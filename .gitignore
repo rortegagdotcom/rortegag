@@ -1,1 +1,4 @@
-logo.psd
+*.psd
+*.ai
+*.pdf
+css/background.css

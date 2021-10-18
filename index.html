@@ -3,54 +3,83 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Blog de rortegag" />
-    <meta name="author" content="rortegag" />
+    <meta name="description" content="rortegag.com">
+    <meta name="author" content="rortegag">
     <title>rortegag.com</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="rog-bg-main">
     <main>
-      <div class="container py-4">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-          <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-            <img src="assets/logo.png" class="bi me-2" width="325" height="75">
+      <div class="container py-1">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-1">
+          <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="assets/img/logo-dark.png">
+              <img src="assets/img/logo-light.png" width="300" height="80">
+            </picture>
           </a>
-          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a href="#" class="nav-link active rog-bg rog-font-default"><i class="bi bi-house-door-fill"></i>  Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a href="aboutme.html" class="nav-link rog-text-color rog-font-default"><i class="bi bi-person-fill"></i>  Sobre mí</a>
+            </li>
+            <li class="nav-item">
+              <a href="blog.html" class="nav-link rog-text-color rog-font-default"><i class="bi bi-card-heading"></i>  Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link rog-text-color rog-font-default"><i class="bi bi-envelope-fill"></i>  Contacto</a>
+            </li>
           </ul>
         </header>
-        <div class="p-5 mb-4 bg-light rounded-3">
-          <div class="container-fluid py-5">
-            <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-            <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
-            <button class="btn btn-primary btn-lg" type="button">Example button</button>
+        <div class="p-4 mb-4 rog-bg-default rounded-3">
+          <div class="container-fluid rog-text-default py-1">
+            <h1 class="display-5 fw-bold rog-font-title">¿Quién soy?</h1>
+            <p class="col-md-8 fs-4 rog-font-default">Apasionado de la informática desde pequeño y en constante aprendizaje de las últimas tecnologías de programación. Me encantan los proyectos ambiciosos de desarrollo y sentirme parte de un producto.</p>
+            <button class="btn rog-btn-github btn-lg btn-block rog-font-default" type="button"><i class="bi bi-github"></i> Ver proyectos</button>
           </div>
         </div>
         <div class="row align-items-md-stretch">
-          <div class="col-md-6">
-            <div class="h-100 p-5 text-white bg-dark rounded-3">
-              <h2>Change the background</h2>
-              <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-              <button class="btn btn-outline-light" type="button">Example button</button>
+          <div class="col-md-6 mb-4">
+            <div class="h-100 p-5 rog-text-color-primary rog-bg-secundary rounded-3">
+              <h2 class="text-center rog-font-title">Frontend</h2>
+              <p class="text-center"></p>
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn rog-btn-outline-primary btn-block rog-font-default" type="button" data-bs-toggle="collapse" data-bs-target="#frontend">Ver proyectos</button>
+              </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="h-100 p-5 bg-light border rounded-3">
-              <h2>Add borders</h2>
-              <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-              <button class="btn btn-outline-secondary" type="button">Example button</button>
+          <div class="col-md-6 mb-4">
+            <div class="h-100 p-5 rog-text-color-secundary rog-bg-primary rounded-3">
+              <h2 class="text-center rog-font-title">Backend</h2>
+              <p class="text-center"></p>
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn rog-btn-outline-secundary btn-block rog-font-default" type="button" data-bs-toggle="collapse" data-bs-target="#backend">Ver proyectos</button>
+              </div>
             </div>
           </div>
         </div>
-        <hr>
-        <footer class="footer mt-auto py-3 bg-dark">
-          <div class="container">
-            <span class="text-light">Please sticky footer content here.</span>
+        <div id="frontend" class="collapse">
+          <p>Frontend</p>
+        </div>
+        <div id="backend" class="collapse">
+          <p>Backend</p>
+        </div>
+        <footer class="footer container-fluid text-center bg-dark text-white rounded-3">
+          <div class="container pt-3">
+            <section class="mb-4">
+              <a class="text-light fs-3 me-3" href="https://www.linkedin.com/in/raul-ortega-gallego/" role="button" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a class="text-light fs-3" href="https://twitter.com/r_ortegag" role="button" target="_blank"><i class="bi bi-twitter"></i></a>
+              <a class="text-light fs-3 ms-3" href="https://github.com/r-ortegag" role="button" target="_blank"><i class="bi bi-github"></i></a>
+            </section>
+          </div>
+          <div class="text-center text-light pb-3">
+            &copy; 2021 Copyright
+            <a class="text-light" href="https://rortegag.com">rortegag.com</a>
           </div>
         </footer>
       </div>
