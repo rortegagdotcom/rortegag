@@ -2,4 +2,5 @@
 *.ai
 *.pdf
 *.svg
-css/background.css
+css/style_nomin.css
+js/send_nomin.js
