@@ -45,19 +45,19 @@
               <div class="row mb-2">
                 <div class="col">
                   <div class="form-floating">
-                    <input type="text" class="form-control rog-input" id="your-name" placeholder="Tu nombre">
+                    <input type="text" class="form-control rog-input" id="your-name" placeholder="Tu nombre" pattern="[a-zA-Z'-'\s]*" required>
                     <label for="your-name">Nombre</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating">
-                    <input type="email" class="form-control rog-input" id="your-email" placeholder="Tu email">
+                    <input type="email" class="form-control rog-input" id="your-email" placeholder="Tu email" required>
                     <label for="your-email">Email</label>
                   </div>
                 </div>
               </div>
               <div class="form-floating mb-5">
-                <textarea class="form-control rog-textarea" placeholder="Tu mensaje" id="your-message" style="height: 100px"></textarea>
+                <textarea class="form-control rog-textarea" placeholder="Tu mensaje" id="your-message" required style="height: 100px"></textarea>
                 <label for="your-message">Mensaje</label>
               </div>
               <div class="d-grid gap-2 col-6 mx-auto">
