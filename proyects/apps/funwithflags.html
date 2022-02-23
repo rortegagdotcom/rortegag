@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="rortegag">
+    <meta name="description" content="Proyecto DAM, diversión con banderas">
+    <meta name="keywords" content="rortegag, Raul Ortega, proyecto, dam, fin de curso, proyecto fin de curso, proyecto dam, java, spring, spring mvc, spring boot, thymeleaf, mysql, hibernate, funwithflags, diversion con banderas">
+    <title>Diversión con banderas - Proyecto final del Grado Superior de DAM - rortegag.com</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/style.css">
+  </head>
+  <body class="rog-bg-main">
+    <div class="container py-1">
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-1">
+        <a href="../../index.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="../../assets/img/logo-dark.png">
+            <img src="../../assets/img/logo-light.png" width="320" height="100">
+          </picture>
+        </a>
+        <nav>
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="../../index.html" id="home" class="nav-link rog-text-color rog-font-default"><i class="bi bi-house-door-fill"></i>  Inicio</a></li>
+            <li class="nav-item"><a href="../../aboutme.html" id="aboutme" class="nav-link rog-text-color rog-font-default"><i class="bi bi-person-fill"></i>  Sobre mí</a></li>
+            <li class="nav-item"><a href="../../blog.html" id="blog" class="nav-link rog-text-color rog-font-default"><i class="bi bi-card-heading"></i>  Blog</a></li>
+            <li class="nav-item"><a href="../../contact.html" id="contact" class="nav-link rog-text-color rog-font-default"><i class="bi bi-envelope-fill"></i>  Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="row align-items-md-stretch">
+          <div class="col-md-8 mb-4">
+            <div class="h-100 p-5 rog-text-default rog-bg-default rounded-3">
+              <h1 class="rog-font-title text-center">Diversión con banderas</h1>
+              <img src="../../assets/img/proyects/apps/funwithflags/funwithflags.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diversión con banderas">
+              <h3 id="introduccion">Introducción</h3>
+              <p><strong>Descripción de la aplicación.</strong></p>
+              <p>Diversión con Banderas es una Aplicación Web hecha en Java con el conocido framework Spring. En la propia aplicación, los usuarios pueden conocer información 
+              sobre cada bandera y crear minijuegos como un Quiz, agregar varias preguntas de opción múltiple y preguntas de Verdadero/Falso.</p>
+              <p>Los usuarios deberán registrarse en la aplicación web si quieren crear sus propias banderas y sus propios minijuegos y tendrá un ranking de competición entre 
+              los usuarios del minijuego creado por un usuario. Los usuarios que quieran jugar, no es necesario registro.</p>
+              <p>El usuario puede crear banderas de cada región, por ejemplo, Asia y poner las banderas de los países de Asia con su información de esa bandera o banderas que no
+              están relacionadas con una región (OTRO), pero está pueda poner banderas que no de países, por ejemplo, las banderas que se usan en carreras de Formula 1.</p>
+              <p>La arquitectura de la Aplicación Web será la siguiente.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/arch-fwf.png" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Arquitectura de la aplicación">
+              <p>Por la parte del cliente tendrá los lenguajes de HTML5, CSS3 y JavaScript/jQuery (un framework de JavaScript). También habrá ciertas librerías que se usaran en este proyecto, como Bootstrap y SweetAlert</p>
+              <p>Entre medias, se usará un motor de plantillas llamada Thymeleaf, que es más practico que el tradicional JSP</p>
+              <p>Por la parte del servidor tendrá las siguientes tecnologías:</p>
+              <ul>
+                <li>Spring Boot: Con Spring Boot, nos facilita el despliegue de un servidor web (en este caso) y seleccionar que tecnologías queremos usar de Spring Framework. 
+                Usa Maven para descargar las dependencias y tenerlas actualizadas.</li>
+                <li>Spring Web MVC: El núcleo para la creación de la aplicación web. 
+                Se utilizará el patrón MVC (Modelo - Vista - Controlador) para crear software más robusto con un cliclo de vida más adecuado, donde se potencie la facilidad de mantenimiento, reutilización del código y la sepración de conceptos</li>
+                <li>Spring Data JPA: Se usará para simplificar la persistencia de los datos usando los estándares de JPA.</li>
+                <li>Hibernate: Se deberá usar un ORM y que sea compatible también con el estándar JPA. Hibernate es el más completo y robusto.</li>
+                <li>Servidor de base de datos MySQL: todos los datos de la aplicación web se guardarán en una base de datos relacional.</li>
+              </ul>
+              <p><strong>Objetivos y motivación.</strong></p>
+              <p>Ahora los desarrolladores ya no es que sepan ciertos lenguajes de programación, sino también que frameworks ahí, para que sirven y desarrollar aplicaciones con esos frameworks.</p>
+              <p>Mis objetivos son:</p>
+              <ul>
+                <li>Aprender un framework de desarrollo web tanto como frontend (Thymeleaf, CSS, Bootstrap) como backend (Spring Framework).</li>
+                <li>Qué se aprende a usar varios módulos del framework de Spring.</li>
+                <li>Desarrollar una aplicación web educativa solamente de banderas. 
+                La idea del proyecto la tenia en mente hace 1 año.</li>
+              </ul>
+              <h3 id="analisis">Análisis</h3>
+              <p><strong>Requisitos funcionales.</strong></p>
+              <p>El sitio estará dividido en tres partes:</p>
+              <ul>
+                <li>Inicio del sitio</li>
+                <li>Administración del usuario</li>
+                <li>Juego</li>
+              </ul>
+              <p><strong>Inicio del sitio</strong></p>
+              <p>Esta es la página principal. En ella, al darle a logo de Diversión con Banderas, volverá al Inicio.
+              En el menú de navegación, está los siguientes enlaces.</p>
+              <p>Al lado izquierdo:</p>
+              <ul>
+                <li>Inicio, es la propia página de inicio.</li>
+                <li>Banderas de países</li>
+                <ul>
+                  <li>Banderas de África</li>
+                  <li>Banderas de Asia</li>
+                  <li>Banderas de América central</li>
+                  <li>Banderas de Europa</li>
+                  <li>Banderas de Norteamérica</li>
+                  <li>Banderas de Oceanía</li>
+                  <li>Banderas de Sudamérica</li>
+                </ul>
+                <li>Otras banderas</li>
+                <li>Rankings</li>
+                <ul>
+                  <li>Quiz</li>
+                  <li>Verdadero o falso</li>
+                </ul>
+              </ul>
+              <p>Al lado derecho:</p>
+              <ul>
+                <li>Iniciar sesión</li>
+                <li>Registrarte</li>
+              </ul>
+              <p><strong>Página de banderas de países</strong></p>
+              <p><strong>Página de banderas de África</strong></p>
+              <p>Aquí se verán todas las banderas de África</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/africa-flags.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de las banderas de África">
+              <p><strong>Página de banderas de Asia</strong></p>
+              <p>Aquí se verán todas las banderas de Asia</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/asia-flags.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de las banderas de Asia">
+              <p><strong>Página de banderas de América central</strong></p>
+              <p>Aquí se verán todas las banderas de América central</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/central-america-flags.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de las banderas de América central">
+              <p><strong>Página de banderas de Europa</strong></p>
+              <p>Aquí se verán todas las banderas de Europa</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/europe-flags.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de las banderas de Europa">
+              <p><strong>Página de banderas de Norteamérica</strong></p>
+              <p>Aquí se verán todas las banderas de Norteamérica</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/north-america-flags.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de las banderas de Norteamérica">
+              <p><strong>Página de banderas de Oceanía</strong></p>
+              <p>Aquí se verán todas las banderas de Oceanía</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/oceania-flags.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de las banderas de Oceanía">
+              <p><strong>Página de banderas de Sudamérica</strong></p>
+              <p>Aquí se verán todas las banderas de Sudamérica</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/south-america-flags.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de las banderas de Sudamérica">
+              <hr>
+              <p><strong>Otras banderas</strong></p>
+              <p>Aquí se verán otras banderas que no tienen región. Se comprueba que si no hay banderas, este indica un mensaje</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/others-flags.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de otras banderas">
+              <hr>
+              <img src="../../assets/img/proyects/apps/funwithflags/view-flag.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de vista de datos de la bandera">
+              <p>Al darle a botón de ver una bandera, se visualizará los datos de la bandera, la imagen de la bandera, el nombre de la bandera, su región y su información.</p>
+              <hr>
+              <p><strong>Rankings</strong></p>
+              <p><strong>Quiz</strong></p>
+              <p>Aquí se visualiza los quizs, como el nombre del juego y su código</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/quiz-game-ranking.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de rankings de quizs">
+              <p><strong>Verdadero/Falso</strong></p>
+              <p>Aquí se visualiza los juegos de verdadero/falso, como el nombre del juego y su código</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/tf-game-ranking.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de rankings de verdadero/falso">
+              <p>Al darle al botón de ver el ranking, se visualizará el ranking de ese juego</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/view-ranking.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de vista de ranking">
+              <hr>
+              <p><strong>Iniciar sesión</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/login.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de iniciar sesión">
+              <p>En la página de inicio de sesión, se tendrá que poner el email y la contraseña con la que se registró en el sitio. 
+              Ahí una casilla de recuérdame para acceso más rápido a la administración de sus banderas y juegos.</p>
+              <p><strong>Registrarte</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/register.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de registro">
+              <p>En la página del registro, se tendrá que poner el nombre, los apellidos, el email y la contraseña. 
+              Al darle al botón de registrarse, se muestra un mensaje de color verde que se registró correctamente o rojo si ha habido un error al registrarse.</p>
+              <br>
+              <p><strong>Administración del usuario</strong></p>
+              <p>Esta es la página principal del usuario. En ella, al darle a logo de Diversión con Banderas, volverá a la página principal del usuario.
+              En el menú de navegación, está los siguientes enlaces.</p>
+              <p>Al lado izquierdo:</p>
+              <ul>
+                <li>Inicio, es la propia página de inicio del usuario.</li>
+                <li>Banderas</li>
+                <ul>
+                  <li>Nueva bandera</li>
+                  <li>Ver mis banderas</li>
+                  <li>Editar banderas</li>
+                  <li>Borrar banderas</li>
+                </ul>
+                <li>Quizs</li>
+                <ul>
+                  <li>Nuevo quiz</li>
+                  <li>Ver mis quizs</li>
+                  <li>Editar quizs</li>
+                  <li>Borrar quizs</li>
+                </ul>
+                <li>Verdadero/Falso</li>
+                <ul>
+                  <li>Nuevo Verdadero/Falso</li>
+                  <li>Ver mis verdadero/falso</li>
+                  <li>Editar juegos verdadero/falso.</li>
+                  <li>Borrar juegos verdadero/falso.</li>
+                </ul>
+              </ul>
+              <p>Al lado derecho:</p>
+              <ul>
+                <li>Nombre del usuario</li>
+                <ul>
+                  <li>Cerrar sesión</li>
+                </ul>
+              </ul>
+              <p><strong>Inicio</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/admin-page.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de administración del usuario">
+              <p>En esta página, se mostrará lo mismo como el menú, pero con interfaz más amigable.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/crud-flags.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="CRUD de banderas">
+              <img src="../../assets/img/proyects/apps/funwithflags/crud-quiz-games.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="CRUD de quizs">
+              <img src="../../assets/img/proyects/apps/funwithflags/crud-tf-games.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="CRUD de verdadero/falso">
+              <p><strong>Banderas</strong></p>
+              <p><strong>Nueva bandera</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/add-flag1.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de nueva bandera">
+              <img src="../../assets/img/proyects/apps/funwithflags/add-flag2.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de nueva bandera">
+              <p>En esta página se selecciona el archivo de imagen para la bandera, el nombre de la bandera, de que región es y la información de la bandera. 
+              Al darle a Guardar bandera se guardará y te regresará a la página principal.</p>
+              <p><strong>Ver mis banderas</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/my-flags.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de ver mis banderas">
+              <p>Aquí se podrá visualizar todas las banderas que ha creado el usuario. 
+              Al darle a Ver bandera, se visualizará esa bandera, su imagen, el nombre, la región y su información en texto enriquecido.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/view-flag2.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de vista de la bandera">
+              <p><strong>Editar banderas</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/edit-flags.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de editar banderas">
+              <p>Aquí se podrá visualizar las banderas creadas, pero al darle al botón Editar bandera, se mostrará los datos de la bandera seleccionada para editarla y actualizarla.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/edit-flag1.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de editar bandera">
+              <img src="../../assets/img/proyects/apps/funwithflags/edit-flag2.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de editar bandera">
+              <p>Si editamos la información de la bandera y pulsamos en el botón Guardar bandera, podemos ver luego que tenemos la bandera actualizada.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/edited-flag.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Bandera editada">
+              <p><strong>Borrar banderas</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/delete-flags.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de borrar banderas">
+              <p>Aquí se podrá visualizar las banderas y al darle a botón de Borrar bandera, saldrá un mensaje como este.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/confirmation-delete-flag.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Confirmación de borrar la bandera">
+              <p>Si le damos en OK, se borrará la bandera y si había un juego con esta bandera, también será eliminado automáticamente por borrar su bandera.</p>
+              <p><strong>Juego</strong></p>
+              <p><strong>Nuevo quiz / verdadero o falso</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/add-quiz-game.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de crear nuevo juego quiz">
+              <p>Al darle en nuevo Quiz/Verdadero o falso, se deberá rellenar el nombre del juego, seleccionar la bandera para ese juego y sus preguntas y sus respuestas y seleccionar la respuesta correcta. 
+              El código del juego para luego acceder para jugar se generará automáticamente.</p>
+              <p><strong>Ver mis quizs</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/view-quiz-games.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de ver mis juegos quiz">
+              <p>Aquí se podrá visualizar los juegos quizs/verdadero o falso del usuario que ha creado. 
+              Si pulsa en el botón Ver quiz/ver verdadero o falso, se visualizará el juego, tanto el nombre del juego, la bandera seleccionada, el código del juego, las preguntas de los juegos y su respuesta correcta.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/view-quiz-game1.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de ver el juego quiz y sus preguntas">
+              <img src="../../assets/img/proyects/apps/funwithflags/view-quiz-game2.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de ver el juego quiz y sus preguntas">
+              <p><strong>Editar quizs / verdadero o falso</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/edit-quiz-games.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de editar juegos quiz">
+              <p>Aquí se podrá visualizar los juegos quizs del usuario que ha creado. 
+              Si pulsa en el botón Editar quiz/verdadero o falso, el usuario podrá editar SOLAMENTE el nombre del juego y la bandera.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/edit-quiz-game.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de edición del juego quiz">
+              <p>Si vemos el quiz editado, vemos que tenemos un nuevo código del juego.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/result-edited-quiz-game.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de resultado de edición de una bandera">
+              <p><strong>Borrar quizs / verdadero o falso</strong></p>
+              <p>Aquí se podrá visualizar los juegos quizs/verdadero o falso del usuario que ha creado. 
+              Si pulsa en el botón Borrar quiz/Borrar juego verdadero o falso, se mostrará un mensaje de advertencia.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/delete-quiz-games.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de borrar juegos quiz">
+              <p>Si pulsamos en borrar, saldrá un mensaje de confirmación si queremos borrar el juego quiz. Si pulsamos en OK, se borrará tanto el juego como sus preguntas y los rankings de los usuarios.</p>
+              <p><strong>Juego</strong></p>
+              <p><strong>Entrada del juego</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/game-lobby.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Lobby del juego">
+              <p>Aquí el usuario deberá poner un nombre del usuario y el código del juego. 
+              Si no existe, se refrescarán la ventana. Si existe pasará al juego.</p>
+              <p><strong>Vista del juego</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/quiz-game1.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Juego quiz">
+              <img src="../../assets/img/proyects/apps/funwithflags/quiz-game2.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Juego quiz">
+              <p>Aquí el usuario deberá seleccionar en cada pregunta, la respuesta que cree que es correcta. 
+              Si el usuario pulsa en Pregunta #2 por ejemplo, se mostrará la pregunta 2 para ser respondida. 
+              Una vez respondidas todas las preguntas, el usuario pude darle en el botón Enviar mis respuestas.</p>
+              <p><strong>Resultado de la puntuación del usuario</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/result-quiz-game1.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Resultado del juego quiz">
+              <p>Aquí se le mostrará al usuario su puntuación y ver que respuesta es la correcta en cada pregunta.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/result-quiz-game2.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Resultado del juego quiz">
+              <p>Más abajo pude ver sus repuestas para comprobar si se ha equivocado o no.</p>
+              <p><strong>Requisitos no funcionales</strong></p>
+              <ul>
+                <li>Para el cliente:</li>
+                <p>Un navegador web que esté actualizado a su última versión. Recomiendo los siguientes Navegadores web:</p>
+                <ul>
+                  <li>Microsoft Edge</li>
+                  <li>Google Chrome</li>
+                  <li>Mozilla Firefox</li>
+                  <li>Opera</li>
+                  <li>Brave</li>
+                </ul>
+                <p>El cliente puede conectarse a través de un móvil, tablet u ordenador.</p>
+                <li>Para el servidor:</li>
+                <ul>
+                  <li>Tener Java 8 instalado.</li>
+                  <li>Tener instalado y configurado MySQL Server 8.0. Ver apartado de configuración MySQL Server.</li>
+                  <li>Conexión a internet.</li>
+                  <li>Dominio DNS en internet para que los clientes puedan conectarse. Ver apartado de configuración de servicio DDNS.</li>
+                </ul>
+              </ul>
+              <h3 id="planificacion">Planificación</h3>
+              <p><strong>Preparación del proyecto.</strong></p>
+              <p>Descargo Spring Tool Suite 4. Es un eclipse con plugins ya incorporados para Spring.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/spring-tools.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página web de Spring Tools Suite 4">
+              <p>Una vez descargado, ejecutamos el jar. Este descomprimirá una carpeta que es el IDE o con ello guardarlo donde queramos.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/spring-tools-file.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Archivo de Spring Tools Suite 4">
+              <p>Vemos los archivos descomprimidos.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/spring-tools-files.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Archivos de Spring Tools Suite 4">
+              <p>Podemos usar el propio Spring Tool Suite para agregar las dependencias para proyecto, pero uso Spring Initializr porque viene todas las dependencias. 
+              Relleno los datos de como se va a llamar el proyecto.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/spring-initializr.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Spring Initializr">
+              <p>Si doy en dependencias, veo para seleccionar las dependencias que quiero usar para mi proyecto.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/spring-initializr2.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Spring Initializr">
+              <p>Selecciono todas estas dependencias.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/spring-initializr3.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Spring Initializr">
+              <p>Al darle a Generate, me descargo un proyecto para se importado con Maven. Vemos el pom.xml como ha quedado.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/pom1.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="POM">
+              <img src="../../assets/img/proyects/apps/funwithflags/pom2.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="POM">
+              <p>La configuración de archivo de application.properties es importante, ya que aquí podemos configurar muchas cosas. Se configura lo siguiente.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/application-properties-file.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Archivo application.properties">
+              <p>
+                spring.datasource.url: La URL de la conexión de la base de datos MySQL.
+                <br>
+                spring.datasource.username: El usuario de la base de datos que se va a conectarse.
+                <br>
+                spring.datasource.password: La contraseña del usuario de la base de datos.
+              </p>
+              <p>
+                spring.jpa.show-sql-true: Esto sirve para mostrar las sentencias SQL como debug.
+                <br>
+                spring.jpa.hibernate.ddl-auto: Esto sirve para generar los DDL. 
+                En Create creará las tablas, pero si se cierra el servicio web y se vuelve a poner, borrará todo lo que contenía y lo creará de nuevo. 
+                Con update actualizará las tablas si Hibernate ve alguna configuración nueva de JPA.
+              </p>
+              <p>
+                spring.jpa.properties.hibernate.jdbc.batch_size: Esto sirve para almacenar inserción de datos a una tabla como un batch para no colgar la base de datos. 
+                En vez de enviar una petición de inserción de 5 preguntas, lo meto en un batch y hará la inserción rápidamente sin cuelgues.
+                <br>
+                spring.jpa.properties.hibernate.order_inserts: Esto sirve para que ordene los insert del batch.
+              </p>
+              <p>
+                spring.thymeleaf.mode: Usamos el modo html ya que las paginas son en html.
+                <br>
+                spring.thymeleaf.cache: Deshabilito la cache de Thymeleaf, ya que puede haber un problema al mostrar las banderas.
+              </p>
+              <p>
+                spring.servlet.multipart.max-file-size: Indico que lo máximo permitido del peso del archivo son 10MB.
+                <br>
+                spring.servlet.multipart.max-request-size: Indico que lo máximos permitido de peso del archivo son 10MB.
+                <br>
+                spring.servlet.multipart.max-enabled: Esto se indica para poder almacenar las imágenes de las banderas
+              </p>
+              <p>
+                server.port: Establecer el puerto de llamada. Pongo 4848 para poder salir a internet con el Router de casa.
+                <br>
+                server.error.whitelabel.enabled: Lo ponemos en false para deshabilitar el whitelabel por defecto de Spring cuando hay un error de HTTP.
+              </p>
+              <p><strong>Estructura de Paquetes</strong></p>
+              <p>La estructura de paquetes del proyecto de Spring debe de ser la siguiente.</p>
+              com.rortegag.funwithflags
+              <br>
+              <i class="bi bi-arrow-return-right"></i>  &nbsp; .configuration
+              <br>
+              <i class="bi bi-arrow-return-right"></i>  &nbsp; .controller
+              <br>
+              <i class="bi bi-arrow-return-right"></i>  &nbsp; .model
+              <br>
+              <i class="bi bi-arrow-return-right"></i>  &nbsp; .repository
+              <br>
+              <i class="bi bi-arrow-return-right"></i>  &nbsp; .service
+              <br>
+              <i class="bi bi-arrow-return-right"></i>  &nbsp; .util
+              <br>
+              <br>
+              <p><strong>Paquete principal</strong></p>
+              <p>En el paquete principal, aparecerá una clase creada, que es la propia aplicación de Spring.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/main-code.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Código principal de la aplicación">
+              <p>La anotación Spring Boot @SpringBootApplication se usa para marcar una clase de configuración que declara uno o más métodos @Bean y también activa la configuración automática y el escaneo de componentes. Es lo mismo que declarar una clase con las anotaciones @Configuration, @EnableAutoConfiguration y @ComponentScan.</p>
+              <p>Básicamente, cualquier @Bean que creemos adicionalmente, incluso los de MVC, como @Controller, @Service, @Repository, Spring lo configurará automáticamente sin tener que escribir código adicional en el XML.</p>
+              <p><strong>Paquete configuration</strong></p>
+              <p>Archivo WebMVCConfiguration</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/webmvcconfiguration-code.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Código de configuración para contenidos estáticos de la aplicación">
+              <p>Esta clase, se configurará que Spring de permisos para poder acceder a los contenidos estáticos de Thymeleaf, ej: las imágenes, los archivos de estilos y los scripts para el cliente.</p>
+              <p>Abajo se crea un @Bean para la codificación de la contraseña del usuario cuando se registra.</p>
+              <p>La clase debe de implementar la interfaz WebMvcConfigurer para poder usar el método addResourceHandler.</p>
+              <p><strong>Archivo SecurityConfiguration</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/securityconfiguration-code.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Código de configuración de seguridad de la aplicación">
+              <p>La anotación @Autowired marca un constructor, campo, método de establecimiento o método de configuración para ser conectado automáticamente por las instalaciones de inyección de dependencia de Spring. Esta es una alternativa a la anotación JSR-330 javax.inject.Inject, agregando semántica requerida vs opcional.</p>
+              <p>Lo ponemos tanto la clase de Codificación de contraseña para usar la clase sin abrir más una instancia de esa clase y el DataSource para verificar que el usuario se autentica en la web.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/securityconfiguration-configure-code.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Código de configuración de seguridad de la aplicación">
+              <p>Se permite acceso sin autenticar todo, menos la parte del acceso a la /home, que será la zona del usuario para crear, ver, modificar y eliminar banderas y juegos.</p>
+              <p><strong>Paquete controller</strong></p>
+              <p>En el paquete Controller estará los controladores que serán los encargados de atender peticiones y derivarnos a una vista adecuada. Básicamente el controlador llamará al servicio de los repositorios de cada Modelo establecido con JPA y mostrar el resultado en la página.</p>
+              <p><strong>Paquete model</strong></p>
+              <p>En el paquete Model estará los modelos JPA (Clases de configuración de las tablas de la base de datos). Se usan las anotaciones de JPA como @Entity, @Table, @Column, etc.</p>
+              <p><strong>Paquete repository</strong></p>
+              <p>En el paquete repository estará los repositorios, que son los encargados de obtener los datos de la base de datos llamando al Hibernate. Ahí tres tipos de repositorio que nos da Spring.</p>
+              <ul>
+                <li>CrudRepository: Este repositorio nos da unos métodos para usar para hacer un CRUD rápido y sin complicación</li>
+                <li>PaginationAndSortingRepository: Este repositorio tiene los mismo que el CrudRepository, pero tiene métodos implementados para la paginación y ordenación</li>
+                <li>JpaRepository. Este repositorio es igual que el CRUD, pero usando la lógica JPA, caso que hacemos en este proyecto.</li>
+              </ul>
+              <p>El trabajo de @Repository es detectar excepciones específicas de persistencia y volver a lanzarlas como una de las excepciones unificadas sin marcar de Spring. Básicamente, por ejemplo, si hay un error de base de datos, se mostrará el error al desarrollador, pero la aplicación web seguirá marchando y al cliente le mostrará que hubo un error interno en el servidor.</p>
+              <p>Se hereda la clase de ese repositorio y podemos implementar algunas interfaces más si queremos, caso que sí, si queremos sacar datos de las banderas dependiendo de la región, por ejemplo.</p>
+              <p><strong>Paquete service</strong></p>
+              <p>En el paquete service crearemos las interfaces Java para implementar los métodos que tiene los repositorios.
+              Marcamos beans con @Service para indicar que tiene la lógica empresarial. Entonces, no hay ninguna otra especialidad excepto usarlo en la capa de servicio.</p>
+              <p><strong>Paquete util</strong></p>
+              <p>En el paquete util se creará si creamos clases que implemente utilidades, por ejemplo, de este proyecto, algunas constantes que indican las rutas de las páginas y un generador del código del juego.</p>
+              <p><strong>Implementación del registro de usuarios</strong></p>
+              <p>La implementación que se hizo primero, es la persistencia de datos del usuario cuando se registre el usuario y cuando se logué, guardar el token de sesión que se borrará automáticamente cuando pase un determinado tiempo.</p>
+              <p>Lo primero fue crear las clases User y PersistentLogins (esta clase sirve para crear automáticamente la tabla en la base datos). 
+              También crear su repositorio (UserRepository) y el servicio (UserService). 
+              Se crea el controlador (UserController) para las URL /signup, /login y /home.
+              En la zona de resources, en la carpeta templates, se crea la página principal (index.html), la carpeta user con los archivos signup.html para el registro y el login.html para el inicio de sesión. 
+              También se crea la carpeta home y dentro de ella el archivo home.html</p>
+              <p class="text-center">index.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/index-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página principal de la aplicación">
+              <p class="text-center">signup.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/signup-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de registro">
+              <p class="text-center">login.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/login-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de inicio de sesión">
+              <p class="text-center">home.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/home-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página principal del usuario">
+              <p><strong>Implementación del CRUD de las banderas</strong></p>
+              <p>El usuario debe haber iniciado sesión para crear, ver modificar y borrar sus propias banderas. 
+              Lo primero fue crear la clase modelo Flag en el paquete model. 
+              Después crear su propio repositorio (FlagRepository) y su servicio (FlagService). 
+              Se crea el controlador (FlagController) para las URL /home/add_flag, /home/view_flags, etc. e implementar el CRUD.
+              En la zona de resources, en la carpeta templates <i class="bi bi-arrow-right"></i> home, creo una carpeta llamada flags para crear los siguientes archivos html.</p>
+              <p class="text-center">add_flag.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/add-flag-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de creación de bandera">
+              <p class="text-center">view_listflags.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/view-listflags-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de ver banderas del usuario">
+              <p class="text-center">view_flag.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/view-flag-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de ver una bandera del usuario">
+              <p class="text-center">edit_listflags.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/edit-listflags-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de editar banderas del usuario">
+              <p class="text-center">edit_flag.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/edit-flag-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de edición de bandera">
+              <p class="text-center">delete_listflags.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/delete-listflags-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de borrar banderas">
+              <p>En las páginas add_flag y edit_flag se usa una librería javascript llamada Summernote para que el textarea para poner la información, sea en texto enriquezido.
+              En la página delete_listflags se usa una librería javascript llamada SweetAlert para mostrar un mensaje de confirmación para borrar la bandera.</p>
+              <p><strong>Implementación del CRUD de los juegos Quiz</strong></p>
+              <p>El usuario debe haber iniciado sesión para crear, ver modificar y borrar sus propios juegos. 
+              Lo primero fue crear las clases QuizGame, QuizQuestion(las preguntas del juego) en el paquete model. 
+              Después crear sus propios repositorios (QuizGameRepository) y su servicio (QuizGameService). 
+              Se crea el controlador (QuizGameController) para las URL /home/add_quizgame, /home/view_quizgames/, etc y la implementación del CRUD.
+              En la zona de resources, en la carpeta templates <i class="bi bi-arrow-right"></i> home <i class="bi bi-arrow-right"></i> games, creo una carpeta llamada quiz para crear los siguientes archivos html.</p>
+              <p class="text-center">add_quizgame.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/add-quizgame-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de creación del juego quiz">
+              <p class="text-center">view_listquizgames.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/view-listquizgames-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de visualización de juegos quiz del usuario">
+              <p class="text-center">view_quizgame.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/view-quizgame-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de ver el juego quiz y sus preguntas">
+              <p class="text-center">edit_listquizgames.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/edit-listquizgames-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de edición de juegos quiz del usuario">
+              <p class="text-center">edit_quizgame.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/edit-quizgame-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de edición del juego quiz">
+              <p class="text-center">delete_listquizgames.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/delete-listquizgames-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de borrado de juegos quiz">
+              <p>En la página delete_listquizgames.html se usa la librería de JavaScript llamada SweetAlert para mostrar un mensaje de confirmación al borrar el juego.</p>
+              <p><strong>Implementación del CRUD de los juegos Verdadero/Falso</strong></p>
+              <p>No se va a detallar mucho, que es básicamente casi igual que los juegos de Quiz, pero diferenciando que en vez de que hay 4 respuestas, hay dos, verdadero o falso.
+              Lo primero fue crear las clases TrueFalseGame, TrueFalseQuestion(las preguntas del juego) en el paquete model. 
+              Después crear sus propios repositorios (TrueFalseGameRepository) y su servicio (TrueFalseGameService). 
+              Se crea el controlador (TrueFalseController) para las URL /home/add_tfgame, /home/view_tfgames, etc y la implementación de su CRUD.
+              En la zona de resources, en la carpeta templates <i class="bi bi-arrow-right"></i> home <i class="bi bi-arrow-right"></i> games, creo una carpeta llamada truefalse para crear los archivos html.</p>
+              <p><strong>Implementación del almacenamiento de imágenes</strong></p>
+              <p>En el paquete service, se crea otra llamada storage para implementar las siguientes clases para poder almacenar las imágenes de las banderas. Se ha seguido un tutorial propio de Spring para su desarrollo.
+              https://spring.io/guides/gs/uploading-files/</p>
+              <p>En el propio código de las clases están documentadas para mayor entendimiento en vez de este documento.</p>
+              <p>Una vez implementado, en la base de datos, en la tabla flags, estará la URL de la bandera.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/db-flags.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Consulta de las banderas guardadas de la base de datos">
+              <p><strong>Implementación del juego</strong></p>
+              <p>Lo primero fue crear las clases RankingQuizGame y RankingTrueFalseGame el paquete model. 
+              Después crear sus propios repositorios (RankingQuizGameRepository y RankingTrueFalseGameRepository) y su servicio (RankingQuizGameService y RankingTrueFalseGameService). 
+              Se crea el controlador (GameController) para poner el código del juego, el juego en sí y el resultado final del juego para el usuario.
+              En la zona de resources, en la carpeta templates, creo una carpeta llamada game para crear los siguientes archivos html.</p>
+              <p class="text-center">enter_quizgame.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/enter-quizgame-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página del lobby del juego quiz">
+              <p class="text-center">quizgame.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/quizgame-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página del juego quiz">
+              <p class="text-center">results_quizgame.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/results-quizgame-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página del resultado del juego quiz">
+              <p class="text-center">enter_truefalsegame.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/enter-truefalsegame-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página del lobby del juego verdadero / falso">
+              <p class="text-center">truefalsegame.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/truefalsegame-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página del juego verdadero / falso">
+              <p class="text-center">results_truefalsegame.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/results-truefalsegame-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página del resultado del juego verdadero / falso">
+              <p><strong>Implementación de mostrar los rankings de los juegos, mostrar las banderas por regiones y páginas de información de la aplicación.</strong></p>
+              <p>Se crea el controlador (RankingGamesController) para mostrar la lista de los juegos y al pulsar en un de ello mostrar el ranking de ese juego.
+              En la zona de resources, en la carpeta templates, creo una carpeta llamada rankings para crear los siguientes archivos html.</p>
+              <p class="text-center">view_quizgames.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/view-quizgames-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de ver juegos quiz">
+              <p class="text-center">view_rankingquizgame.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/view-rankingquizgame-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de ver el ranking del juego quiz">
+              <p class="text-center">view_truefalsegame.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/view-truefalsegame-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de ver juegos verdadero / falso">
+              <p class="text-center">view_rankingtruefalsegame.html</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/view-rankingtruefalsegame-html.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de ver el ranking del juego verdadero / falso">
+              <p><strong>Implementación de mostrar errores HTTP personalizados</strong></p>
+              <p>En el paquete controller, se crea otro paquete llamado error. Este contendrá un controlador para errores http. 
+              Se implementa la clase ErrorController. Al implementarlo, los errores HTTP serán personalizados.</p>
+              <img src="../../assets/img/proyects/apps/funwithflags/error-404.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página error 404">
+              <h3 id="diseño">Diseño</h3>
+              <p><strong>Diseño de la base datos</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/db-design.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diseño de la base de datos">
+              <h3 id="pruebas">Pruebas</h3>
+              <p>Se prueba la aplicación web en vista ordenador y la vista en móvil, para comprobar que se vea bien en diferentes pantallas y tenga buena comunicación.</p>
+              <p><strong>Vista ordenador</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/pc-view1.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Vista ordenador">
+              <img src="../../assets/img/proyects/apps/funwithflags/pc-view2.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Vista ordenador">
+              <img src="../../assets/img/proyects/apps/funwithflags/pc-view3.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Vista ordenador">
+              <img src="../../assets/img/proyects/apps/funwithflags/pc-view4.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Vista ordenador">
+              <p><strong>Vista móvil</strong></p>
+              <img src="../../assets/img/proyects/apps/funwithflags/mobile-view1.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Vista móvil">
+              <img src="../../assets/img/proyects/apps/funwithflags/mobile-view2.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Vista móvil">
+              <img src="../../assets/img/proyects/apps/funwithflags/mobile-view3.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Vista móvil">
+              <img src="../../assets/img/proyects/apps/funwithflags/mobile-view4.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Vista móvil">
+              <img src="../../assets/img/proyects/apps/funwithflags/mobile-view5.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Vista móvil">
+              <img src="../../assets/img/proyects/apps/funwithflags/mobile-view6.jpg" class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Vista móvil">
+              <h3 id="conclusiones">Conclusiones</h3>
+              <p>Desarrollar en Spring es un trabajo grande si no tienes experiencia, porque, en un framework de Java muy grande, pero es muy divertido aprender como con solo las anotaciones de Spring, te ahorría horas y horas de trabajo. 
+              Cuando te vas soltando, ya sabes cómo desarrollar, por ejemplo, un CRUD sencillo con relaciones de tablas.</p>
+              <p>Ahí cosas que tengo que pulir, sobre todo tener más conocimientos con Thymeleaf para la integración con JavaScript, ya que me hubiese gustado editar las preguntas cuando estas editando el juego, pero necesitaría más tiempo.</p>
+              <p>El juego me hubiese gustado que sea con el WebSocket de Spring, pero tengo poca información con lo que hacer, solamente tengo como hacer un chat sencillo. 
+              Quiero que el juego sea como Kahoot, que cuando un usuario se conecte a un juego, aparezcan los demás usuarios en tiempo real y que el usuario que ha iniciado el juego, lo inicie y salgan las preguntas en uno en uno.</p>
+              <p>Aunque Spring esté desarrollado para aplicaciones empresariales, pero que se puede crear una aplicación web interactiva y educativa sobre él, de momento con este proyecto me voy contento, pero con ganas de seguir aprendiendo otros módulos de Spring.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="h-100 p-5 rog-text-color rog-bg-default rounded-3">
+              <h2 class="rog-font-title text-center">ÍNDICE</h2>
+              <ol class="fs-5">
+                <li><a class="rog-text-color" href="#introduccion">Introducción</a></li>
+                <li><a class="rog-text-color" href="#analisis">Análisis</a></li>
+                <li><a class="rog-text-color" href="#planificacion">Planificación</a></li>
+                <li><a class="rog-text-color" href="#diseño">Diseño</a></li>
+                <li><a class="rog-text-color" href="#pruebas">Pruebas</a></li>
+                <li><a class="rog-text-color" href="#conclusiones">Conclusiones</a></li>
+              </ol>
+              <div class="d-grid mx-auto">
+                <button class="btn rog-btn-github btn-lg btn-block rog-font-default" type="button" onclick="window.open('https://github.com/r-ortegag/funwithflags', '_blank');"><i class="bi bi-github"></i> Ver proyecto en GitHub</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer container-fluid text-center bg-dark text-white rounded-3">
+        <div class="container pt-3">
+          <section class="mb-4">
+            <a class="text-light fs-3 me-3" href="https://www.linkedin.com/in/raul-ortega-gallego/" role="button" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a class="text-light fs-3" href="https://twitter.com/r_ortegag" role="button" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a class="text-light fs-3 ms-3" href="https://github.com/r-ortegag" role="button" target="_blank"><i class="bi bi-github"></i></a>
+          </section>
+        </div>
+        <div class="text-center text-light pb-3">
+          &copy; 2021 Copyright
+          <a class="text-light" href="https://rortegag.com">rortegag.com</a>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../../js/enhance.js"></script>
+  </body>
+</html>
