@@ -42,19 +42,13 @@
             <h1 class="display-4 fw-bold rog-text-default rog-font-title">Contacto</h1>
             <p class="fs-4 rog-text-default rog-font-default">¿Tiene alguna pregunta o quiere trabajar juntos?</p>
             <div class="justify-content-md-center m-5">
-              <div class="row mb-2">
-                <div class="col">
-                  <div class="form-floating">
-                    <input type="text" class="form-control rog-input" id="your-name" placeholder="Tu nombre" pattern="[a-zA-Z'-'\s]*" required>
-                    <label for="your-name">Nombre</label>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-floating">
-                    <input type="email" class="form-control rog-input" id="your-email" placeholder="Tu email" required>
-                    <label for="your-email">Email</label>
-                  </div>
-                </div>
+              <div class="form-floating mb-5">
+                <input type="text" class="form-control rog-input" id="your-name" placeholder="Tu nombre" pattern="[a-zA-Z'-'\s]*" required autofocus>
+                <label for="your-name">Nombre</label>
+              </div>
+              <div class="form-floating mb-5">
+                <input type="email" class="form-control rog-input" id="your-email" placeholder="Tu email" required>
+                <label for="your-email">Email</label>
               </div>
               <div class="form-floating mb-5">
                 <textarea class="form-control rog-textarea" placeholder="Tu mensaje" id="your-message" required style="height: 100px"></textarea>
