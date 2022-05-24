@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="rortegag">
+  <meta name="description" content="Proyecto DAM, diversión con banderas">
+  <meta name="keywords"
+    content="rortegag, Raul Ortega, proyecto, dam, fin de curso, proyecto fin de curso, proyecto dam, java, spring, spring mvc, spring boot, thymeleaf, mysql, hibernate, funwithflags, diversion con banderas">
+  <title>SQL Server 2016 VS MySQL - Proyecto final del Grado Superior de ASIR - rortegag.com</title>
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body class="rog-bg-main">
+  <div class="container py-1">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-1">
+      <a href="../../index.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="../../assets/img/logo-dark.png">
+          <img src="../../assets/img/logo-light.png" width="320" height="100">
+        </picture>
+      </a>
+      <nav>
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="../../index.html" id="home" class="nav-link rog-text-color rog-font-default"><i
+                class="bi bi-house-door-fill"></i> Inicio</a></li>
+          <li class="nav-item"><a href="../../aboutme.html" id="aboutme"
+              class="nav-link rog-text-color rog-font-default"><i class="bi bi-person-fill"></i> Sobre mí</a></li>
+          <li class="nav-item"><a href="../../blog.html" id="blog" class="nav-link rog-text-color rog-font-default"><i
+                class="bi bi-card-heading"></i> Blog</a></li>
+          <li class="nav-item"><a href="../../contact.html" id="contact"
+              class="nav-link rog-text-color rog-font-default"><i class="bi bi-envelope-fill"></i> Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="row align-items-md-stretch">
+        <div class="col-md-8 mb-4">
+          <div class="h-100 p-5 rog-text-default rog-bg-default rounded-3">
+            <h1 class="rog-font-title text-center">SQL Server 2016 VS MySQL</h1>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-2016-vs-mysql.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="SQL Server 2016 VS MySQL">
+            <h3 id="introduccion">1. Introducción</h3>
+            <h3 id="presentacion">1.1. Presentación</h3>
+            <p>En esta elaboración de mi proyecto trato de averiguar y saber si ofrece las mismas ventajas el software
+              comercial con software gratuito y/o libre.
+              En este proyecto he elaborado un servidor de base de datos con el software SQL Server 2016 de Microsoft en
+              un sistema operativo Windows Server 2016.
+              Trataré, sobre todo, lo fundamental de lo que aprendido sobre este curso con MySQL en sistemas de
+              Microsoft. También pondré otros servicios en el servidor
+              como IIS (servidor web), DNS y Active Directory.</p>
+            <h3 id="objetivos">1.2. Objetivos</h3>
+            <p>Mis objetivos sobre este proyecto es averiguar las ventajas y desventajas sobre un software comercial,
+              como en este caso SQL Server 2016 respecto a MySQL.
+              También ver qué diferencias hay entre usar un Sistema de Gestor de Base de Datos distinto a MySQL, tanto
+              al visualizar y crear tablas, funciones,
+              procedimientos, cursores, disparadores, etc… También veremos diferencias entre usar PHP con SQL Server
+              respecto a MySQL.</p>
+            <h3 id="motivaciones">1.3. Motivaciones</h3>
+            <p>Mis motivaciones en este proyecto es aprender cosas nuevas y he elegido Windows Server en modo Core
+              porque, se supone, que será el futuro de Windows Server,
+              no tendrá una GUI y me gustaría aprender PowerShell, si es de verdad un buen sistema de comandos y de
+              scripts, ya que está orientado a objetos,
+              muy diferente al modo comando del CMD, que se va a reemplazar por PowerShell.</p>
+            <p>Respecto a SQL Server por que ofrece algunas cosas útiles que llevan otro gestor de base de datos y ver
+              si es más fácil aprender con SQL Server que con MySQL.
+              También por dejar de lado, de momento, usar software libre para aprender cosas y en entornos empresariales
+              de trabajo usan software comercial
+              que software libre.</p>
+            <h3 id="planificacion">2. Planificación</h3>
+            <p>La planificación del proyecto consistirá en un servidor con Windows Server 2016 sin GUI que contendrá
+              unos servicios de DNS, Active Directory,
+              IIS (servicio web) y SQL Server 2016 (servidor de base de datos).</p>
+            <p>Después estarán tres clientes Windows 10, que iniciarán con sus usuarios de Active Directory y podrán
+              utilizar la herramienta SQLCMD para conectarse con SQL Server.</p>
+            <p>En la base de datos de SQL Server contendrá solamente una base de datos. Se trata de una inmobiliaria.
+            </p>
+            <p>Se trata del proyecto de IAW de PHP que hice anteriormente. Aquí mostraré el uso de PHP para que se
+              conecte a SQL Server y mostrar, actualizar, crear y
+              borrar datos de la base de datos de SQL Server y ver cuantas diferencias hay entre MySQL. También
+              contendrá funciones, procedimientos, cursores…
+              creados anteriormente en el proyecto ASGBD y ver las diferencias.</p>
+            <h3 id="requisitos">3. Requisitos previos</h3>
+            <p>Los requisitos previos que debemos tener es el disco de instalación de Windows Server 2016 y el disco de
+              instalación de SQL Server 2016 para el servidor,
+              el disco de instalación de Windows 10 Pro para los clientes, in contar que se realizará en máquinas
+              virtuales VMware.</p>
+            <h3 id="plan_contenido">4. Plan del contenido</h3>
+            <p>Instalar Windows Server 2016 Standard sin entorno gráfico e instalar servicios básicos, como Active
+              Directory, DNS, Servicio Web, etc…</p>
+            <h3 id="diagrama_base_datos">5. Diagrama de la base de datos</h3>
+            <p>Aquí está reflejado el dibujo de la base de datos y su modelo relacional. Se explicará más delante de que
+              consiste la base de datos.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/diagram-db.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diagrama de la base de datos">
+            <h3 id="servidor_windows_server_2016">6. Servidor Windows Server 2016</h3>
+            <p>Dicho antes, el servidor será Windows sin entorno gráfico, administrado con la consola de comandos CMD y
+              con PowerShell. Se verá la instalación,
+              la configuración dada para este servidor y la configuración de las copias de seguridad.</p>
+            <h3 id="instalacion_windows_server_2016">6.1. Instalación de Windows Server 2016</h3>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-install1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de Windows Server 2016">
+            <p>Seleccionamos el Idioma español y método de teclado de entrado en español.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-install2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de Windows Server 2016">
+            <p>Seleccionamos la opción Windows Server 2016 Standard, que es la opción sin entorno de escritorio. No
+              necesitamos el Datacenter ya que no vamos a virtualizar nada en este proyecto.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-install3.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de Windows Server 2016">
+            <p>Creamos una partición solamente para el sistema operativo. Después les agregaremos discos para temas de
+              copia de seguridad.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-install4.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de Windows Server 2016">
+            <p>Una vez instalado el sistema, se reiniciará y veremos una ventana tipo cmd. Nos pedirá agregar una
+              contraseña al usuario Administrador, le damos en Aceptar.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-install5.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de Windows Server 2016">
+            <p>Y tenemos el Windows Server 2016 Core iniciado. Siempre se iniciará con una ventana de cmd.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-install6.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de Windows Server 2016">
+            <p>Para iniciar Windows PowerShell podemos iniciar de tres formas diferentes.</p>
+            <ul>
+              <li>Escribiendo powershell dentro del cmd para iniciar PowerShell dentro de la misma consola cmd.</li>
+              <li>Escribiendo start powershell dentro del cmd para iniciar PowerShell en una ventana nueva.</li>
+              <li>Abriendo el Administrador de tareas con Ctrl + Shift + Esc. Archivo  Nueva Tarea y escribir
+                powershell.</li>
+            </ul>
+            <h3 id="configuracion_windows_server_2016">6.2. Configuración de Windows Server 2016</h3>
+            <p><strong>Creación de un Minshell para Windows server 2016 Core (Opcional).</strong></p>
+            <p>Una de las cosas que tenía Windows Server 2012 R2 era que podías abrir el explorador de archivos, el
+              Internet Explorer y el Administrador del servidor
+              estando en modo Core. Ahora esto se ha eliminado, cosa que no han gustado a algunos administradores de
+              sistemas, crearé yo mismo mi propio Minshell.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Nos desplazamos a la raíz de C: y creamos una Carpeta llamada Apps. Creamos una carpeta llamada terminal
+              Server que guardará la aplicación de escritorio remoto.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Vamos a montar un disco que tiene Windows Server 2016 con entorno gráfico en nuestro Windows Server Core.
+              Para ello usamos <strong>diskpart</strong>.
+              Listamos los discos con <strong>list disk</strong> y listamos los volúmenes con <strong>list
+                volume</strong>. Vemos que se ha montado automáticamente la partición E: con 100 GB.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config3.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Salimos del <strong>diskpart</strong> y nos movemos a la unidad de disco E:\Windows\system32. Copiamos la
+              aplicación <strong>mstsc.exe</strong> a la unidad C:
+              Para hacerlo funcionar necesitamos más archivos. Usamos el comando <strong>robocopy</strong> para copiar
+              más archivos a una partición diferente.
+              Copiamos los archivos que indican en la imagen.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config4.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Ahora dentro de la carpeta <strong>Terminal Server</strong> creamos la carpeta <strong>es-ES</strong> y
+              nos movemos en ella. Ahora nos movemos a la carpeta
+              E:\Windows\SysWOW64\es-ES.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config5.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Usamos otra vez el comando robocopy para copiar los últimos archivos.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config6.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Probamos que la aplicación <strong>mstsc</strong> que la conexión a Escritorio remoto abre correctamente.
+            </p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/mozilla-firefox-install1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de Mozilla Firefox">
+            <p>Ahora procedemos a instalar Mozilla Firefox. ¿Funcionará?</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/mozilla-firefox-install2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de Mozilla Firefox">
+            <p>Vemos que sí</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/freecomander-install1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de FreeCommander">
+            <p>Vamos a descargarnos el programa FreeComander desde la página <a href="www.freecommander.com"
+                class="rog-text-color">www.freecommander.com</a>. Nos descargamos la versión Portable.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/freecomander-install2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de FreeCommander">
+            <p>Cuando ejecutemos el instalador, al darle a examinar no se podrá ver las carpetas, tendremos que poner la
+              ruta nosotros mismos a mano.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/freecomander-install3.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de FreeCommander">
+            <p>Cuando se haya instalado, vemos que al ejecutar el programa tendremos un explorador de archivos con
+              bastantes funciones.</p>
+            <p><strong>Configuración inicial de Windows Server 2016</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config6.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Vamos a cambiar el nombre del equipo al servidor. Para ello hay un comando/script llamado
+              <strong>sconfig</strong>. Cuando lo ejecutemos saldrá bastantes
+              opciones de configuración. Para cambiar el nombre, elegimos la opción 2 y después el nombre del equipo que
+              queremos. Nos pedirá reiniciar para cambiar el
+              nombre del equipo.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config7.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Cuando se reinicie, vamos al <strong>sconfig</strong> otra vez y habilitamos el acceso remoto al
+              servidor. Elegimos la opción 7 y después la opción 1,
+              para que se usen solamente el programa <strong>mstsc.exe</strong> al conectarse al servidor remotamente y
+              no con herramientas de terceros.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config8.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Vamos a configurar la tarjeta de red. Elegimos la opción 8. Saldrá las tarjetas de red que tenemos
+              habilitadas. Elegimos la 1 ya que no hay más.
+              Después nos saldrá la información de esa tarjeta de red, como la dirección IP, la máscara de subred, el
+              DNS… Seleccionamos la opción 1 que es de establecer
+              una dirección IP y luego la opción e para asignar una dirección IP estática.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config9.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Después le damos la opción 2 para poner la dirección DNS primario igual a nuestra dirección IP, ya que
+              este servidor tendrá DNS.</p>
+            <p><strong>Configuración de Windows Update</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config10.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Elegimos la opcion 5 para configurar Windows Update. Podemos ponerlo en automáticas, solo descarga o
+              manual.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config11.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Si de alguna manera la tenemos en Manual, para descargar e instalar las actualizaciones de Windows,
+              elegimos la opción 6. Saldrá una ventana.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config12.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Seleccionamos la opción <strong>r</strong>, solamente las recomendadas y cuando termine de buscar
+              actualizaciones seleccionamos la opción <strong>a</strong>
+              para instalar todas las actualizaciones. Si seleccionamos la opción a para buscar todas las
+              actualizaciones, buscará también actualizaciones para otros
+              productos de Microsoft y drivers para el servidor.</p>
+            <p><strong>Instalación y configuración de Active Directory y DNS.</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config13.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>En PowerShell usamos el comando <strong>Get-WindowsFeature</strong> para instalar servicios y
+              características de Windows Server 2016. Queremos instalar
+              los Servicios de dominio de Active Directory (Ad-Domain-Services) y DNS (DNS).</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config14.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Para instalarlos debemos usar el comando <strong>Install-WindowsFeature</strong> [Name] y opcional, pero
+              recomendable, los parámetros
+              <strong>-IncludeManagementTools</strong> (para incluir las herramientas de administración de ese servicio)
+              y <strong>-IncludeAllSubFeature</strong> (para
+              incluir todas las características asociadas de ese servicio que vamos a instalar).
+            </p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config15.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Importamos el módulo de configuración para configurar el servicio de Active Directory
+              <strong>(Import-Module ADDSDeployment)</strong>. Es aconsejable poner todo lo que pone en este comando.
+            </p>
+            <p class="text-center"><strong>Install-ADDSForest</strong></p>
+            <p><strong>-CreateDnsDelegation</strong> <i class="bi bi-arrow-right"></i> valor <strong>$true</strong> para
+              que cree una zona DNS de delegación para
+              Active Directory o <strong>$false</strong> para que no cree una zona de delegación para Active Directory.
+            </p>
+            <p><strong>-DatabasePath</strong> <i class="bi bi-arrow-right"></i> “C:\Windows\NTDS”. Es aconsejable poner
+              la ruta por defecto.</p>
+            <p><strong>-DomainMode</strong> <i class="bi bi-arrow-right"></i> “Win2012R2”. Los valores pueden ser los
+              siguientes:</p>
+            <ul>
+              <li><strong>Win2003</strong> o <strong>2</strong>. Modo de Active Directory para compatibilidad desde
+                Windows XP o superior.</li>
+              <li><strong>Win2008</strong> o <strong>3</strong>. Modo de Active Directory para compatibilidad desde
+                Windows Vista o superior.</li>
+              <li><strong>Win2008R2</strong> o <strong>4</strong>. Modo de Active Directory para compatibilidad desde
+                Windows 7 o superior.</li>
+              <li><strong>Win2012</strong> o <strong>5</strong>. Modo de Active Directory para compatibilidad desde
+                Windows 8 o superior.</li>
+              <li><strong>Win2012R2</strong> o <strong>6</strong>. Modo de Active Directory para compatibilidad desde
+                Windows 8.1 o superior.</li>
+              <li><strong>Win2016</strong> o <strong>7</strong>. Modo de Active Directory para compatibilidad desde
+                Windows 10 o superior.</li>
+            </ul>
+            <p><strong>-DomainName</strong> <i class="bi bi-arrow-right"></i> “sql_raul.local”. Nombre del dominio que
+              queremos.</p>
+            <p><strong>-DomainNetBiosName</strong> -> “SQL_RAUL”. Nombre de NetBIOS.</p>
+            <p><strong>-ForestMode</strong> -> “Wn2012R2”. Los valores pueden ser los siguientes:</p>
+            <ul>
+              <li><strong>Win2003</strong> o <strong>2</strong>. Modo de Active Directory para compatibilidad desde
+                Windows XP o superior.</li>
+              <li><strong>Win2008</strong> o <strong>3</strong>. Modo de Active Directory para compatibilidad desde
+                Windows Vista o superior.</li>
+              <li><strong>Win2008R2</strong> o <strong>4</strong>. Modo de Active Directory para compatibilidad desde
+                Windows 7 o superior.</li>
+              <li><strong>Win2012</strong> o <strong>5</strong>. Modo de Active Directory para compatibilidad desde
+                Windows 8 o superior.</li>
+              <li><strong>Win2012R2</strong> o <strong>6</strong>. Modo de Active Directory para compatibilidad desde
+                Windows 8.1 o superior.</li>
+              <li><strong>Win2016</strong> o <strong>7</strong>. Modo de Active Directory para compatibilidad desde
+                Windows 10 o superior.</li>
+            </ul>
+            <p class="text-center text-danger"><strong>ATENCIÓN</strong></p>
+            <p class="text-danger">Si por ejemplo el <strong>ForestMode</strong> es Win2008R2,
+              <strong>DomainMode</strong> no puede tener un valor superior al <strong>ForestMode</strong>,
+              tendrá que ser igual o menor valor.</p>
+            <p><strong>-LogPath</strong> <i class="bi bi-arrow-right"></i> “C:\Windows\NTDS”. Es aconsejable poner la
+              ruta por defecto.</p>
+            <p><strong>-NoReebotOnCompletion</strong> <i class="bi bi-arrow-right"></i> <strong>$false</strong>.
+              <strong>$true</strong> para reiniciar el servidor al completar de configurar el servicio de Active
+              Directory. <strong>$false</strong> hará lo contrario, no reiniciarse al completar la configuración de
+              Active Directory.</p>
+            <p><strong>-SysvolPath</strong> <i class="bi bi-arrow-right"></i> “C:\Windows\SYSVOL”. Es aconsejable poner
+              la ruta por defecto.</p>
+            <p><strong>-Force</strong> <i class="bi bi-arrow-right"></i> <strong>$true</strong> fuerza para que se
+              complete la configuración, aunque haya advertencias
+              y errores, pero no si hay errores críticos durante se configura el servicio de Active Directory.
+              <strong>$false</strong> hará lo contrario, no completará la
+              configuración si hay errores, pero mostrará indicándole al usuario las advertencias que haya en la
+              configuración del servicio de Active Directory.</p>
+            <p>Terminado de explicarlo, ejecutamos el comando</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config16.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Ponemos la contraseña para el servicio de Active Directory.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config17.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Ha mostrado unas advertencias y luego ha dado un error. ¿Por qué ha sucedido esto? Si hemos instalado el
+              servidor DNS antes de configurar el servicio de
+              Active Directory, dará este error por qué no ha creado una zona principal para el dominio (seguramente la
+              zona inversa del dominio). Podemos hacer donde pone
+              <strong>-CreateDnsDelegation:$true</strong>, lo ponemos a $false para que no cree la delegación y la
+              crearemos a mano.
+            </p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config18.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Si no hemos instalado DNS antes de instalar los servicios de Active Directory, en el comando podemos
+              agregar el siguiente parámetro
+              <strong>-InstallDNS:$true</strong> para que instale el servidor DNS.
+            </p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config19.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Cuando se termine de instalar y configurar Active Directory, es recomendable reiniciar el servidor para
+              autenticarnos con el dominio del Active Directory.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config20.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>En los equipos Windows 10 que van a estar unidos, los unimos al Active Directory yendo a Panel de control
+              <i class="bi bi-arrow-right"></i> Sistema <i class="bi bi-arrow-right"></i> Cambiar configuración <i
+                class="bi bi-arrow-right"></i> Cambiar nombre. Cambiamos el nombre del equipo para identificarlo bien y
+              en dominio ponemos el nombre del dominio que hemos puesto. Pedirá el nombre del usuario que tenga permisos
+              de administrador de ese dominio y reiniciamos ese equipo con Windows 10 para iniciar sesión con los
+              usuarios del Active Directory.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config21.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Para ver si de verdad se ha unido podemos verlo desde el servidor DNS con el comando cmdlet
+              <strong>Get-DnsServerResourceRecord -ZoneName [Nombre del Dominio]</strong>.</p>
+            <p>Si queremos verlo desde Active Directory y con más información usamos el comando cmdlet
+              <strong>Get-ADComputer -Identity [Nombre del host]</strong>.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config22.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Para crear nuevos usuarios de Active Directory, usamos el comando cmdlet:</p>
+            <p class="text-center"><strong>New-ADUser</strong></p>
+            <p><strong>-Name</strong> <i class="bi bi-arrow-right"></i> “Raul”. Nombre del usuario.</p>
+            <p><strong>-Surname</strong> <i class="bi bi-arrow-right"></i> “Ortega”. Apellidos del usuario.</p>
+            <p><strong>-SamAccountName</strong> <i class="bi bi-arrow-right"></i> “ROG”. Nombre del usuario para iniciar
+              sesión.</p>
+            <p><strong>-DisplayName</strong> <i class="bi bi-arrow-right"></i> “Raul Ortega”. Nombre que saldrá como
+              nombre del usuario.</p>
+            <p><strong>-GivenName</strong> <i class="bi bi-arrow-right"></i> “Raul”. Que sea igual que el nombre real
+              del usuario.</p>
+            <p><strong>-UserPrincipalName</strong> <i class="bi bi-arrow-right"></i> “ROG”. Nombre principal del
+              usuario.</p>
+            <p>Una vez hecho esto, debemos ponerle una contraseña. Usamos el comando cmdlet
+              <strong>Set-ADAccountPasswrod [Nombre del usuario SamAccountName]</strong>.</p>
+            <p>Una vez puesta, debemos habilitar el usuario con el comando cmdlet <strong>Set-ADUser [Nombre del usuario
+                SamAccuntName] -Enabled $true</strong>.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config23.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Ingresamos con el usuario ROG si accede a un equipo unido al dominio.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config24.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Ingresamos con el usuario AEG si accede a un equipo unido al dominio.</p>
+            <p><strong>Instalación de IIS Server y Powershell Administration Web Server</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config25.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Instalamos IIS con el comando cmdlet <strong>Install-WindowsFeature Web-Server</strong>.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config26.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Instalamos PowershellWebAccess con el comando cmdlet <strong>Install-WindowsFeature
+                WindowsPowershellWebAccess</strong>, incluyendo los <strong>–IncludeManagementTools</strong> y
+              <strong>–IncludeAllSubFeature</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config27.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Instalamos un certificado de prueba, pues para entrar en PowerShell Web Access se necesita que esté
+              cifrado. Usamos el comando <strong>Install-PswaWebApplication –UseTestCertificate</strong>.</p>
+            <p>Creamos una regla para el usuario Administrador pueda acceder por la interfaz web de PowerShell.</p>
+            <p>Usamos el comando:</p>
+            <p class="text-center"><strong>Add-PswaAuthorizationRule</strong></p>
+            <p><strong>-UserName</strong> <i class="bi bi-arrow-right"></i> “sql_raul.local\Administrador” nombre de
+              usuario que permitimos el acceso a la interfaz web</p>
+            <p><strong>-ComputerName</strong> <i class="bi bi-arrow-right"></i> “SQLSERVER.sql_raul.local” nombre del
+              equipo al que podrá acceder el usuario por la interfaz web.</p>
+            <p><strong>-ConfigurationName</strong> <i class="bi bi-arrow-right"></i> Micrososft.PowerShell Esto no se
+              debe cambiar.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config28.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Ahora un paso importante. Debemos de acceder al registro bien por regedit.exe o por PowerShell. Accedemos
+              a la carpeta del registro
+              <strong>>HKEY_LOCAL_MACHINE (HLM:)</strong>. Vamos ahora a la ruta HKLM\SOFTWARE\Microsoft. Si no está la
+              carpeta WebManagement, la creamos. Dentro de la
+              carpeta WebManagement debe estar la carpeta Server, sino, la creamos. La ruta debe ser la siguiente:
+            </p>
+            <p class="text-center">HKLM:\SOFTWARE\Microsoft\WebManagement\Server</p>
+            <p>Dentro de esa ruta creamos una clave de registro con el comando cmdlet <strong>Set-ItemProperty</strong>
+              con el parámentro <strong>–Name</strong> y el nombre <strong>EnableRemoteManagement</strong> y el
+              parámetro <strong>–Value</strong> en <strong>1</strong>.</p>
+            <p>Indicamos la ruta que se guardará esa clave, la ruta dicha anteriormente.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config29.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Vamos a un cliente Windows 10 y podemos ir al servicio Windows PowerShell Web Access en la dirección URL
+              <strong>sqlserver/pswa</strong> si estamos en local.</p>
+            <p>Escribimos el nombre del usuario <strong>(sql_raul.local\Administrador)</strong>, la contraseña, tipo de
+              conexión (Nombre de equipo) y el nombre del equipo <strong>(SQLSERVER)</strong>.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-config30.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de Windows Server 2016">
+            <p>Iniciamos sesión y vemos que tenemos PowerShell a través del navegador Web.</p>
+            <h3 id="monitorizacion_windows_server_2016">6.3. Monitorización de Windows Server 2016</h3>
+            <p>La monitorización en Windows Server 2016 modo Core, podemos abrir el administrador de tareas con los
+              atajos del teclado Ctrl+Shift+Esc.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-monitoring1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Monitorización de Windows Server 2016">
+            <p>Podemos ver los procesos que más consumen en el servidor.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-monitoring2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Monitorización de Windows Server 2016">
+            <p>Desde la pestaña Servicios, podemos ver los servicios del sistema y de SQL Server. Si el proceso
+              MSSQLSERVER está detenido al iniciar, clic derecho y lo
+              iniciamos. Podemos para el proceso SQLTelemetry ya que sirve para telemetría.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-monitoring3.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Monitorización de Windows Server 2016">
+            <h3 id="servidor_sql_server_2016">7. Servidor SQL Server 2016</h3>
+            <h3 id="instalacion_sql_server_2016_y_configuracion_instalacion">7.1. Instalación de SQL Server 2016 y
+              configuración dentro de la instalación</h3>
+            <p>Antes de la instalación, he instalado SQL Server en modo gráfico para sacar el fichero de configuración
+              de instalación para el modo comando y tenerlo
+              configurado cuando se instale.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-2016-config1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de SQL Server 2016">
+            <p>Ejecutamos el <strong>setup.exe</strong> del CD de SQL Server 2016. Para ejecutarlo tendremos que
+              ejecutar el <strong>setup.exe</strong> con los parámetros
+              <strong>/QS</strong> <strong>/ConfigurationFile=”nombre del archivo de configuración de la
+                instalación”</strong> y
+              <strong>/IAcceptSQLServerLicenseTerms</strong> para aceptar los términos de licencia de SQL Server.
+            </p>
+            <p>El archivo de configuración contiene lo siguiente (pondré los más importantes):</p>
+            <ul>
+              <li><strong>ACTION=INSTALL</strong>. Especifica un flujo de trabajo de instalación, como
+                <strong>INSTALL</strong>, <strong>UNINSTALL</strong> o
+                <strong>UPGRADE</strong>. Es un parámetro necesario. <strong>INSTALL</strong> para instalar.
+              </li>
+              <li><strong>ENU="False"</strong>. Use el parámetro /ENU para instalar la versión en inglés de SQL Server
+                en el sistema operativo Windows traducido.
+                Ponemos False para instalarlo con el idioma que este puesto Windows.</li>
+              <li><strong>FEATURES=SQLENGINE,FULLTEXT,CONN</strong>. Especifica las características que se van a
+                instalar, desinstalar o actualizar. La lista de las
+                características de nivel superior incluye SQL, AS, RS, IS, MDS y Herramientas. La característica SQL
+                instalará el motor de base de datos, la replicación,
+                el texto completo y el servidor de Data Quality Services (DQS). La característica Herramientas instalará
+                los componentes compartidos. Solamente vamos a
+                necesitar <strong>SQLENGINE</strong> (motor de base de datos), <strong>FULLTEXT</strong> (Extracciones
+                de texto completo y semánticas de búsqueda) y
+                <strong>CONN</strong> (conectividad con herramientas de cliente).
+              </li>
+              <li><strong>INSTANCENAME="MSSQLSERVER"</strong>. Especifique una instancia predeterminada o con nombre.
+                MSSQLSERVER y SQLExpress son las instancias
+                predeterminadas de las ediciones que no son Express y de las Express, respectivamente. Se requiere este
+                parámetro al instalar el motor de base de datos
+                de SQL Server (SQL), Analysis Services (AS) o Reporting Services (RS). Por defecto es
+                <strong>MSSQLSERVER</strong>.</li>
+              <li><strong>INSTANCEID="MSSQLSERVER"</strong>. Especifique el identificador de instancia de las
+                características de SQL Server que ha indicado.
+                Las estructuras de directorios y del Registro, así como los nombres de los servicios SQL Server
+                incorporarán el identificador de instancia de SQL Server.
+                Por defecto tiene que ser igual que el parámetro <strong>INSTANCENAME</strong>.</li>
+              <li><strong>AGTSVCACCOUNT="NT Service\SQLSERVERAGENT"</strong>. Nombre de cuenta del Agente. Por defecto
+                <strong>NT Service\SQLSERVERAGENT</strong>.</li>
+              <li><strong>AGTSVCSTARTUPTYPE="Automatic"</strong>. Iniciar servicio automáticamente después de la
+                instalación. Ponemos en automático.</li>
+              <li><strong>SQLSVCSTARTUPTYPE="Automatic"</strong>. Tipo de inicio para el servicio SQL Server. Ponemos en
+                automático.</li>
+              <li><strong>SQLSVCACCOUNT="NT Service\MSSQLSERVER"</strong>. Cuenta para el servicio de SQL Server:
+                Dominio\Usuario o cuenta de sistema. Por defecto
+                usaremos uno del sistema <strong>NT Service\MSSQLSERVER</strong>.</li>
+              <li><strong>SQLSYSADMINACCOUNTS="SQL_RAUL\Administrador"</strong>. Cuentas de Windows que se suministran
+                como administradores del sistema de SQL Server.
+                La cuenta de usuario del Administrador del servidor.</li>
+              <li><strong>SECURITYMODE="SQL"</strong>. Autenticación de Windows predeterminada. Use "SQL" para el modo
+                mixto de autenticación de Windows.
+                Usamos <strong>SQL</strong> para habilitar el modo mixto.</li>
+              <li><strong>SAPWD="Inves-1234"</strong>. Contraseña para el usuario administrador de SQL (sa). Ponemos la
+                contraseña que contendrá el usuario sa de SQL Server.</li>
+              <li><strong>TCPENABLED="1"</strong>. Especifique 0 para deshabilitar el protocolo TCP/IP, o 1 para
+                habilitarlo. Usamos el 1 para habilitar TCP.</li>
+              <li><strong>BROWSERSVCSTARTUPTYPE="Automatic"</strong>. Tipo de inicio para el servicio SQL Server
+                Browser. Ponemos en automático.</li>
+            </ul>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-2016-config2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de SQL Server 2016">
+            <p>Vemos que se prepara para instalar. Tardará con las características puestas, unos 10 – 15 minutos,
+              dependiendo de la características del servidor y si
+              hemos puesto más características para SQL Server.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-2016-config3.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Configuración de SQL Server 2016">
+            <p>Una vez instalado usamos en comando sqlcmd para comprobar que funciona.</p>
+            <h3 id="codigo_base_datos">7.2. Código de base de datos</h3>
+            <p>Vamos a ver las diferencias entre SQL Server y MySQL de la base de datos de la inmobiliaria. La base de
+              datos de la inmobiliaria consiste en:</p>
+            <p>Que permita guardar los administradores que administran el sitio de la inmobiliaria, los empleados puedan
+              poner en venta o en alquiler los inmuebles y
+              los clientes puedan acceder a esa venta de inmuebles.</p>
+            <p>Lo inmuebles tiene distintos tipos: Casas, Pisos, Locales y Garajes. Los garajes pueden estar o no unidos
+              a las casas o pisos. Los garajes pueden estar
+              solos independientemente sin las casas y los pisos para ponerse en venta o alquiler. Los locales no pueden
+              tener garajes puestos (la inmobiliaria venden o
+              alquilan los locales con garaje propio). Los pisos se diferencian por dos atributos, planta y puerta de
+              ese piso.</p>
+            <p>Una inmobiliaria puede tener más de dos imágenes puestas en el mismo inmueble.</p>
+            <p>Los empleados serán los agentes de los alquileres de esos inmuebles y ellos contenderán cuantos pagos
+              recibe ese mismo alquiler.</p>
+            <p>Las compras guardaran el valor y la fecha cuando se creó ese inmueble en venta.</p>
+            <p>Dicho esto, veremos las diferencias del código entre SQL Server y MySQL.</p>
+            <p class="text-center"><strong>SQL Server</strong></p>
+            <p>Para ver las base de datos en SQL Server.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-view-dbs.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Ver bases de datos en SQL Server">
+            <p>Para ver las tablas de la inmobiliaria en SQL Server.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-view-tables.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Ver tablas en SQL Server">
+            <p class="text-center"><strong>MySQL</strong></p>
+            <p>Para ver las base de datos en MySQL.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/mysql-view-dbs.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Ver bases de datos en MySQL">
+            <p>Para ver las tablas de la inmobiliaria en MySQL.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/mysql-view-tables.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Ver tablas en MySQL">
+            <h3 id="tablas">7.2.1. Tablas</h3>
+            <p class="text-center"><strong>SQL Server</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-sql-server-tables1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Creación de tablas en SQL Server">
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-sql-server-tables2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Creación de tablas en SQL Server">
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-sql-server-tables3.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Creación de tablas en SQL Server">
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-sql-server-tables4.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Creación de tablas en SQL Server">
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-sql-server-tables5.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Creación de tablas en SQL Server">
+            <p class="text-center"><strong>MySQL</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-mysql-tables1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Creación de tablas en MySQL">
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-mysql-tables2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Creación de tablas en MySQL">
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-mysql-tables3.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Creación de tablas en MySQL">
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-mysql-tables4.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Creación de tablas en MySQL">
+            <p>Para que los IDs se autoincrementen, se usa la función IDENTITY(1,1) el primer valor debe ser 1, para que
+              empiece por el 1 y el segundo valor lo que se va a incrementar, si es 1 pues sería 1,2,3,4… si es 2 pues
+              1,3,5,7,9…
+              En SQL Server no se puede poner un ancho de columna para los valores INT, en MySQL sí.</p>
+            <h3 id="usuarios">7.2.2. Usuarios</h3>
+            <p class="text-center"><strong>SQL Server</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-sql-server-users.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Creación de usuarios de SQL Server">
+            <p class="text-center"><strong>MySQL</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-mysql-users.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Creación de usuarios de MySQL">
+            <p>Para crear usuarios, se utiliza el CREATE LOGIN “nombre usuario” y si queremos añadir contraseña ponemos
+              a continuación WITH PASSWORD = “contraseña”.</p>
+            <p>En MySQL se pude utilizar CREATE USER para crear un usuario o con el propio GRANT puede crear el usuario
+              si ponemos después IDENTIFIED BY “contraseña” para añadirle la contraseña.</p>
+            <h3 id="procedimientos">7.2.3. Procedimientos</h3>
+            <p class="text-center"><strong>SQL Server</strong></p>
+            <p>Procedimiento impuesto_pago</p>
+            <img
+              src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-sql-server-procedures1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Procedimientos en SQL Server">
+            <p>Procedimiento impuesto_compra</p>
+            <img
+              src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-sql-server-procedures2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Procedimientos en SQL Server">
+            <p class="text-center"><strong>MySQL</strong></p>
+            <p>rocedimiento impuesto_pago</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-mysql-procedures1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Procedimientos en MySQL">
+            <p>Procedimiento impuesto_compra</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-mysql-procedures2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Procedimientos en MySQL">
+            <h3 id="funciones">7.2.4. Funciones</h3>
+            <p class="text-center"><strong>SQL Server</strong></p>
+            <p>Función sumatodopagos</p>
+            <img
+              src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-sql-server-functions1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Funciones en SQL Server">
+            <p>Función sumatodocompras</p>
+            <img
+              src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-sql-server-functions2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Funciones en SQL Server">
+            <p>Función sumatodo</p>
+            <img
+              src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-sql-server-functions3.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Funciones en SQL Server">
+            <p class="text-center"><strong>MySQL</strong></p>
+            <p>Función sumatodopagos</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-mysql-functions1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Funciones en MySQL">
+            <p>Función sumatodocompras</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-mysql-functions2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Funciones en MySQL">
+            <p>Función sumatodo</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-mysql-functions3.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Funciones en MySQL">
+            <h3 id="cursores">7.2.5. Cursores</h3>
+            <p class="text-center"><strong>SQL Server</strong></p>
+            <p>Cursor para ver el alquiler que más paga en casas</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-sql-server-cursors1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Cursores en SQL Server">
+            <p>Cursor para ver el alquiler que más paga en pisos</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-sql-server-cursors2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Cursores en SQL Server">
+            <p>Cursor para ver el alquiler que más paga en locales</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-sql-server-cursors3.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Cursores en SQL Server">
+            <p>Cursor para ver el alquiler que más paga en garajes</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-sql-server-cursors4.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Cursores en SQL Server">
+            <p class="text-center"><strong>MySQL</strong></p>
+            <p>Cursor para ver el alquiler que más paga en casas</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-mysql-cursors1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Cursores en MySQL">
+            <p>Cursor para ver el alquiler que más paga en pisos</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-mysql-cursors2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Cursores en MySQL">
+            <p>Cursor para ver el alquiler que más paga en locales</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-mysql-cursors3.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Cursores en MySQL">
+            <p>Cursor para ver el alquiler que más paga en garajes</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-db-mysql-cursors4.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Cursores en MySQL">
+            <h3 id="php_sql_server">7.3. PHP en SQL Server</h3>
+            <p>Como primer paso, vamos a explicar de qué va la página web para la inmobiliaria, después veremos cómo
+              instalar la versión PHP 7 en Windows Server 2016 con
+              IIS 10.0 y el Driver PHP para SQL Server y por último las diferencias entre SQL Server y MySQL con PHP.
+            </p>
+            <p><strong>Explicación de la página web.</strong></p>
+            <p>La página index es esta de aquí.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-index-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página principal de InmoAzteca">
+            <p>Tiene Inicio que va a la página de inicio (index.php), Inicia sesión (iniciar_sesion.php) para iniciar
+              sesión con los usuarios de administración, empleados y
+              clientes y Registrate (registro.php) para que un cliente se registre en la página. Vamos a ver la página
+              de registro.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-signup-page1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Registro en InmoAzteca">
+            <p>En este registro, estos datos se guardarán en la tabla clientes. El registro se valida con Javascript.
+            </p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-signup-page2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Registro en InmoAzteca">
+            <p>Cuando se registre, puede iniciar sesión.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-login-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Inicio de sesión en InmoAzteca">
+            <p>Se introduce el usuario y contraseña. Como está dentro de un &lt;form&gt; que method POST, cuando le
+              demos a iniciar sesión, comprobará el usuario en un
+              archivo llamado comprobarsesion.php</p>
+            <p>Como hay tres niveles de usuarios, que están separados en distintas tablas, comprobará el usuario y
+              contraseña introducidos en esas tres tablas.
+              Si el usuario y contraseña no sale ningún resultado de esas tres consultas como se muestra en el archivo,
+              mostrará que usuario y/o contraseña son incorrectos.</p>
+            <img
+              src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-user-or-pass-incorrect-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Usuario o contrasña incorrectos en InmoAzteca">
+            <p><strong>Sitio del administrador</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-admin-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              alt="Página principal del administrador de InmoAzteca">
+            <p>El administrador del sitio podrá:</p>
+            <ul>
+              <li>Empleados</li>
+              <ul>
+                <li>Ver empleados</li>
+                <li>Crear empleados</li>
+                <li>Modificar empleados</li>
+                <li>Borrar empleados</li>
+                <li>Cambiar contraseña a los empleados</li>
+              </ul>
+              <li>Clientes</li>
+              <ul>
+                <li>Ver clientes</li>
+                <li>Crear clientes</li>
+                <li>Modificar clientes</li>
+                <li>Borrar clientes</li>
+                <li>Cambiar contraseña a los clientes</li>
+              </ul>
+            </ul>
+            <p class="text-center">Ver empleados <strong>(empleados.php)</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-view-employees-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de ver empleados de InmoAzteca">
+            <p>Una página que muestra la tabla empleados.</p>
+            <p class="text-center">Crear empleados <strong>(crear_empleado.php)</strong></p>
+            <p>Un formulario para ingresar datos del nuevo empleado. El formulario es casi idéntico que al de registro
+              del cliente. Se valida con javascript e ingresa los
+              datos en la tabla empleados.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-create-employee-ok-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de empleado creado de InmoAzteca">
+            <p class="text-center">Modificar empleados <strong>(modificar_empleado.php)</strong></p>
+            <p>Selecciona el empleado y dar en modificar.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-update-employee-page1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              alt="Página de modificación de los empleados de InmoAzteca">
+            <p>Cambiamos los valores que queremos cambiar. El ID se muestra, pero no se puede editar. Damos en
+              modificar.</p>
+            <img
+              src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-update-employee-data-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              alt="Página de modificación de datos del empleado de InmoAzteca">
+            <p>El archivo mod_empleados.php es el encargado de actualizar el registro en la tabla empleados. Vemos que
+              lo ha modificado</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-update-employee-page2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              alt="Página de modificación de los empleados de InmoAzteca">
+            <p class="text-center">Borrar empleados <strong>(borrar_empleado.php)</strong></p>
+            <img
+              src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-delete-employee-data-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              alt="Página de eliminación de datos del empleado de InmoAzteca">
+            <p>Seleccionamos el empleado que queremos borrar. El archivo bor_emp.php es el encargado de borrar el
+              empleado seleccionado.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-delete-employee-success.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              alt="Página de eliminación de datos satisfactoriamente del empleado de InmoAzteca">
+            <p class="text-center">Cambiar contraseñas <strong>(cambiar_contra_empleado.php)</strong></p>
+            <img
+              src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-change-pass-employee-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              alt="Página de cambiar contraseña del empleado de InmoAzteca">
+            <p>Seleccionamos el empleado que queremos cambiar la contraseña e introducimos la nueva contraseña. El
+              archivo pass_emp.php es el encargado de cambiar la
+              contraseña del empleado.</p>
+            <p class="text-center">Cerrar sesión <strong>(cerrar_sesion.php)</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/close-session.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Fichero de cierre de sesión">
+            <p>Iniciamos session_start() y borramos las variables de sesión de administración y el de seguridad. Y lo
+              envío a la página principal.</p>
+            <p>Para clientes es lo mismo que los empleados, sigue el mismo metodo, pero los archivos .php son todos
+              terminados en cliente/s.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-files-pages.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Ficheros del sitio web de InmoAzteca">
+            <p><strong>Sitio del Empleado</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-employee-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página principal del empleado de InmoAzteca">
+            <p>En el sitio del empleado, podrá hacer:</p>
+            <ul>
+              <li>Casas</li>
+              <ul>
+                <li>Ver las casas</li>
+                <li>Crear casas</li>
+                <li>Modificar casas</li>
+                <li>Borrar casas</li>
+              </ul>
+              <li>Pisos</li>
+              <ul>
+                <li>Ver los pisos</li>
+                <li>Crear pisos</li>
+                <li>Modificar pisos</li>
+                <li>Borrar pisos</li>
+              </ul>
+              <li>Locales</li>
+              <ul>
+                <li>Ver los locales</li>
+                <li>Crear locales</li>
+                <li>Modificar locales</li>
+                <li>Borrar locales</li>
+              </ul>
+              <li>Garajes</li>
+              <ul>
+                <li>Ver los garajes</li>
+                <li>Crear garajes</li>
+                <li>Modificar garajes</li>
+                <li>Borrar garajes</li>
+              </ul>
+            </ul>
+            <p>Cuando una casa, piso, local o garaje, podrán hacer:</p>
+            <ul>
+              <li>Añadir imágenes a esos inmuebles.</li>
+              <li>Poner en venta el inmueble o poner en alquiler el inmueble.</li>
+              <li>Para los garajes, pueden ponerse en venta o alquiler, pero no se podrá poner en venta o en alquiler si
+                es un garaje para una casa o piso.</li>
+            </ul>
+            <p class="text-center">Ver inmuebles <strong>(casas.php, pisos.php, locales.php, garajes.php)</strong></p>
+            <p>Solamente es una tabla que muestra la primera imagen del inmueble y sus datos de la tabla casas, pisos,
+              locales, garajes.</p>
+            <p>Casas</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-houses-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de casas de InmoAzteca">
+            <p>Pisos</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-flats-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de pisos de InmoAzteca">
+            <p>Locales</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-locals-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de locales de InmoAzteca">
+            <p>Garajes</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-garages-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de garajes de InmoAzteca>
+              <p class=" text-center">Crear inmuebles <strong>(crear_casa.php, crear_piso.php, crear_local.php,
+              crear_garaje.php)</strong></p>
+            <p>Un formulario para introducir los datos del nuevo inmueble. Las casas, pisos, locales y garajes, pueden
+              tener diferentes tipos de datos.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-add-house-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de creación de casas de InmoAzteca">
+            <p>Cuando se introduce los datos, saldrá otro formulario para subir las imágenes del inmueble. Se da ha
+              enviar, dirá que el inmueble está creado y
+              pedirá si queremos ponerlo en venta o en alquiler.</p>
+            <p>Si queremos ponerlo en venta pondremos el valor del inmueble. Para alquileres se pondrá automáticamente
+              en alquiler.</p>
+            <p>Los archivos compra_*.php Son los encargados de poner en venta el inmueble.</p>
+            <p>Los archivos alquiler_*.php Son los encargados de poner en alquiler el inmueble.</p>
+            <p>Las subidas de imágenes lo hacen los archivos subir_imagen_*.php</p>
+            <p>Para garajes es distinto, tendremos en vez de dos opciones (En venta o alquiler) tendremos (En venta o
+              alquiler o unir el garaje a una casa o piso).
+              Los archivos que hacen eso son agregar_garaje_casa.php y agregar_garaje_piso.php.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-garage-created-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Páginade garaje creado de InmoAzteca">
+            <p class="text-center">Modificar inmuebles <strong>(modificar_casas.php, modificar_pisos.php,
+                modificar_locales.php, modificar_garajes.php)</strong></p>
+            <p>Hace la misma operación como el de modificar los empleados pero con los inmuebles.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-update-houses-page1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de modificación de casas de InmoAzteca">
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-update-houses-page2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Página de modificación de casas de InmoAzteca">
+            <p>Los archivos que hacen actualizar los datos de los inmuebles son mod_casa.php, mod_piso.php,
+              mod_local.php, mod_garaje.php.</p>
+            <p class="text-center">Borrar inmueble <strong>(borrar_casa.php, borrar_piso.php, borrar_local.php,
+                borrar_garaje.php)</strong></p>
+            <p>Estos archivos muestran los inmuebles y un boto de borrar. Se puede seleccionar más de uno para borrar.
+            </p>
+            <p>Cuando le demos a borrar, Se borrará ese inmueble. No pasa nada por las tablas azteca.compras_*,
+              azteca.alquiler_* y azteca.imagen_* ya que están unidas con
+              una clave foránea que se actualiza cuando se borra o se actualiza la tabla principal, haciendo que estas
+              se borren o se actualicen automáticamente.</p>
+            <p>Los archivos que borran los inmuebles son bc.php, bp.php, bl.php y bg.php.</p>
+            <p>Todos los archivos que lo hacen posible.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-employee-files-pages.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              alt="Ficheros del sitio web del empleado de InmoAzteca">
+            <p><strong>Sitio del cliente</strong></p>
+            <p>El cliente cuando inicie sesión, podrá ver las casas con garaje incluido en venta y en alquiler, casas
+              sin garaje incluido en venta y en alquiler,
+              pisos con garaje incluido en venta y en alquiler, pisos sin garaje incluido en venta y en alquiler,
+              locales en venta y en alquiler y garajes en
+              venta y en alquiler.</p>
+            <p>Archivos que lo hacen posible.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-client-files-pages.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              alt="Ficheros del sitio web del cliente de InmoAzteca">
+            <p>Ejemplos:</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-house-example-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Ejemplo de página de una casa de InmoAzteca">
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-flat-example-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Ejemplo de página de un piso de InmoAzteca">
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-garage-example-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Ejemplo de página de un garaje de InmoAzteca">
+            <p>En la carpeta js, se guardar los javascripts de las validaciones de los formularios.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-js-files-pages.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Ficheros JavaScript de InmoAzteca">
+            <p>En la carpeta conexión, se encuentra el fichero conexión.php que hace conectarse a la base de datos. En
+              la carpeta css se guardan los estilos de la
+              página de Azteca.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/inmoazteca-css-file-page.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Ficheros CSS de InmoAzteca">
+            <p><strong>Instalación de PHP 7 en Windows Server 2016 y el driver PHP para SQL Server</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-php1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de PHP7 en Windows Server 2016">
+            <p>Instalamos el componente CGI, es necesario para que PHP funcione en IIS.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-php2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de PHP7 en Windows Server 2016">
+            <p>Descargamos la herramienta Instalador de plataforma web 5.0
+              <a href="https://www.microsoft.com/web/downloads/platform.aspx"
+                class="rog-text-color">https://www.microsoft.com/web/downloads/platform.aspx</a> para descargar el
+              PHP 7.0.15 (x64). Importante que sea 64 bits porque SQL Server está solamente en 64 bits.
+            </p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-php3.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de PHP7 en Windows Server 2016">
+            <p>Si falla la instalación de PHP 7.0.15 sin IIS Express, instalar el de IIS Express. Descargamos el Driver
+              de PHP para SQL Server
+              <a href="https://www.microsoft.com/en-us/download/details.aspx?id=20098"
+                class="rog-text-color">https://www.microsoft.com/en-us/download/details.aspx?id=20098</a>.
+              Descargamos el SQLSRV40.EXE para PHP 7.
+            </p>
+            <p>Necesitaremos solo estos dos archivos.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-php4.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de PHP7 en Windows Server 2016">
+            <p>Lo dejamos en la carpeta php/extensions que estará en la carpeta C:\Archivos de Programa\IIS express y
+              editamos el archivo php.ini.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-php5.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de PHP7 en Windows Server 2016">
+            <p>Añadimos los .dll de los drivers PHP para SQL Server. Probamos con nuestra página web de Azteca, ya que
+              esta en .php, para ver si se muestra correctamente.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-php6.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Instalación de PHP7 en Windows Server 2016">
+            <p><strong>Diferencias de código entre SQL Server y MySQL en PHP</strong></p>
+            <p>En este documento pondré las que más se diferencias, hay procedimientos iguales como en otros archivos.
+            </p>
+            <p class="text-center">Vamos a empezar por la conexión con la base de datos. El archivo es
+              <strong>conexion/conexión.php</strong></p>
+            <p class="text-center"><strong>SQL Server</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-php1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en SQL Server">
+            <p class="text-center"><strong>MySQL</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/mysql-php1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en MySQL">
+            <p class="text-center">Registro del cliente <strong>(registro.php)</strong></p>
+            <p class="text-center"><strong>SQL Server</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-php2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en SQL Server">
+            <p class="text-center"><strong>MySQL</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/mysql-php2.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en MySQL">
+            <p>No cambia mucho, solamente en vez de ser mysqli_query es sqlsrv_query. Pero en la consulta para cifrar la
+              contraseña que nos pasa por el formulario,
+              en MySQL usamos la función MD5(). En SQL Server debemos de usar la función HASHBYTES(‘MD5’, “la contraseña
+              que pasemos por el $_POST”), pero debemos de
+              convertirlo, porque si lo usamos así, se verá esto.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-insert-error.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Error de inserción en SQL Server">
+            <p>Usamos la función CONVERT() para sacar el HASH de MD5. Saldrá así.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-insert-result.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Solución de inserción en SQL Server">
+            <p class="text-center">Comprobar la sesión de los usuarios <strong>(comprobarsesion.php)</strong></p>
+            <p class="text-center"><strong>SQL Server</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-php3.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en SQL Server">
+            <p class="text-center"><strong>MySQL</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/mysql-php3.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en MySQL">
+            <p>Primer cambio realizado e importante. Si en sqlsrv_query, no ponemos las opciones $param=array(),
+              $options=array(“Scrollable” => “static”) saldrá un error
+              en el ODBC de SQL Server (para ver los errores de sqlsrv, debemos poner print_r(sqlsrv_errors())). Este es
+              el error.</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-scrollable-error.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Error Scrollable en SQL Server">
+            <p>Podemos poner el Scrollable en “static”, “keyset” o en “buffered”.</p>
+            <p>En mysqli_num_rows se cambia por sqlsrv_num_rows.</p>
+            <p>En mysqli puede funcionar con usar PDO, pero en sqlsrv no. Usamos sqlsrv para todo.</p>
+            <p>Los mysqli_fecth_array y mysqli_fecth_assoc, el primero es el por defecto del fetch y el otro es para
+              decir que los array son asociativos.
+              Para sqlsrv se debe usar la función sqlsrv_fetch_array y después de la consulta realizada, escribimos
+              SQLSRV_FETCH_ASSOC para decir que es un array
+              asociativo, SQLSRV_FETCH_NUMERIC que es un array numérico o SQLSRV_FETCH_BOTH (por defecto). También la
+              función sqlsrv_fetch_array se puede definir más cosas.</p>
+            <p><strong>Sitio de la administración. Los empleados y clientes tienen los mismos cambios pero con diferente
+                tabla.</strong></p>
+            <p class="text-center"><strong>Empleados – Clientes</strong></p>
+            <p class="text-center"><strong>SQL Server</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-php4.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en SQL Server">
+            <p class="text-center"><strong>MySQL</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/mysql-php4.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en MySQL">
+            <p class="text-center"><strong>Borrar empleados – Borras clientes</strong></p>
+            <p class="text-center"><strong>SQL Server</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-php5.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en SQL Server">
+            <p class="text-center"><strong>MySQL</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/mysql-php5.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en MySQL">
+            <p><strong>Sitio del empleado – Las casas, pisos, locales y garajes con exactamente igual, pero puede
+                diferenciar por tener más valores en unas tablas que otras.</strong></p>
+            <p class="text-center"><strong>Casas - Pisos – Locales – Garajes</strong></p>
+            <p class="text-center"><strong>SQL Server</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-php6.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en SQL Server">
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-php6-1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en SQL Server">
+            <p class="text-center"><strong>MySQL</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/mysql-php6.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en MySQL">
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/mysql-php6-1.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en MySQL">
+            <p class="text-center"><strong>Compras casas – pisos – locales – garajes</strong></p>
+            <p class="text-center"><strong>SQL Server</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-php7.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en SQL Server">
+            <p class="text-center"><strong>MySQL</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/mysql-php7.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en MySQL">
+            <p class="text-center"><strong>Alquiler casas – pisos – locales – garajes</strong></p>
+            <p class="text-center"><strong>SQL Server</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-php8.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en SQL Server">
+            <p class="text-center"><strong>MySQL</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/mysql-php8.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Diferencia de código PHP en MySQL">
+            <h3 id="copias_seguridad_sql_server_2016">7.4. Copias de seguridad de SQL Server 2016</h3>
+            <p class="text-center"><strong>Por Transact-SQL</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-backup-transactsql.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              alt="Copia de seguridad de la base de datos en TransactSQL">
+            <p>Se usa el BACKUP DATABASE “nombre de la base de datos” y luego la ruta que se guardará la copia de
+              seguridad. La copia de seguridad tiene que
+              ser con la extensión .bak</p>
+            <p class="text-center"><strong>Por PowerShell</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-backup-powershell.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              alt="Copia de seguridad de la base de datos en Powershell">
+            <p>Con PowerShell se usa el comando cmdlet Backup-SqlDatabase –ServerInstance “Servidor y el nombre de la
+              instancia” –Database “nombre de la base de datos”
+              –BackupAction como quiero guardar la base de datos entera, poenmos Database</p>
+            <p class="text-center"><strong>Mediante un cursor almacenado</strong></p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-backup-cursor.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              alt="Copia de seguridad de la base de datos con cursores en SQL Server">
+            <p>Con este curso lo que se hace que puedas hacer copias de más de una base de datos. Podemos inluir la que
+              queramos, como en la imagen puesta,
+              se hará una copia del master e inmobiliaria pero no la base de datos model, msdb y tempdb.</p>
+            <p>La copias se guardará con el nombre EJ: inmobiliaria_20170613.bak</p>
+            <h3 id="posibles_actualizaciones">8. Posibles actualizaciones</h3>
+            <p>Introducción a SQL Server Management Studio. Este programa, que usar el núcleo de Visual Studio, es una
+              herramienta gráfica para administrar SQL Server 2016,
+              permitiendo comodidad al cambiar la configuración del servidor de base de datos, tanto el uso para diseñar
+              scripts SQL.</p>
+            <p>Servidor de replicación de SQL Server. Instalación del servicio de replicación en un servidor de
+              replicación SQL Server 2016 y comprobar su funcionamiento.</p>
+            <h3 id="costes">9. Costes</h3>
+            <p>Si solamente contamos el coste del software de SQL Server 2016, Windows Server 2016 Standard y Windows 10
+              Pro, este sería su precio.</p>
+            <p>SQL Server 2016 Standard Edition</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/sql-server-2016-standard.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Caja del producto SQL Server 2016 Standard">
+            <p class="text-end">4.124,00 €</p>
+            <p>Windows 10 Pro</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-10-pro.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3" alt="Caja del producto Windows 10 Pro">
+            <p class="text-end">279,00 €</p>
+            <p>Windows Server 2016 Standard – Licencia de acceso 10 clientes</p>
+            <img src="../../assets/img/proyects/backend/sql-server-2016-vs-mysql/windows-server-2016-standard.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              alt="Caja del producto Windows Server 2016 Standard">
+            <p class="text-end">1.790,00 €</p>
+            <p class="text-end"><strong>Total: 6.193,00 €</strong></p>
+            <h3 id="resumen_conclusiones">10. Resumen y conclusiones</h3>
+            <p>Mirando todo lo procesado, si es montar solamente un página web sencilla, elijo más MySQL por su rapidez,
+              pero si es una página web que tiene que cambiar
+              datos, como una página web que nos muestra todos los productos de una tienda, prefiero la gestión que nos
+              da SQL Server.</p>
+            <p>Los dos sistemas de gestores de base de datos están bastante bien, pero MySQL es más fácil de usar y es
+              mucho más rápido que SQL Server, pero SQL Server
+              gana que darte herramientas de administración de datos, una consola (Transact-SQL) mucho mejor que la
+              consola de MySQL. Te dice todos los errores que tienes
+              al ejecutar al crear una función por ejemplo, en MySQL cuando ve un error, corta la ejecución. En T-SQL
+              puedes ejecutar varias consultas a la vez, en MySQL no.</p>
+            <p>En MySQL gana en:</p>
+            <ul>
+              <li>Rapidez.</li>
+              <li>Sencillez.</li>
+              <li>Come pocos recursos del servidor.</li>
+            </ul>
+            <p>En SQL Server gana en:</p>
+            <ul>
+              <li>Herramientas administrativas mejores.</li>
+              <li>Permite ejecutar procedimientos o funciones creadas antes de almacenarlas.</li>
+            </ul>
+            <p>No es tan complicado en crear un cursor, función y procedimientos que en MySQL. Si alguien viene de
+              Visual Basic, no tendrá problemas en crear
+              funciones o procedimientos. Me gustan los dos, elegiría uno dependiendo de qué va a ser mejor.</p>
+            <h3 id="bibliografia_documentacion">11. Bibliografía y documentación</h3>
+            <p>Aquí tenéis toda la bibliografía sacada.</p>
+            <p>Documentación de SQL Server Transact-SQL: <a
+                href="https://msdn.microsoft.com/es-es/library/bb510741.aspx"
+                class="rog-text-color">https://msdn.microsoft.com/es-es/library/bb510741.aspx</a></p>
+            <p>Documentación de SQL Server para PHP: <a href="http://php.net/manual/es/book.sqlsrv.php"
+                class="rog-text-color">http://php.net/manual/es/book.sqlsrv.php</a> y <a
+                href="https://docs.microsoft.com/en-us/sql/connect/php/microsoft-php-driver-for-sql-server"></a>https://docs.microsoft.com/en-us/sql/connect/php/microsoft-php-driver-for-sql-server
+            </p>
+            <p>Documentación de Windows PowerShell para Windows Server: <a
+                href="https://technet.microsoft.com/es-es/itpro/powershell/windows/index"
+                class="rog-text-color">https://technet.microsoft.com/es-es/itpro/powershell/windows/index</a></p>
+            <p>Gracias a la comunidad de StackOverflow: <a href="https://stackoverflow.com/"
+                class="rog-text-color"></a>https://stackoverflow.com/</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="h-100 p-5 rog-text-color rog-bg-default rounded-3">
+            <h2 class="rog-font-title text-center">ÍNDICE</h2>
+            <ol class="fs-5">
+              <li><a class="rog-text-color" href="#introduccion">Introducción</a></li>
+              <ol>
+                <li><a class="rog-text-color" href="#presentacion">Presentación</a></li>
+                <li><a class="rog-text-color" href="#objetivos">Objetivos</a></li>
+                <li><a class="rog-text-color" href="#motivaciones">Motivaciones</a></li>
+              </ol>
+              <li><a class="rog-text-color" href="#planificacion">Planificación</a></li>
+              <li><a class="rog-text-color" href="#requisitos">Requisitos previos</a></li>
+              <li><a class="rog-text-color" href="#plan_contenido">Plan del contenido</a></li>
+              <li><a class="rog-text-color" href="#diagrama_base_datos">Diagrama de la base de datos</a></li>
+              <li><a class="rog-text-color" href="#servidor_windows_server_2016">Servidor Windows Server 2016</a></li>
+              <ol>
+                <li><a class="rog-text-color" href="#instalacion_windows_server_2016">Instalación de Windows Server
+                    2016</a></li>
+                <li><a class="rog-text-color" href="#configuracion_windows_server_2016">Configuración de Windows Server
+                    2016</a></li>
+                <li><a class="rog-text-color" href="#monitorizacion_windows_server_2016">Monitorización de Windows
+                    Server 2016</a></li>
+              </ol>
+              <li><a class="rog-text-color" href="#servidor_sql_server_2016">Servidor SQL Server 2016</a></li>
+              <ol>
+                <li><a class="rog-text-color"
+                    href="#instalacion_sql_server_2016_y_configuracion_instalacion">Instalación de SQL Server 2016 y
+                    configuración dentro de la instalación</a></li>
+                <li><a class="rog-text-color" href="#codigo_base_datos">Código de base de datos</a></li>
+                <ol>
+                  <li><a class="rog-text-color" href="#tablas">Tablas</a></li>
+                  <li><a class="rog-text-color" href="#usuarios">Usuarios</a></li>
+                  <li><a class="rog-text-color" href="#procedimientos">Procedimientos</a></li>
+                  <li><a class="rog-text-color" href="#funciones">Funciones</a></li>
+                  <li><a class="rog-text-color" href="#cursores">Cursores</a></li>
+                </ol>
+                <li><a class="rog-text-color" href="#php_sql_server">PHP en SQL Server</a></li>
+                <li><a class="rog-text-color" href="#copias_seguridad_sql_server_2016">Copias de seguridad de SQL Server
+                    2016</a></li>
+              </ol>
+              <li><a class="rog-text-color" href="#posibles_actualizaciones">Posibles actualizaciones</a></li>
+              <li><a class="rog-text-color" href="#costes">Costes</a></li>
+              <li><a class="rog-text-color" href="#resumen_conclusiones">Resumen y conclusiones</a></li>
+              <li><a class="rog-text-color" href="#bibliografia_documentacion">Bibliografía y documentación</a></li>
+            </ol>
+            <div class="d-grid mx-auto">
+              <button class="btn rog-btn-github btn-lg btn-block rog-font-default" type="button"
+                onclick="window.open('https://github.com/r-ortegag/funwithflags', '_blank');"><i
+                  class="bi bi-github"></i> Ver proyecto en GitHub</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer container-fluid text-center bg-dark text-white rounded-3">
+      <div class="container pt-3">
+        <section class="mb-4">
+          <a class="text-light fs-3 me-3" href="https://www.linkedin.com/in/raul-ortega-gallego/" role="button"
+            target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a class="text-light fs-3" href="https://twitter.com/r_ortegag" role="button" target="_blank"><i
+              class="bi bi-twitter"></i></a>
+          <a class="text-light fs-3 ms-3" href="https://github.com/r-ortegag" role="button" target="_blank"><i
+              class="bi bi-github"></i></a>
+        </section>
+      </div>
+      <div class="text-center text-light pb-3">
+        &copy; 2021 Copyright
+        <a class="text-light" href="https://rortegag.com">rortegag.com</a>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../../js/enhance.js"></script>
+</body>
+
+</html>
