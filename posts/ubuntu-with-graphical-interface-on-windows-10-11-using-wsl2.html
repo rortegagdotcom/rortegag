@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="rortegag" />
+    <meta
+      name="description"
+      content="En esta página enseño la instalación de Ubuntu 20.04 LTS haciendo uso de una interfáz gráfica en Windows 10 u 11."
+    />
+    <meta
+      name="keywords"
+      content="rortegag, Raul Ortega, ubuntu, ubuntu 20.04 LTS, WSL, WSL2, interfáz gráfica, instalación, instalación wsl, instalación wsl2, windows 10, windows 11, wsl en windows 10, wsl en windows 11, wsl2 en windows 10, wsl2 en windows 11"
+    />
+    <meta name="application-name" content="rortegag.com" />
+    <meta name="apple-mobile-web-app-title" content="rortegag.com" />
+    <meta name="theme-color" content="#efefef" />
+    <meta name="msapplication-TileColor" content="#efefef" />
+    <title>Recursos de iconos gratuitos - rortegag.com</title>
+    <link rel="manifest" href="../public/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="../public/safari-pinned-tab.svg"
+      color="#761f85"
+    />
+    <link rel="icon" type="image/x-icon" href="../public/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../public/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../public/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../public/apple-touch-icon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../public/apple-touch-icon-180x180.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../public/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../public/apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../public/apple-touch-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../public/apple-touch-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../public/apple-touch-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../public/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../public/apple-touch-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../public/apple-touch-icon-57x57.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body class="rog-bg-main">
+    <div class="container py-1">
+      <header
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-1"
+      >
+        <a
+          href="../index.html"
+          class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
+        >
+          <picture>
+            <source
+              media="(prefers-color-scheme: dark)"
+              srcset="../assets/img/logo-dark.png"
+            />
+            <img src="../assets/img/logo-light.png" width="320" height="100" />
+          </picture>
+        </a>
+        <nav>
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a
+                href="../index.html"
+                id="home"
+                class="nav-link rog-text-color rog-font-default"
+                ><i class="bi bi-house-door-fill"></i> Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="../aboutme.html"
+                id="aboutme"
+                class="nav-link rog-text-color rog-font-default"
+                ><i class="bi bi-person-fill"></i> Sobre mí</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="../blog.html"
+                id="blog"
+                class="nav-link rog-text-color rog-font-default"
+                ><i class="bi bi-card-heading"></i> Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="../cheatsheets.html"
+                id="cheatsheets"
+                class="nav-link rog-text-color rog-font-default"
+                ><i class="bi bi-file-earmark-spreadsheet"></i> Cheatsheets</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="../contact.html"
+                id="contact"
+                class="nav-link rog-text-color rog-font-default"
+                ><i class="bi bi-envelope-fill"></i> Contacto</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="p-4 mb-4 rog-bg-default rounded-3">
+          <div class="container-fluid">
+            <img
+              class="img-fluid mx-auto d-block mb-2 rounded-3"
+              src="../assets/img/9-fonts-icons.png"
+              width="800"
+              height="400"
+              alt="Recursos de iconos gratuitos"
+            />
+            <h1
+              class="display-5 fw-bold text-center rog-text-default rog-font-title"
+            >
+              Ubuntu con interfaz gráfica en Windows 10/11 con Windows Subsystem
+              for Linux
+            </h1>
+            <p class="fs-5 rog-text-default rog-font-default">
+              Traigo esta tarea de instalación y configuración de Ubuntu 20.04 LTS con entorno
+              gráfico dentro de Windows 10/11, haciendo uso de Windows
+              Subsystem for Linux a su última versión (WSL2). 
+            </p>
+            <p class="fs-5 rog-text-default rog-font-default">
+              ¿Qué es WSL?. <br />
+              Windows Subsystem for Linux es una capa
+              de compatibilidad que ha agregado Microsoft en Windows 10 y 11 para entornos GNU/Linux dentro de Windows, lo
+              anterior quiere decir que podrás usar ciertas distribuciones de GNU/Linux en Windows 10/11. La primera versión 
+              de WSL llevó al intérprete de comandos que se instala en la mayoría de las distribuciones
+              GNU/Linux (estamos hablando del shell bash) a Windows,
+              permitiendo ejecutar binarios desde Windows. Para la versión 2 de
+              WSL hubo grandes mejoras en cuando rendimiento, ya que WSL2 utiliza un núcleo Linux real. Se pueden utilizar
+              aplicaciones de GNU/Linux desde Windows 10/11 utilizando
+              direcciones IP remotas, así mismo
+              permite la gestión de una distribución GNU/Linux con entorno
+              gráfico.
+            </p>
+            <p class="fs-5 rog-text-default rog-font-default">
+              Requisitos para instalar Ubuntu 20.04 LTS en WSL
+            </p>
+            <ul class="rog-text-default rog-font-default">
+              <li>Mínima versión de Windows 10: Versión 2004 (OS Build 19041.329)</li>
+              <li>Tener instalado WSL2 en Windows 10/11</li>
+              <li>Instalar Ubuntu 20.04 LTS</li>
+              <li>Instalar la interfaz gráfica de Ubuntu 20.04 LTS</li>
+            </ul>
+            <p class="fs-5 rog-text-default rog-font-default">
+              Primero, se debe que versión de Windows tenemos. Con ejecutar el comando <code>winver</code>
+              veremos la versión de Windows.
+            </p>
+            <img />
+            <p class="fs-5 rog-text-default rog-font-default">
+              Una vez comprobado la versión de Windows, tenenemos que instalar 2 características: Plataforma de máquina virtual y Subsistema de Windows para Linux
+
+            </p>
+            <ol class="fs-5 rog-text-default rog-font-default">
+              <li class="fs-3 ms-5">iconmonstr</li>
+              <a href="https://iconmonstr.com/"
+                ><img
+                  class="img-fluid mx-auto d-block mb-2 rounded-3"
+                  src="../assets/img/site-iconmonstr.png"
+                  width="800"
+                  height="400"
+                  alt="iconmonstr"
+              /></a>
+              <p>
+                Iconmonstr encontramos iconos para casi todos los gustos, con
+                imágenes relativas a las redes sociales, a herramientas
+                habituales en internet o a opciones más genéricas que podemos
+                utilizar para identificar las opciones de nuestro proyecto.
+                Todos ellos son en descarga gratuita aunque hay que respetar las
+                licencias bajo las cuáles se conceden, por los logos de las
+                redes sociales.
+              </p>
+              <p>
+                También tiene su propia
+                <a
+                  href="https://iconmonstr.com/iconicfont/#cdn"
+                  class="link-primary rog-text-color"
+                  >fuente CDN</a
+                >
+                que puedes usar que contiene más de 300 iconos.
+              </p>
+              <li class="fs-3 ms-5">FeatherIcons</li>
+              <a href="https://feathericons.com/"
+                ><img
+                  class="img-fluid mx-auto d-block mb-2 rounded-3"
+                  src="../assets/img/site-feathericons.png"
+                  width="800"
+                  height="400"
+                  alt="FeatherIcons"
+              /></a>
+              <p>
+                Feather es una colección de iconos de código abierto simplemente
+                hermosos. Cada ícono está diseñado en una cuadrícula 24x24 con
+                énfasis en la simplicidad, consistencia y flexibilidad. Contiene
+                286 iconos que puedes descargar y es Open Source.
+              </p>
+              <p>
+                También tiene su propia
+                <a
+                  href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"
+                  class="link-primary rog-text-color"
+                  >fuente CDN</a
+                >
+                o instalar con como paquete NPM. Os dejo también su enlace a
+                <a
+                  href="https://github.com/feathericons/feather"
+                  class="link-primary rog-text-color"
+                  >GitHub</a
+                >
+                que explica como usarlo.
+              </p>
+              <li class="fs-3 ms-5">Bootstrap Icons</li>
+              <a href="https://icons.getbootstrap.com/"
+                ><img
+                  class="img-fluid mx-auto d-block mb-2 rounded-3"
+                  src="../assets/img/site-bootstrapicons.png"
+                  width="800"
+                  height="400"
+                  alt="Bootstrap Icons"
+              /></a>
+              <p>
+                Como no, Bootstrap también te ofrece iconos gratuitos y Open
+                Source que puedes usarlo en tu proyecto usando su
+                <a
+                  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"
+                  class="link-primary rog-text-color"
+                  >CDN</a
+                >
+                o instalarlo con NPM. Contiene más de 1000 iconos que puedes
+                descargar y no hace falta usar el framework de Bootstrap para
+                usar sus iconos.
+              </p>
+              <li class="fs-3 ms-5">ionicons</li>
+              <a href="https://ionic.io/ionicons"
+                ><img
+                  class="img-fluid mx-auto d-block mb-2 rounded-3"
+                  src="../assets/img/site-ionicons.png"
+                  width="800"
+                  height="400"
+                  alt="ionicons"
+              /></a>
+              <p>
+                Iconos de diseño premium para usar en aplicaciones web, iOS,
+                Android y de escritorio. Completamente Open Source, con licencia
+                del MIT y construido por Ionic. Contiene más de 500 iconos.
+              </p>
+              <p>
+                Os dejo su repositorio de
+                <a
+                  href="https://github.com/ionic-team/ionicons"
+                  class="link-primary rog-text-color"
+                  >GitHub</a
+                >.
+              </p>
+              <li class="fs-3 ms-5">css.gg</li>
+              <a href="https://css.gg/"
+                ><img
+                  class="img-fluid mx-auto d-block mb-2 rounded-3"
+                  src="../assets/img/site-cssgg.png"
+                  width="800"
+                  height="400"
+                  alt="css.gg"
+              /></a>
+              <p>
+                Si te ha gustado los iconos de Ionic, los de css.gg son de la
+                misma calidad y contiene más de 700 iconos. Su repositorio de
+                <a
+                  href="https://github.com/astrit/css.gg"
+                  class="link-primary rog-text-color"
+                  >GitHub</a
+                >
+                explica su instalación.
+              </p>
+              <li class="fs-3 ms-5">Tabler Icons</li>
+              <a href="https://tabler-icons.io/"
+                ><img
+                  class="img-fluid mx-auto d-block mb-2 rounded-3"
+                  src="../assets/img/site-tablericons.png"
+                  width="800"
+                  height="400"
+                  alt="Tabler Icons"
+              /></a>
+              <p>
+                Más de 1250 iconos de píxeles perfectos para diseño web. Iconos
+                gratuitos y Open Source diseñados para hacer que cualquier
+                proyecto se sienta moderno. Su repositorio de
+                <a
+                  href="https://github.com/tabler/tabler-icons"
+                  class="link-primary rog-text-color"
+                  >GitHub</a
+                >
+                explica su uso y os dejo el enlace de su
+                <a
+                  href="https://unpkg.com/@tabler/icons@latest/iconfont/tabler-icons.min.css"
+                  class="link-primary rog-text-color"
+                  >CDN</a
+                >.
+              </p>
+              <li class="fs-3 ms-5">Material Icons</li>
+              <a href="https://fonts.google.com/icons"
+                ><img
+                  class="img-fluid mx-auto d-block mb-2 rounded-3"
+                  src="../assets/img/site-googlefonts.png"
+                  width="800"
+                  height="400"
+                  alt="Material Icons"
+              /></a>
+              <p>
+                Si estamos haciendo una aplicación web que sea con el mismo
+                sistema de diseño que de Google, tengo que recomendar su propio
+                sitios de iconos de Material UI.
+              </p>
+              <li class="fs-3 ms-5">Remix Icon</li>
+              <a href="https://remixicon.com/"
+                ><img
+                  class="img-fluid mx-auto d-block mb-2 rounded-3"
+                  src="../assets/img/site-remixicons.png"
+                  width="800"
+                  height="400"
+                  alt="Remix Icon"
+              /></a>
+              <p>
+                Remix Icon es un conjunto de símbolos de código abierto de
+                estilo neutro elaborados para diseñadores y desarrolladores.
+                Remix Icon tiene licencia de Apache License Version 2.0 por lo
+                que todos los iconos son gratuitos tanto para uso personal como
+                comercial. Si el icono que necesitas no está en la colección,
+                puedes solicitarlo y la comunidad
+                <a
+                  href="https://github.com/Remix-Design/remixicon#usage"
+                  class="link-primary rog-text-color"
+                  >GitHub</a
+                >
+                puede ayudarte.
+              </p>
+              <li class="fs-3 ms-5">Eva Icons</li>
+              <a href="https://akveo.github.io/eva-icons/#/"
+                ><img
+                  class="img-fluid mx-auto d-block mb-2 rounded-3"
+                  src="../assets/img/site-evaicons.png"
+                  width="800"
+                  height="400"
+                  alt="Eva Icons"
+              /></a>
+              <p>
+                Y por últinmo, otro paquete de iconos que contiene sumando
+                iconos bordeados y rellenados, son mas de 400 iconos. Estos
+                iconos encajan bien con proyectos relacionados con la salud. Os
+                dejo su repositorio de
+                <a
+                  href="https://github.com/akveo/eva-icons"
+                  class="link-primary rog-text-color"
+                  >GitHub</a
+                >
+                y su
+                <a
+                  href="https://unpkg.com/eva-icons"
+                  class="link-primary rog-text-color"
+                  >CDN</a
+                >.
+              </p>
+              <li class="fs-3 ms-5">EXTRA: Font Awesome</li>
+              <a href="https://fontawesome.com/v6.0/icons"
+                ><img
+                  class="img-fluid mx-auto d-block mb-2 rounded-3"
+                  src="../assets/img/site-fontawesome.png"
+                  width="800"
+                  height="400"
+                  alt="Font Awesome"
+              /></a>
+              <p>
+                Font Awesome es el paquete de iconos más utilizado en diseño
+                web. Contiene en su versión gratuita, mas de 1500 iconos que se
+                puede utilizar, pero no es Open Source, pero seguro que
+                encuentras un icono especiual que busques y Font Awesome lo
+                tenga. En su versión de pago contiene más de 6200 iconos.
+              </p>
+            </ol>
+          </div>
+        </div>
+      </main>
+      <footer
+        class="footer container-fluid text-center bg-dark text-white rounded-3"
+      >
+        <div class="container pt-3">
+          <section class="mb-4">
+            <a
+              class="text-light fs-3 me-3"
+              href="https://www.linkedin.com/in/raul-ortega-gallego/"
+              role="button"
+              target="_blank"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a
+              class="text-light fs-3"
+              href="https://twitter.com/r_ortegag"
+              role="button"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            <a
+              class="text-light fs-3 ms-3"
+              href="https://github.com/r-ortegag"
+              role="button"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="bi bi-github"></i
+            ></a>
+          </section>
+        </div>
+        <div class="text-center text-light pb-3">
+          &copy; 2022 Copyright
+          <a class="text-light" href="https://rortegag.com">rortegag.com</a>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="../js/enhance.js"></script>
+  </body>
+</html>
