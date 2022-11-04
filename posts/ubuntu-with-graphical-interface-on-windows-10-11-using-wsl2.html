@@ -19,7 +19,7 @@
     <meta name="apple-mobile-web-app-title" content="rortegag.com" />
     <meta name="theme-color" content="#efefef" />
     <meta name="msapplication-TileColor" content="#efefef" />
-    <title>Recursos de iconos gratuitos - rortegag.com</title>
+    <title>Ubuntu con interfaz gráfica en Windows 10/11 con WSL2 - rortegag.com</title>
     <link rel="manifest" href="../public/manifest.json" />
     <link
       rel="mask-icon"
@@ -169,10 +169,10 @@
           <div class="container-fluid">
             <img
               class="img-fluid mx-auto d-block mb-2 rounded-3"
-              src="../assets/img/9-fonts-icons.png"
+              src="../assets/img/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2.png"
               width="800"
               height="400"
-              alt="Recursos de iconos gratuitos"
+              alt="Ubuntu con interfaz gráfica en Windows 10/11 con Windows Subsystem for Linux"
             />
             <h1
               class="display-5 fw-bold text-center rog-text-default rog-font-title"
@@ -186,10 +186,11 @@
               Subsystem for Linux a su última versión (WSL2). 
             </p>
             <p class="fs-5 rog-text-default rog-font-default">
-              ¿Qué es WSL?. <br />
+              <span class="fw-bold">¿Qué es WSL?</span> <br />
               Windows Subsystem for Linux es una capa
               de compatibilidad que ha agregado Microsoft en Windows 10 y 11 para entornos GNU/Linux dentro de Windows, lo
-              anterior quiere decir que podrás usar ciertas distribuciones de GNU/Linux en Windows 10/11. La primera versión 
+              anterior quiere decir que podrás usar ciertas distribuciones de GNU/Linux en Windows 10/11. <br /> 
+              La primera versión 
               de WSL llevó al intérprete de comandos que se instala en la mayoría de las distribuciones
               GNU/Linux (estamos hablando del shell bash) a Windows,
               permitiendo ejecutar binarios desde Windows. Para la versión 2 de
@@ -198,76 +199,69 @@
               direcciones IP remotas, así mismo permite la gestión de una distribución GNU/Linux con entorno gráfico.
             </p>
             <p class="fs-5 rog-text-default rog-font-default">
-              Requisitos para instalar Ubuntu 20.04 LTS en WSL
-            </p>
-            <ul class="rog-text-default rog-font-default">
-              <li>Mínima versión de Windows 10: Versión 2004 (OS Build 19041.329)</li>
-              <li>Tener instalado WSL2 en Windows 10/11</li>
-              <li>Instalar Ubuntu 20.04 LTS</li>
-              <li>Instalar la interfaz gráfica de Ubuntu 20.04 LTS</li>
-            </ul>
-            <p class="fs-5 rog-text-default rog-font-default">
-              Primero, se debe que versión de Windows tienes. Con ejecutar el comando <code>winver</code>
+              Primero, que versión de Windows tienes. Con ejecutar el comando <code class="rog-font-title">winver</code>
               verás la versión de Windows.
             </p>
-            <img />
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/winver.png" alt="Mostrando versión de Windows con winver"/>
             <p class="fs-5 rog-text-default rog-font-default">
               Una vez comprobado la versión de Windows, tienes que instalar 2 características: Plataforma de máquina virtual y Subsistema de Windows para Linux.
             </p>
-            <p>Se puede instalar dos formas, usando la herramienta DISM de Powershell o a través de Activar o desactivar características de Windows:</p>
-            <p>En Powershell, ejecutado en modo administrador, debes de introducir los siguentes comandos.</p>
-            <p><code>dism.exe /Online /Enable-Feature /FeatureName:Microsoft-Windows-Subsystem-Linux /All /NoRestart</code></p>
-            <img />
-            <p><code>dism.exe /Online /Enable-Feature /featureName:VirtualMachinePlatform /All /NoRestart</code></p>
-            <img />
-            <p>En Activar y desactivar características de Windows, dbees dar click en la casilla para seleccionarlo para instalarlo.</p>
-            <p>Después hay que reiniciar Windows para activar completamente las características instaladas.</p>
-            <p>Luego, hay que volver abrir Powershell, en modo adminsitrador, para permitir usar WSL2 de forma predeterminada.</p>
-            <p><code>wsl --set-default-version 2</code></p>
-            <img />
-            <p>Si sale un mensjae de que WSL2 requiere una actualización en su componente kernel, debes abrir el enlace que te da. Con Ctrl + Click izquierdo abres el enlace.</p>
-            <img />
-            <img />
-            <p>Debes volver a ejecutar otro vez el comando.</p>
-            <p><code>wsl --set-default-version 2</code></p>
-            <p>Ahora, abres la Microsoft Store e instalas la versión de Ubuntu que quieras.</p>
-            <img />
-            <p>Una vez descargado, le das  abrir y saldrá un terminal de Ubuntu.</p>
-            <img src="" alt="">
-            <img />
-            <p>Si ejecutas el comando: <code>wsl -l -v</code> puedes ver que Ubuntu se está ejecutando.</p>
-            <h2>Instalación de la GUI para Ubuntu</h2>
-            <p>Dentro de Ubuntu, ejecuta los siguientes comandos en este orden:</p>
-            <ul>
-              <li><code>sudo apt update && sudo apt -y upgrade</code></li>
-              <li><code>sudo apt install -y xrdp</code></li>
-              <li><code>sudo apt install -y xfce4</code></li>
-              <li><code>sudo apt install -y xfce4-goodies</code></li>
-              <li><code>sudo cp /etc/xrdp/xrdp.ini /etc/xrdp/xrdp.ini.bak</code></li>
-              <li><code>sudo sed -i 's/3389/3390/g' /etc/xrdp/xrdp.ini</code></li>
-              <li><code>sudo sed -i 's/max_bpp=32/#max_bpp=32\nmax_bpp=128/g' /etc/xrdp/xrdp.ini</code></li>
-              <li><code>sudo sed -i 's/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g' /etc/xrdp/xrdp.ini</code></li>
-              <li><code>echo xfce4-session > ~/.xsession</code></li>
-              <li><code>sudo nano /etc/xrdp/startwm.sh</code></li>
-            </ul>
-            <p>Puedes seleccionar el que quieras, LightDM es más ligero que GDM3.</p>
-            <img />
-            <p>Cuando estes editando con el editor de archivos <code>nano</code>, debes comentar las siguentes líneas:</p>
-            <p><code># test -x /etc/X11/Xsession && exec /etc/X11/Xsession</code></p>
-            <p><code># exec /bin/sh /etc/X11/Xsession</code></p>
-            <img>
-            <p>Agrega las siguiente línea</p>
-            <p><code>startxfce4</code></p>
-            <img>
-            <p>Guarda el archivo (Ctrl + O) y sal (Ctrl + X)</p>
-            <p>Ahora inicia el servicio de escritorio remoto.</p>
-            <p><code>sudo /etc/init.d/xrdp start</code></p>
-            <p>Abre el programa de Conexión a escritorio remoto</p>
-            <img>
-            <p>Y cuando te conectes, pon tu usuario y contraseña.</p>
-            <img>
-            <p>Y ya tienes un Ubuntu operativo con entorno gráfico sin sacrificar rendimiento del ordenador.</p>
-            <img>
+            <p class="fs-5 rog-text-default rog-font-default">Se puede instalar de dos formas, usando la herramienta DISM de Powershell o a través de Activar o desactivar características de Windows:</p>
+            <p class="fs-5 rog-text-default rog-font-default">En Powershell, ejecutado en modo administrador, debes de introducir los siguentes comandos.</p>
+            <p class="fs-5 rog-text-default rog-font-default"><code class="rog-font-title">dism.exe /Online /Enable-Feature /FeatureName:Microsoft-Windows-Subsystem-Linux /All /NoRestart</code></p>
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/caracteristicas-powershell-1.png" alt=""/>
+            <p class="fs-5 rog-text-default rog-font-default"><code class="rog-font-title">dism.exe /Online /Enable-Feature /featureName:VirtualMachinePlatform /All /NoRestart</code></p>
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/caracteristicas-powershell-2.png"/>
+            <p class="fs-5 rog-text-default rog-font-default">En Activar y desactivar características de Windows, debes dar click en la casilla para seleccionarlo para instalarlo.</p>
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/caracteristicas-1.png" alt="Característica seleccionada Plataforma de máquina virtual">
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/caracteristicas-2.png" alt="Característica seleccionada Subsistema de Windows para Linux">
+            <p class="fs-5 rog-text-default rog-font-default">Después hay que reiniciar Windows para activar completamente las características instaladas.</p>
+            <p class="fs-5 rog-text-default rog-font-default">Luego, hay que volver abrir Powershell, en modo adminsitrador, para permitir usar WSL2 de forma predeterminada.</p>
+            <p class="fs-5 rog-text-default rog-font-default"><code class="rog-font-title">wsl --set-default-version 2</code></p>
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/activar-wsl2.png"/>
+            <p class="fs-5 rog-text-default rog-font-default">Si sale un mensjae de que WSL2 requiere una actualización en su componente kernel, debes abrir el enlace que te da. Con Ctrl + Click izquierdo abres el enlace.</p>
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/instalar-paquete-actualizacion-wsl2-1.png"/>
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/instalar-paquete-actualizacion-wsl2-2.png"/>
+            <p class="fs-5 rog-text-default rog-font-default">Debes volver a ejecutar otro vez el comando.</p>
+            <p class="fs-5 rog-text-default rog-font-default"><code class="rog-font-title">wsl --set-default-version 2</code></p>
+            <p class="fs-5 rog-text-default rog-font-default">Ahora, abres la Microsoft Store e instalas la versión de Ubuntu que quieras.</p>
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/instalar-ubuntu-2004.png"/>
+            <p class="fs-5 rog-text-default rog-font-default">Una vez descargado, le das abrir y saldrá un terminal de Ubuntu.</p>
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/ubuntu-2004-1.png" alt="">
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/ubuntu-2004-2.png" alt=""/>
+            <p class="fs-5 rog-text-default rog-font-default">Si ejecutas el comando: <code class="rog-font-title">wsl -l -v</code> puedes ver que Ubuntu se está ejecutando.</p>
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/ubuntu-ejecutandose.png" alt="">
+            <p class="fs-5 rog-text-default rog-font-default">Dentro de Ubuntu, ejecuta los siguientes comandos en este orden:</p>
+            <ol>
+              <li><code class="rog-font-title">sudo apt update && sudo apt -y upgrade</code></li>
+              <li><code class="rog-font-title">sudo apt install -y xrdp</code></li>
+              <li><code class="rog-font-title">sudo apt install -y xfce4</code></li>
+              <li><code class="rog-font-title">sudo apt install -y xfce4-goodies</code></li>
+              <li><code class="rog-font-title">sudo cp /etc/xrdp/xrdp.ini /etc/xrdp/xrdp.ini.bak</code></li>
+              <li><code class="rog-font-title">sudo sed -i 's/3389/3390/g' /etc/xrdp/xrdp.ini</code></li>
+              <li><code class="rog-font-title">sudo sed -i 's/max_bpp=32/#max_bpp=32\nmax_bpp=128/g' /etc/xrdp/xrdp.ini</code></li>
+              <li><code class="rog-font-title">sudo sed -i 's/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g' /etc/xrdp/xrdp.ini</code></li>
+              <li><code class="rog-font-title">echo xfce4-session > ~/.xsession</code></li>
+              <li><code class="rog-font-title">sudo nano /etc/xrdp/startwm.sh</code></li>
+            </ol>
+            <p class="fs-5 rog-text-default rog-font-default">Puedes seleccionar el que quieras, LightDM es más ligero que GDM3.</p>
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/lightdm.png"/>
+            <p class="fs-5 rog-text-default rog-font-default">Cuando estes editando con el editor de archivos <code>nano</code>, debes comentar las siguentes líneas:</p>
+            <p class="fs-5 rog-text-default rog-font-default"><code class="rog-font-title"># test -x /etc/X11/Xsession && exec /etc/X11/Xsession</code></p>
+            <p class="fs-5 rog-text-default rog-font-default"><code class="rog-font-title"># exec /bin/sh /etc/X11/Xsession</code></p>
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/editar-xrdp-1.png">
+            <p class="fs-5 rog-text-default rog-font-default">Agrega la siguiente línea.</p>
+            <p class="fs-5 rog-text-default rog-font-default"><code class="rog-font-title">startxfce4</code></p>
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/editar-xrdp-2.png">
+            <p class="fs-5 rog-text-default rog-font-default">Guarda el archivo (Ctrl + O) y sal (Ctrl + X).</p>
+            <p class="fs-5 rog-text-default rog-font-default">Ahora inicia el servicio de escritorio remoto.</p>
+            <p class="fs-5 rog-text-default rog-font-defualt"><code class="rog-font-title">sudo /etc/init.d/xrdp start</code></p>
+            <p class="fs-5 rog-text-default rog-font-default">Abre el programa de Conexión a escritorio remoto.</p>
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/conexion.png">
+            <p class="fs-5 rog-text-default rog-font-default">Y cuando te conectes, pon tu usuario y contraseña.</p>
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/conexion-ubuntu-2004-1.png">
+            <p class="fs-5 rog-text-default rog-font-default">Y ya tienes un Ubuntu operativo con entorno gráfico sin sacrificar rendimiento del ordenador.</p>
+            <img class="img-fluid mx-auto d-block mb-2 rounded-3" src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/conexion-ubuntu-2004-2.png">
           </div>
         </div>
       </main>
