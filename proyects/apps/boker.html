@@ -474,7 +474,168 @@
                 Firebase.<br>De momento, la App no tiene base de datos local SQLite.
               </p>
               <p class="fw-bold">Sprint 3</p>
-              <p></p>
+              <p>BluetoothChat</p>
+              <p>Para acceder, debe pulsar el botón del ActionBar y luego a Chat. El desarrollo del módulo es el siguiente:</p>
+              <p>rortegag.boker.controllers/ChatController.class</p>
+              <p>
+                En esta clase, tiene 3 hilos, uno para la mandar que ha aceptado la conexión un dispositivo Bluetooth (AcceptThread), uno para conexión de 
+                los dispositivos (ConnectThread) y otro para la lectura y escritura de datos que vienen del Bluetooth(ReadWriteThread).
+              </p>
+              <p>
+                <code>private final BluetoothAdapter bluetoothAdapter;</code>
+                <code>private final Handler handler;</code>
+                <code>private AcceptThread acceptThread;</code>
+                <code>private ConnectThread connectThread;</code>
+                <code>private int state;</code>
+              </p>
+              <p>
+                Todo el código está comentado de que hace cada función.
+                rortegag.boker/BluetoothChat.class
+              </p>
+              <p>
+                Este es el código detrás de la pantalla de Bluetooth, también está documentado.
+              </p>
+              <p>
+                La App solo enviará al usuario a la Aplicación por defecto del Teléfono.
+              </p>
+              <p>
+                Google Maps.
+              </p>
+              <p>
+                En Ver mapa, cuando el usuario entre por primera vez, se le pedirá acesso a la ubicación. Si se le deniega, no podrá cargar la ubicación 
+                exacta del usuario, obvio. Si acepta, el usuario debe de entrar otra vez para entrar para ver su ubicación exacta.
+              </p>
+              <p>
+                El código está en rortegag.boker.main.ui.view_libraries/ViewLibrariesFragment.
+              </p>
+              <p>
+                Notificaciones Push.
+              </p>
+              <p>
+                Las notificaciones push se ha usado la tecnología de OneSignal. Se debe obtener desde OneSignal, el id para nuestra App. Hay una guía 
+                cuando te creas una cuenta de cómo agregar OneSignal al proyecto.
+              </p>
+              <p>
+                Agregar dependencias al Gradle.
+              </p>
+              <p>
+                <code>implementation 'com.onesignal:OneSignal:[3.11.2, 3.99.99]'</code>
+              </p>
+              <p>
+                En la primera línea de Gradle añadir lo siguiente.
+              </p>
+              <p>
+                <code>buildscript { 
+                  repositories { 
+                    maven { 
+                      url 'https://plugins.gradle.org/m2/'} 
+                    } 
+                    dependencies { 
+                      classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.4, 0.99.99]' 
+                    } 
+                  } 
+                  apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin' 
+                  
+                  repositories { 
+                    maven { url 'https://maven.google.com' } 
+                  }</code>
+              </p>
+              <p>
+                En la línea de android, debajo de <code>testInstrumentationRunner</code> añadir lo siguiente.
+              </p>
+              <p>
+                <code>manifestPlaceholders = [ 
+                  onesignal_app_id: 'AQUÍ DEBE DE IR NUESTRA ID DE ONESIGNAL’, 
+                  // Project number pulled from dashboard, local value is ignored. 
+                  onesignal_google_project_number: 'REMOTE' ]</code>
+              </p>
+              <p>Una vez hecho esto, se crea un Template.</p>
+              <img class="" src="boker_sprint3_1.jpg" alt="">
+              <p>Después vamos a Automated y creamos un nuevo mensaje automático</p>
+              <img class="" src="boker_sprint3_2.jpg" alt="">
+              <p>Cada 3 horas, más o menos, también depende de la zona horaria del teléfono, envía el mensaje al usuario suscrito.</p>
+              <img class="" src="boker_sprint3_3.jpg" alt="">
+              <h2 id="diseno">Diseño</h2>
+              <p class="fw-bold">Arquitectura del sistema</p>
+              <img class="" src="boker_diseño_1.jpg" alt="">
+              <p class="fw-bold">Interfaz gráfica</p>
+              <p>
+                SplashScreen. Actividad de inicio. Comprueba si tiene internet el usuario y se debe esperar 5 segundos para ir a otra Actividad. 
+                Si no se ha inciado sesión va a WelcomeScreen, si ha iniciado sesión va a MainActivity.
+              </p>
+              <img class="" src="boker_ui_1.jpg" alt="">
+              <p>
+                WelcomeScreen. Actividad de bienvenida del usuario cuando instala por primera vez la App. El usuario puede pulsar Registrarse, 
+                que va a SignUpScreen o Iniciar sesión, que va a LoginScreen.
+              </p>
+              <img class="" src="boker_ui_2.jpg" alt="">
+              <p>
+                SignUpScreen. Actividad para que el usuario se registre en Boker. Cuando pulse en Registrarse, le manda a MainActivity.
+              </p>
+              <img class="" src="boker_ui_3.jpg" alt="">
+              <p>
+                LoginScreen. Actividad para que el usuario inicie sesión en Boker. Cuando pulse en Iniciar sesión, le manda a MainActivity.
+              </p>
+              <img class="" src="boker_ui_4.jpg" alt="">
+              <p>
+                MainActivity. Actividad principal de la App, que contiene un panel de navegación y la vista es por fragments. La vista del fragment 
+                de inicio es HomeFragment.
+              </p>
+              <p>El panel de navegación es el siguiente.</p>
+              <img class="" src="boker_ui_5.jpg" alt="">
+              <p>HomeFragment. Vista de la App. No tiene funcionalidad.</p>
+              <img class="" src="boker_ui_6.jpg" alt="">
+              <p>CategoriesFragment. Vista de las categorías que puede elegir el usuario. Si pulsa en una, le envía a ViewBookSynopsis.</p>
+              <img class="" src="boker_ui_7.jpg" alt="">
+              <p>ViewBookFragment. Vista de los libros favoritos del usuario.</p>
+              <img class="" src="boker_ui_8.jpg" alt="">
+              <p>ScanCodeFragment. Fragment con un botón para iniciar el escaneo. Si el escaneo es correcto, va a la Actividad AddBook.</p>
+              <img class="" src="boker_ui_9.jpg" alt="">
+              <p>ViewLibrariesFragment. Vista que usa el fragment de Google Maps y visualiza el mapa con la ubicación del usuario.</p>
+              <img class="" src="boker_ui_10.jpg" alt="">
+              <p>
+                ViewBookSynopsis. Actividad que muestra la sinopsis del libro, de la categoría elegida por el usuario. Si el usuario le da al botón del 
+                Ojo, se va a la Actividad ViewBook. Si le da a la fecha de siguiente, vuelve a cargar otra sinopsis.
+              </p>
+              <img class="" src="boker_ui_11.jpg" alt="">
+              <p>
+                ViewBook. Actividad que muestra el libro que quería ver el usuario. Si el usuario le da Atrás, termina la Actividad. Si el usuario le 
+                da Me gusta, agrega este libro al ViewBookFragment.
+              </p>
+              <img class="" src="boker_ui_12.jpg" alt="">
+              <p>AddBook. Actividad que muestra el ISBN escaneado y el usuario puede agregar este libro al backend de Boker.</p>
+              <img class="" src="boker_ui_13.jpg" alt="">
+              <p>BluetoothChat. Actividad para chatear con un dispositivo Bluetooth que disponga también de Boker.</p>
+              <img class="" src="boker_ui_14.jpg" alt="">
+              <p class="fw-bold">Diseño de la base de datos</p>
+              <p>
+                Descripción de la base de datos local y del backend.<br>Se recomienda utilizar diagramas de clases, así como la descripción de las 
+                diferentes relaciones y sus atributos.
+              </p>
+              <p>La App no tiene de momento base de datos local SQLite, seguiré trabajando con la App.</p>
+              <p>
+                El backend es un Firebase. Uso dos cosas de Firebase, Firebase Authentication para el registro y logeo de usuarios y Firebase Realtime 
+                Database, la base de datos que es un fichero JSON.
+              </p>
+              <p>Al crear una base de datos en Realtime, debemos de establecer por defecto la reglas en true.</p>
+              <img class="" src="boker_db_1.jpg" alt="">
+              <p>Después de trabajar como será nuestro BD de JSON, cambiamos las reglas, para que puedan leer y escribir los usuarios autenticados.</p>
+              <img class="" src="boker_db_2.jpg" alt="">
+              <p>Diagrama de clases</p>
+              <img class="" src="boker_db_3.jpg" alt="">
+              <p class="fw-bold">Entorno de desarrollo</p>
+              <p>Android Studio ha sido el entorno de desarrollo de la App.</p>
+              <p class="fw-bold">Servicios y librerías</p>
+              <p>Librería Firebase Authentication</p>
+              <p><code>implementation 'com.google.firebase:firebase-auth:19.2.0'</code></p>
+              <p>Esta librería se usa en las Actividades SignUpScreen y LoginScreen.</p>
+              <p>En SignUpScreen se crear una variable de tipo FirebaseAuth</p>
+              <p><code>private FirebaseAuth firebaseAuth;</code></p>
+              <p>En el OnCreate de la Actividad, se instancia la conexión a Firebase.</p>
+              <p><code>firebase = FirebaseAuth.getInstance();</code></p>
+              <p>En una función o puede ponerse en un onClick de un botón, se utiliza la función…</p>´
+              <p><code>firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener&lt;AuthResult&gt;() {
+                @})</code></p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
