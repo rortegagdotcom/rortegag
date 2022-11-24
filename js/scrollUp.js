@@ -1,0 +1,3 @@
+let btnScrollTop=document.getElementById("btn-scroll-top");function backToTop(){document.body.scrollTop=0;document.documentElement.scrollTop=0}
+function scrollFunction(){if(document.body.scrollTop>30||document.documentElement.scrollTop>30){btnScrollTop.style.display="block"}else{btnScrollTop.style.display="none"}}
+btnScrollTop.addEventListener("click",backToTop);window.onscroll=function(){scrollFunction()}
