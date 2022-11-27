@@ -106,1306 +106,1276 @@
   </head>
 
   <body class="rog-bg-main">
-    <div class="container py-1">
-      <header
-        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-1"
+    <header
+      class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-1"
+    >
+      <a
+        href="../../index.html"
+        class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
       >
-        <a
-          href="../../index.html"
-          class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
-        >
-          <picture>
-            <source
-              media="(prefers-color-scheme: dark)"
-              srcset="../../assets/img/logo-dark.svg"
+        <picture>
+          <source
+            media="(prefers-color-scheme: dark)"
+            srcset="../../assets/img/logo-dark.svg"
+          />
+          <img src="../../assets/img/logo-light.svg" width="320" height="100" />
+        </picture>
+      </a>
+      <nav>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a
+              href="../../index.html"
+              id="home"
+              class="nav-link rog-text-color rog-font-default"
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="../../aboutme.html"
+              id="aboutme"
+              class="nav-link rog-text-color rog-font-default"
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="../../blog.html"
+              id="blog"
+              class="nav-link rog-text-color rog-font-default"
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="../../cheatsheets.html"
+              id="cheatsheets"
+              class="nav-link rog-text-color rog-font-default"
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="../../contact.html"
+              id="contact"
+              class="nav-link rog-text-color rog-font-default"
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container py-1">
+      <div class="row align-items-md-stretch">
+        <div class="col-md-8 mb-4">
+          <div class="h-100 p-5 rog-text-default rog-bg-default rounded-3">
+            <h1 class="rog-font-title text-center">Boker</h1>
+            <img
+              src="../../assets/img/proyects/apps/boker/boker-index.jpg"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              alt="Boker"
+            />
+            <h2 id="introduccion">Introducción</h2>
+            <p class="fw-bold">Descripción de la aplicación</p>
+            <p>
+              Boker es una App para descubrir libros que le interesen al
+              usuario, de la misma manera que la App de Tinder.
+            </p>
+            <p>
+              El usuario tendrá que registrarse en la App. Después de su
+              registro, le mostrará algunas recomendaciones de sinopsis de
+              libros. Para descubrir un libro que le interese al usuario, habrá
+              una serie de categorías, por ejemplo, los más leídos, lo más
+              gustados, libros que han salido en películas, etc. o por su
+              género, si son biografías, novelas románticas, cuentos, etc.
+            </p>
+            <p>
+              Al elegir la categoría, se mostrarán solamente las sinopsis de los
+              libros, el usuario lo leerá y si le gusta, puede ver qué libro es
+              y guardarlo como favoritos.
+            </p>
+            <p>
+              También el usuario puede escanear el código de barras o poner el
+              ISBN de un libro para buscarlo y ponerlo en la lista.
+            </p>
+            <p class="fw-bold">Objetivos y motivación</p>
+            <p>
+              El objetivo de esta aplicación es hacer que los lectores no
+              juzguen por la caratula de un libro o por el autor del mismo.
+              <br />Si con la sinopsis del libro, ese lector le gusta, puede
+              descubrir libros que no ha leído y descubrir si le gusta un nuevo
+              género literario.
+            </p>
+            <h2 id="analisis">Análisis</h2>
+            <p>Descripción de los requisitos funcionales y no funcionales.</p>
+            <p class="fw-bold">Requisitos funcionales</p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_analisis_1.jpg"
+              alt=""
+            />
+            <p>
+              Al iniciar la App, aparecerá una pantalla de carga. Esta pantalla
+              de carga hará la conexión del usuario a la base de datos para
+              cargar la lista de libros y se mostrará la actividad principal.<br />Si
+              es la primera vez, se mostrará la actividad de bienvenida del
+              usuario y poder registrarse o iniciar sesión.<br />Si el usuario
+              no tiene conexión a internet, se mostrará un aviso de que no tiene
+              conexión.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_analisis_2.jpg"
+              alt=""
+            />
+            <p>
+              En esta actividad, el usuario elegirá si registrarse si no tiene
+              una cuenta de Boker o Iniciar sesión.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_analisis_3.jpg"
+              alt=""
+            />
+            <p>
+              Esta es la pantalla de registro que pedirá el email del usuario,
+              el nombre de usuario y la contraseña.
+            </p>
+            <p>
+              Habrá dos CheckBoxs que uno consistirá en aceptar los términos y
+              condiciones de uso, que habilitará el botón de Registrarse y otro
+              si desea recibir noticias (Notificaciones) y correos de Boker.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_analisis_4.jpg"
+              alt=""
+            />
+            <p>
+              Esta pantalla es la de iniciar sesión, que pedirá el usuario o
+              email y la contraseña.<br />Habrá un enlace abajo si el usuario al
+              olvidado la contraseña.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_analisis_5.jpg"
+              alt=""
+            />
+            <p>
+              Esta pantalla es la actividad principal de la aplicación.<br />Se
+              mostrarán algunos apartados, como recomendaciones, ultimas
+              búsquedas de los usuarios, etc.
+            </p>
+            <p>
+              Al darle un toque a una sinopsis del libro, le llevará a la
+              actividad de la sinopsis del libro.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_analisis_6.jpg"
+              alt=""
+            />
+            <p>
+              Si abrimos el menú principal, vemos que tenemos varios apartados.
+            </p>
+            <ul>
+              <li>Categorías.</li>
+              <li>Libros guardados.</li>
+              <li>Escanear código ISBN.</li>
+              <li>Ver librerías en Google Maps.</li>
+            </ul>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_analisis_7.jpg"
+              alt=""
+            />
+            <p>
+              En esta pantalla, estará las categorías. Se mostrarán las 4
+              principales importantes, lo más leídos, los más vendidos, …<br />Si
+              vamos más para abajo, vemos por género, novelas, biografías,
+              cuentos, fábulas, etc.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_analisis_8.jpg"
+              alt=""
+            />
+            <p>
+              Si abrimos una categoría, se mostrarán sinopsis de un libro
+              aleatorio, el usuario podrá leer la sinopsis y puede hacer dos
+              cosas, pasar a otra sinopsis de otro libro (flecha Siguiente) o
+              ver el libro (Icono Ojo).
+            </p>
+            <p>
+              Si el usuario ha querido ver qué libro es, el usuario puntúa que
+              el libro parece ser recomendable, ya que ha captado la atención de
+              un lector.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_analisis_9.jpg"
+              alt=""
+            />
+            <p>
+              Esta es la pantalla que muestra el libro, su portada, el título
+              del libro, su autor y su género.
+            </p>
+            <p>
+              Aquí el usuario puede hacer dos cosas, o retroceder (flecha
+              retroceder) que volverá a otra sinopsis de un libro o darle a me
+              gusta (dedo Me Gusta) que guardará en libros guardados.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_analisis_10.jpg"
+              alt=""
+            />
+            <p>
+              Esta es la pantalla de los libros guardados que el usuario pulsa
+              el botón Me Gusta.<br />Se muestra una lista de todos los libros
+              que le ha gustado.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_analisis_11.jpg"
+              alt=""
+            />
+            <p>
+              Si el usuario pulsa Escanear código ISBN, se abrirá la cámara y
+              tendrá que escanearlo.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_analisis_12.jpg"
+              alt=""
+            />
+            <p>
+              Al escanear el libro, saldrá la información de este y podrá
+              guardarlo en Libros guardados.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_analisis_13.jpg"
+              alt=""
+            />
+            <p>
+              Esta es la pantalla al abrir Google Maps en Boker, saldrá en mapa,
+              las librarías más cercanas del usuario.
+            </p>
+            <p class="fw-bold">Requisitos no funcionales</p>
+            <p>
+              La App debería de funcionar en Android 4.4 KitKat o superior. El
+              dispositivo debe tener una pantalla de 5 pulgadas con 720 x 1280
+              pixeles, con geolocalización y conexión a Internet para la
+              conexión del usuario que estará almacenado en una base de datos,
+              como también sus libros guardados.
+            </p>
+            <h2 id="aplicacion">Planificación</h2>
+            <p class="fw-bold">Sprint 0</p>
+            <p>En este proyecto, la App usará las siguientes tecnologías:</p>
+            <ul>
+              <li>
+                Firebase Authentication, para la Autenticación de usuarios en la
+                App. En ella, se guardará el email y la contraseña de usuario.
+                La contraseña vendrá cifrada.
+              </li>
+              <li>
+                Firebase Database, la base de datos de Boker, el Backend. En la
+                base de datos se guardará la siguiente información:
+                <ul>
+                  <li>User: IDUser {email, IDUser, userName}</li>
+                  <li>
+                    Books: ISBN {authorBook, genreBook, ISBN, nameBook,
+                    synopsisBook}
+                  </li>
+                  <li>
+                    Listbook: IDListBook {IDListBook, IDUser,
+                    books{ID{authorBook, genreBook, ISBN, nameBook,
+                    synopsisBook} }}
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="rog-text-color" href="https://onesignal.com/"
+                  >OneSignal</a
+                >, para las notificaciones Push de la App. En ella se enviará
+                automáticamente una notificación al usuario de que abra la App
+                en busca de nuevos libros.
+              </li>
+              <li>
+                <a class="rog-text-color" href="https://github.com/zxing/zxing"
+                  >Zxing Barcode Scanner</a
+                >
+                La App tendrá una opción de escanear el código de barras ISBN de
+                un libro, verificando si es un ISBN y si lo es, mostrará una
+                Actividad para añadir el libro a la base de datos de Boker.
+              </li>
+              <li>
+                Google Maps: La App tendrá una opción para ver el Mapa de
+                Google, mostrando su ubicación real.
+              </li>
+            </ul>
+            <p class="fw-bold">Sprint 1</p>
+            <p>La App tendrá las siguientes Actividades:</p>
+
+            <p>SplashScreen:rortegag.boker/SplashScreen.class</p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_sprint1_1.jpg"
+              alt=""
+            />
+            <p>
+              Esta actividad es el laucher de la App. El usuario tendrá que
+              esperar 5 segundos para ir a la siguiente actividad WelcomeScreen,
+              a no ser que el usuario no tenga conexión a Internet.
+            </p>
+            <p>WelcomeScreen: rortegag.boker/WelcomeScreen.class</p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_sprint1_2.jpg"
+              alt=""
+            />
+            <p>
+              En esta Actividad se mostrará una pantalla de bienvenida de la App
+              y contendrá dos botones: Registrarse: Este botón hará un Intent a
+              otra actividad, SignUpScreen. Iniciar sesión: Este botón hará un
+              Intent a otra actividad LoginScreen.
+            </p>
+            <p>SignUpScreen: rortegag.boker/SignUpScreen.class</p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_sprint1_3.jpg"
+              alt=""
+            />
+            <p>
+              En esta Actividad se mostrará 4 EditText donde el usuario tendrá
+              que meter los siguientes datos:
+            </p>
+            <ul>
+              <li>Usuario: Tendrá que meter el nombre de usuario.</li>
+              <li>
+                Correo electrónico: Tendrá que meter el correo electrónico del
+                usuario.
+              </li>
+              <li>Contraseña: La contraseña del usuario:</li>
+              <li>
+                Repetir contraseña: Para comprobar la contraseña esté
+                introducida bien.
+              </li>
+            </ul>
+            <p>
+              También tendrá dos checkbox,una para Aceptar los términos y
+              condiciones y otro para recibir noticias.<br />Un botón, que será
+              para registrar los datos del usuario al backend.
+            </p>
+            <p>LoginScreen: rortegag.boker/LoginScreen.class</p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_sprint1_4.jpg"
+              alt=""
+            />
+            <p>
+              En esta Actividad contendrá dos EditText, uno para el correo
+              electrónico de usuario y otro para su contraseña.<br />Más abajo
+              tendrá un botón donde puede iniciar sesión en la App, conectándose
+              al backend.
+            </p>
+            <p>MainActivity: rortegag.boker.main/MainActivity.class</p>
+            <p>
+              Esta es la Actividad principal de la App. La actividad contendrá
+              un NavigationDrawner, que contiene los siguientes Fragments:
+            </p>
+            <ul>
+              <li>Inicio: rortegag.boker.main.ui.home/HomeFragment.class</li>
+              <img
+                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+                src="../../assets/img/proyects/apps/boker/boker_sprint1_5.jpg"
+                alt=""
+              />
+              <p>
+                Este fragment contedrá dos CardView con información estática de
+                libros. Estos CardView no tienen funcionalidad.
+              </p>
+              <li>
+                Categorías:
+                rortegag.boker.main.ui.categories/CategoriesFragment.class
+              </li>
+              <img
+                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+                src="../../assets/img/proyects/apps/boker/boker_sprint1_6.jpg"
+                alt=""
+              />
+              <p>
+                Este Fragment contendra 12 CardView, una para cada categoría, 4
+                principales y 8 con distintos géneros de cada libro. En pulsar
+                en el CardView, le llevará a una Actividad llamada
+                ViewBookSynopsis
+              </p>
+              <li>
+                Libros guardados:
+                rortegag.boker.main.ui.saved_books/SavedBooksFragment.class
+              </li>
+              <img
+                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+                src="../../assets/img/proyects/apps/boker/boker_sprint1_7.jpg"
+                alt=""
+              />
+              <p>
+                Este Fragment contendrá un layout, que esté será un
+                RecyclerView, que mostrará el nombre del libro y el autor del
+                libro favoritos del usuario.
+              </p>
+              <li>
+                Escanear código ISBN:
+                rortegag.boker.main.ui.scan_code/ScanCodeFragment.class
+              </li>
+              <img
+                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+                src="../../assets/img/proyects/apps/boker/boker_sprint1_8.jpg"
+                alt=""
+              />
+              <p>
+                Este Fragment contendrá un botón para iniciar el escaneo del
+                código de barras. Si el código es correcto, llevará a una
+                Activiad llamada AddBook.
+              </p>
+              <li>Ver mapa:</li>
+              <p>
+                Este fragment contendrá el mapa de Google Maps, mostrando la
+                ubicación real del usuario.
+              </p>
+              <p>
+                Este es la MainActivity, se irá desplazando por varios fragments
+                de NavigationDrawner. En la Actividad, tendrá un ActionBar, con
+                un botón de búsqueda (de momento sin funcionadidad) y otros dos
+                con Chat (Actividad BluetoothChat) y Llamar (abrirá la App del
+                teléfono).
+              </p>
+              <li>
+                Ver sinopsis de un libro desconocido:
+                rortegag.boker.main/ViewBookSynopsis.class
+              </li>
+              <img
+                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+                src="../../assets/img/proyects/apps/boker/boker_sprint1_9.jpg"
+                alt=""
+              />
+              <p>
+                En esta Actividad se mostrará un CardView grande, mostrando un
+                largo texto de una sinopsis de un libro, elegido por el usuario,
+                en el Fragment de Categorias. En el CardView tiene dos botones
+                con una imagen:
+              </p>
+              <p>
+                Boton Ver libro: Este botón hará un intent a otra Actividad
+                llamado ViewBook,que msotrará que libro es.
+              </p>
+              <p>
+                Boton Siguiente. Se llamará a sí mismo en intent y mostrará otra
+                sinopsis de un libro.
+              </p>
+              <li>
+                Ver libro de la sinopsis: rortegag.boker.main/ViewBook.class
+              </li>
+              <img
+                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+                src="../../assets/img/proyects/apps/boker/boker_sprint1_10.jpg"
+                alt=""
+              />
+              <p>
+                En esta Actividad mostrará al usuario los datos del libro, como
+                son su Título, Autor, Genero y el ISBN del libro. En el
+                CardView, tendrá dos botones:
+              </p>
+              <p>
+                Botón Atrás: Terminará esta Actividad y lo mandará de vuelta al
+                ViewBookSynopsis.
+              </p>
+              <p>
+                Botón Me gusta: Esté botón añadirá a favoritos este libro y se
+                podrá ver en el fragment de Libros guardados.
+              </p>
+              <li>Añadir libro: rortegag.boker.main/AddBook.class</li>
+              <img
+                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+                src="../../assets/img/proyects/apps/boker/boker_sprint1_11.jpg"
+                alt=""
+              />
+              <p>
+                En esta Actividad se podrá añadir un libro, esta Actividad es
+                llamada cuando se escanea un código ISBN.
+              </p>
+              <li>Chat: rortegag.boker.main/BluetoothChat.class</li>
+              <img
+                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+                src="../../assets/img/proyects/apps/boker/boker_sprint1_12.jpg"
+                alt=""
+              />
+              <p>
+                Esta Actividad se muestra un chat que irá por Bluetooth. El
+                darle al botón conectar, se mostrará un layout que contendrá los
+                dispositivos Bluetooth que encuentre.
+              </p>
+            </ul>
+            <p class="fw-bold">Sprint 2</p>
+            <p>
+              El backend de Boker es un BaaS. Este BaaS es firebase, y se
+              utiliza para la autenticación de usuarios y la base de datos de
+              Boker.
+            </p>
+            <p>
+              Firebase Authetication. La App debe tener en el gradle la
+              librería:
+              <code
+                >implementation 'com.google.firebase:firebase-auth:19.2.0'</code
+              >
+            </p>
+            <p>
+              Si se va a usar la base de datos Realtime de Firebase, tiene que
+              tener la misma versión que la de autenticación:
+              <code
+                >implementation
+                'com.google.firebase:firebase-database:19.2.0'</code
+              >
+            </p>
+            <p>
+              De momento la persistencia de datos se usará la Shared
+              Preferences. Las preferencias guardarán solamente, el ID de la
+              lista de libros del usuario, nombre del usuario, email del usuario
+              y si ya ha iniciado sesión o no.<br />
+              Al registrarse el usuario SignUpScreen, mandará a Firebase el
+              email y contraseña en Firebase Authentication.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_sprint2_1.jpg"
+              alt=""
+            />
+            <p>
+              En el Realtime se guardará la siguiente información al
+              registrarse:
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_sprint2_2.jpg"
+              alt=""
+            />
+            <p>
+              En el LoginScreen, consultará los datos, buscará el email en user,
+              obtendrá los datos de user en un Objeto User.class que está en
+              rortegag.boker.main.models.user. El objeto se usa como un POJO,
+              para obtener los datos que queremos.
+            </p>
+            <p>
+              Después consultará los datos de la lista de libros, buscará el ID
+              del usuario código antes y mirará en listbook y obtendrá el ID de
+              la lista.
+            </p>
+            <p>
+              Al registrarse, se crea un ArrayList para que cree el hijo books,
+              con su índice y un libro de ejemplo.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_sprint2_3.jpg"
+              alt=""
+            />
+            <p>
+              Al iniciar o registrarse, en el MainActivity, en el
+              NavigationDrawner se muestra el nombre de usuario y el email. El
+              usuario no tendrá que volver a iniciar sesión, porque en el
+              SplashScreen se comprueba si se ha iniciado sesión.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_sprint2_4.jpg"
+              alt=""
             />
             <img
-              src="../../assets/img/logo-light.svg"
-              width="320"
-              height="100"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_sprint2_5.jpg"
+              alt=""
             />
-          </picture>
-        </a>
-        <nav>
-          <ul class="nav nav-pills">
-            <li class="nav-item">
+            <p>
+              En usuario, dentro de App, cuando pulsa una categoría dependiendo
+              de que género a elegido, se muestra la sinopsis del libro.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_sprint2_6.jpg"
+              alt=""
+            />
+            <p>
+              Si el usuario a elegido ver el libro, cogerá la sinopsis del libro
+              y buscará la sinopsis en Firebase. Hará una consulta y sacará los
+              datos del libro.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_sprint2_7.jpg"
+              alt=""
+            />
+            <p>
+              Si el usuario le da Me gusta, se guardará el libro en su lista de
+              libros. Si vamos a Libros guardados, vemos el libro favorito.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_sprint2_8.jpg"
+              alt=""
+            />
+            <p>
+              En AddBook, cuando se escanea un código, al botón de Añadir se
+              guarda ese libro en books.<br />Fuera de este documento, estará el
+              JSON de Firebase.<br />De momento, la App no tiene base de datos
+              local SQLite.
+            </p>
+            <p class="fw-bold">Sprint 3</p>
+            <p>BluetoothChat</p>
+            <p>
+              Para acceder, debe pulsar el botón del ActionBar y luego a Chat.
+              El desarrollo del módulo es el siguiente:
+            </p>
+            <p>rortegag.boker.controllers/ChatController.class</p>
+            <p>
+              En esta clase, tiene 3 hilos, uno para la mandar que ha aceptado
+              la conexión un dispositivo Bluetooth (AcceptThread), uno para
+              conexión de los dispositivos (ConnectThread) y otro para la
+              lectura y escritura de datos que vienen del
+              Bluetooth(ReadWriteThread).
+            </p>
+            <p>
+              <code>private final BluetoothAdapter bluetoothAdapter;</code
+              ><br />
+              <code>private final Handler handler;</code><br />
+              <code>private AcceptThread acceptThread;</code><br />
+              <code>private ConnectThread connectThread;</code><br />
+              <code>private int state;</code>
+            </p>
+            <p>
+              Todo el código está comentado de que hace cada función.
+              rortegag.boker/BluetoothChat.class
+            </p>
+            <p>
+              Este es el código detrás de la pantalla de Bluetooth, también está
+              documentado.
+            </p>
+            <p>
+              La App solo enviará al usuario a la Aplicación por defecto del
+              Teléfono.
+            </p>
+            <p>Google Maps.</p>
+            <p>
+              En Ver mapa, cuando el usuario entre por primera vez, se le pedirá
+              acesso a la ubicación. Si se le deniega, no podrá cargar la
+              ubicación exacta del usuario, obvio. Si acepta, el usuario debe de
+              entrar otra vez para entrar para ver su ubicación exacta.
+            </p>
+            <p>
+              El código está en
+              rortegag.boker.main.ui.view_libraries/ViewLibrariesFragment.
+            </p>
+            <p>Notificaciones Push.</p>
+            <p>
+              Las notificaciones push se ha usado la tecnología de OneSignal. Se
+              debe obtener desde OneSignal, el id para nuestra App. Hay una guía
+              cuando te creas una cuenta de cómo agregar OneSignal al proyecto.
+            </p>
+            <p>Agregar dependencias al Gradle.</p>
+            <p>
+              <code
+                >implementation 'com.onesignal:OneSignal:[3.11.2,
+                3.99.99]'</code
+              >
+            </p>
+            <p>En la primera línea de Gradle añadir lo siguiente.</p>
+            <p>
+              <code
+                >buildscript { <br />
+                repositories { <br />
+                maven { <br />
+                url 'https://plugins.gradle.org/m2/'} <br />
+                } <br />
+                dependencies { <br />
+                classpath
+                'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.4,
+                0.99.99]' <br />
+                } <br />
+                } <br />
+                apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+                <br />
+                <br />
+                repositories { <br />
+                maven { url 'https://maven.google.com' } <br />
+                }</code
+              >
+            </p>
+            <p>
+              En la línea de android, debajo de
+              <code>testInstrumentationRunner</code> añadir lo siguiente.
+            </p>
+            <p>
+              <code
+                >manifestPlaceholders = [ <br />
+                onesignal_app_id: 'AQUÍ DEBE DE IR NUESTRA ID DE ONESIGNAL’,
+                <br />
+                // Project number pulled from dashboard, local value is ignored.
+                <br />
+                onesignal_google_project_number: 'REMOTE' ]</code
+              >
+            </p>
+            <p>Una vez hecho esto, se crea un Template.</p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_sprint3_1.jpg"
+              alt=""
+            />
+            <p>
+              Después vamos a Automated y creamos un nuevo mensaje automático
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_sprint3_2.jpg"
+              alt=""
+            />
+            <p>
+              Cada 3 horas, más o menos, también depende de la zona horaria del
+              teléfono, envía el mensaje al usuario suscrito.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_sprint3_3.jpg"
+              alt=""
+            />
+            <h2 id="diseno">Diseño</h2>
+            <p class="fw-bold">Arquitectura del sistema</p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_diseño_1.jpg"
+              alt=""
+            />
+            <p class="fw-bold">Interfaz gráfica</p>
+            <p>
+              SplashScreen. Actividad de inicio. Comprueba si tiene internet el
+              usuario y se debe esperar 5 segundos para ir a otra Actividad. Si
+              no se ha inciado sesión va a WelcomeScreen, si ha iniciado sesión
+              va a MainActivity.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_ui_1.jpg"
+              alt=""
+            />
+            <p>
+              WelcomeScreen. Actividad de bienvenida del usuario cuando instala
+              por primera vez la App. El usuario puede pulsar Registrarse, que
+              va a SignUpScreen o Iniciar sesión, que va a LoginScreen.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_ui_2.jpg"
+              alt=""
+            />
+            <p>
+              SignUpScreen. Actividad para que el usuario se registre en Boker.
+              Cuando pulse en Registrarse, le manda a MainActivity.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_ui_3.jpg"
+              alt=""
+            />
+            <p>
+              LoginScreen. Actividad para que el usuario inicie sesión en Boker.
+              Cuando pulse en Iniciar sesión, le manda a MainActivity.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_ui_4.jpg"
+              alt=""
+            />
+            <p>
+              MainActivity. Actividad principal de la App, que contiene un panel
+              de navegación y la vista es por fragments. La vista del fragment
+              de inicio es HomeFragment.
+            </p>
+            <p>El panel de navegación es el siguiente.</p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_ui_5.jpg"
+              alt=""
+            />
+            <p>HomeFragment. Vista de la App. No tiene funcionalidad.</p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_ui_6.jpg"
+              alt=""
+            />
+            <p>
+              CategoriesFragment. Vista de las categorías que puede elegir el
+              usuario. Si pulsa en una, le envía a ViewBookSynopsis.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_ui_7.jpg"
+              alt=""
+            />
+            <p>ViewBookFragment. Vista de los libros favoritos del usuario.</p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_ui_8.jpg"
+              alt=""
+            />
+            <p>
+              ScanCodeFragment. Fragment con un botón para iniciar el escaneo.
+              Si el escaneo es correcto, va a la Actividad AddBook.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_ui_9.jpg"
+              alt=""
+            />
+            <p>
+              ViewLibrariesFragment. Vista que usa el fragment de Google Maps y
+              visualiza el mapa con la ubicación del usuario.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_ui_10.jpg"
+              alt=""
+            />
+            <p>
+              ViewBookSynopsis. Actividad que muestra la sinopsis del libro, de
+              la categoría elegida por el usuario. Si el usuario le da al botón
+              del Ojo, se va a la Actividad ViewBook. Si le da a la fecha de
+              siguiente, vuelve a cargar otra sinopsis.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_ui_11.jpg"
+              alt=""
+            />
+            <p>
+              ViewBook. Actividad que muestra el libro que quería ver el
+              usuario. Si el usuario le da Atrás, termina la Actividad. Si el
+              usuario le da Me gusta, agrega este libro al ViewBookFragment.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_ui_12.jpg"
+              alt=""
+            />
+            <p>
+              AddBook. Actividad que muestra el ISBN escaneado y el usuario
+              puede agregar este libro al backend de Boker.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_ui_13.jpg"
+              alt=""
+            />
+            <p>
+              BluetoothChat. Actividad para chatear con un dispositivo Bluetooth
+              que disponga también de Boker.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_ui_14.jpg"
+              alt=""
+            />
+            <p class="fw-bold">Diseño de la base de datos</p>
+            <p>
+              Descripción de la base de datos local y del backend.<br />Se
+              recomienda utilizar diagramas de clases, así como la descripción
+              de las diferentes relaciones y sus atributos.
+            </p>
+            <p>
+              La App no tiene de momento base de datos local SQLite, seguiré
+              trabajando con la App.
+            </p>
+            <p>
+              El backend es un Firebase. Uso dos cosas de Firebase, Firebase
+              Authentication para el registro y logeo de usuarios y Firebase
+              Realtime Database, la base de datos que es un fichero JSON.
+            </p>
+            <p>
+              Al crear una base de datos en Realtime, debemos de establecer por
+              defecto la reglas en true.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_db_1.jpg"
+              alt=""
+            />
+            <p>
+              Después de trabajar como será nuestro BD de JSON, cambiamos las
+              reglas, para que puedan leer y escribir los usuarios autenticados.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_db_2.jpg"
+              alt=""
+            />
+            <p>Diagrama de clases</p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_db_3.jpg"
+              alt=""
+            />
+            <p class="fw-bold">Entorno de desarrollo</p>
+            <p>Android Studio ha sido el entorno de desarrollo de la App.</p>
+            <p class="fw-bold">Servicios y librerías</p>
+            <p>Librería Firebase Authentication.</p>
+            <p>
+              <code
+                >implementation 'com.google.firebase:firebase-auth:19.2.0'</code
+              >
+            </p>
+            <p>
+              Esta librería se usa en las Actividades SignUpScreen y
+              LoginScreen.
+            </p>
+            <p>En SignUpScreen se crear una variable de tipo FirebaseAuth</p>
+            <p><code>private FirebaseAuth firebaseAuth;</code></p>
+            <p>
+              En el OnCreate de la Actividad, se instancia la conexión a
+              Firebase.
+            </p>
+            <p><code>firebase = FirebaseAuth.getInstance();</code></p>
+            <p>
+              En una función o puede ponerse en un onClick de un botón, se
+              utiliza la función…
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_connect_firebase_1.jpg"
+              alt=""
+            />
+            <p>
+              En LoginScreen se utiliza lo mismo, se crea la varialbe
+              FirebaseAuth, se instancia y se utiliza esta función para iniciar
+              sesión en Firebase.
+            </p>
+            <p>Librería Firebase Realtime Database.</p>
+            <p>
+              <code
+                >implementation
+                'com.google.firebase:firebase-database:19.2.0'</code
+              >
+            </p>
+            <p>
+              Esta librería se utiliza para guardar y consultar datos del
+              backend de Firebase. Claros ejemplos están en SignUpScreen y
+              LoginScreen de como utilizarlos. ViewBookSynopsis, ViewBook,
+              ViewBooksFragment y AddBook, utiliza esta librería para ello.
+            </p>
+            <p>Se crea la variable de tipo DatabaseReference.</p>
+            <p>
+              <code>
+                private DatabaseReference databaseUsers;<br />
+                private DatabaseReference databaseListBooks;
+              </code>
+            </p>
+            <p>
+              Se instancia y se hace referencia a donde pondrá el punto de
+              apoyo.
+            </p>
+            <p>
+              <code>
+                databaseUsers =
+                FirebaseDatabase.getInstance().getReference();<br />
+                String idUser = databaseUsers.push().getKey();<br />
+                User userDB = new User(idUser, userName, email);<br />
+                databaseUsers.child("user").child(idUser).setValue(userDB);
+              </code>
+            </p>
+            <p>
+              Si no se pone nada en <code>getReference</code>, partirá por la
+              raíz del documento JSON. Podemos generar una clave a aleatoria de
+              tipo String con <code>.push().getKey()</code>. Si vamos a meter un
+              Usuario de Boker, creamos un objeto de tipo User. Este objeto se
+              encuentra en rortegag.boker.main.models.user/User.class
+            </p>
+            <p>
+              Después, con <code>child()</code> seleccionamos el hijo de
+              <code>document(user)</code>. Dentro del hijo user, buscamos su
+              <code>child(idUser)</code>, la key generada por Firebase será el
+              ID del usuario.
+            </p>
+            <p>
+              Como último ponemos <code>setValue(userDB)</code>. Guardará los
+              datos ID, nombre e email. Si por alguna razón, no estuviera esos
+              hijos, no pasa nada, se crearán automáticamente.
+            </p>
+            <p>
+              En el LoginScreen, se puede ver una consulta para sacar el nombre
+              del usuario, ya que la App solo pide email y contraseña y queremos
+              visualizar el nombre del usuario en panel de navegación.
+            </p>
+            <p>
+              <code
+                >databaseUsers =
+                FirebaseDatabase.getInstance().getReference("user")</code
+              >
+            </p>
+            <p>Como vemos aquí, le pongo la referencia de user.</p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_connect_firebase_2.jpg"
+              alt=""
+            />
+            <p>
+              Creamos una variable de tipo Query. La consulta usamos
+              <code>orderByChild(“email”)</code>, los hijos que contienen los
+              hijos llamados email que sean igual
+              <code>.equalTo(email del usuario)</code>.
+            </p>
+            <p>
+              Creamos un Listener y en un bucle for, sacamos cada hijo que
+              contiene el campo email. Como va a sacar uno solo, saldrá
+              rápidamente del bucle. Debemos crear el objeto User y usar el
+              getValue() y dentro el Objeto que se va usar.<br />
+              Estamos utilizando los objetos como POJOs, pueden guardar y sacar
+              datos de Firebase. Guardamos los datos en varias variables.
+            </p>
+            <p>Librería OneSignal</p>
+            <p>
+              <code
+                >implementation 'com.onesignal:OneSignal:[3.11.2,
+                3.99.99]'</code
+              >
+            </p>
+            <p>OneSignal se ha explicado arriba.</p>
+            <p>Librería Zxing</p>
+            <p><code>implementation 'com.google.zxing:core:3.3.0'</code></p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_zxing_1.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_zxing_2.jpg"
+              alt=""
+            />
+            <p>Librería Google Maps</p>
+            <p>
+              <code
+                >implementation
+                'com.google.android.gms:play-services-maps:17.0.0'</code
+              >
+            </p>
+            <p>Explicado en la propia clase ViewLibrariesFragment.</p>
+            <h2 id="pruebas">Pruebas</h2>
+            <p class="fw-bold">Pruebas en varios dispositivos</p>
+            <p>
+              Se hará pruebas en 3 dispositivos reales, 1 que no cumpla la
+              función de resolución de pantalla, que puede ocasionar y 2
+              dispositivos normales que cumplen y ver discrepancias.
+            </p>
+            <p>Dispositivos utilizados</p>
+            <p>
               <a
-                href="../../index.html"
-                id="home"
-                class="nav-link rog-text-color rog-font-default"
-              ></a>
-            </li>
-            <li class="nav-item">
+                class="rog-text-color"
+                href="https://www.phonehouse.es/movil/vodafone/smart-prime-7.html"
+                >Vodafone VFD 600 (Smart Prime 7)</a
+              >
+            </p>
+            <p>
               <a
-                href="../../aboutme.html"
-                id="aboutme"
-                class="nav-link rog-text-color rog-font-default"
-              ></a>
-            </li>
-            <li class="nav-item">
+                class="rog-text-color"
+                href="https://www.phonehouse.es/movil/lg/lgx210-8gb-blanco.html"
+                >LG K7 (LG-X210)</a
+              >
+            </p>
+            <p>
               <a
-                href="../../blog.html"
-                id="blog"
-                class="nav-link rog-text-color rog-font-default"
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="../../cheatsheets.html"
-                id="cheatsheets"
-                class="nav-link rog-text-color rog-font-default"
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="../../contact.html"
-                id="contact"
-                class="nav-link rog-text-color rog-font-default"
-              ></a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <div class="row align-items-md-stretch">
-          <div class="col-md-8 mb-4">
-            <div class="h-100 p-5 rog-text-default rog-bg-default rounded-3">
-              <h1 class="rog-font-title text-center">Boker</h1>
-              <img
-                src="../../assets/img/proyects/apps/boker/boker-index.jpg"
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                alt="Boker"
-              />
-              <h2 id="introduccion">Introducción</h2>
-              <p class="fw-bold">Descripción de la aplicación</p>
-              <p>
-                Boker es una App para descubrir libros que le interesen al
-                usuario, de la misma manera que la App de Tinder.
-              </p>
-              <p>
-                El usuario tendrá que registrarse en la App. Después de su
-                registro, le mostrará algunas recomendaciones de sinopsis de
-                libros. Para descubrir un libro que le interese al usuario,
-                habrá una serie de categorías, por ejemplo, los más leídos, lo
-                más gustados, libros que han salido en películas, etc. o por su
-                género, si son biografías, novelas románticas, cuentos, etc.
-              </p>
-              <p>
-                Al elegir la categoría, se mostrarán solamente las sinopsis de
-                los libros, el usuario lo leerá y si le gusta, puede ver qué
-                libro es y guardarlo como favoritos.
-              </p>
-              <p>
-                También el usuario puede escanear el código de barras o poner el
-                ISBN de un libro para buscarlo y ponerlo en la lista.
-              </p>
-              <p class="fw-bold">Objetivos y motivación</p>
-              <p>
-                El objetivo de esta aplicación es hacer que los lectores no
-                juzguen por la caratula de un libro o por el autor del mismo.
-                <br />Si con la sinopsis del libro, ese lector le gusta, puede
-                descubrir libros que no ha leído y descubrir si le gusta un
-                nuevo género literario.
-              </p>
-              <h2 id="analisis">Análisis</h2>
-              <p>Descripción de los requisitos funcionales y no funcionales.</p>
-              <p class="fw-bold">Requisitos funcionales</p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_analisis_1.jpg"
-                alt=""
-              />
-              <p>
-                Al iniciar la App, aparecerá una pantalla de carga. Esta
-                pantalla de carga hará la conexión del usuario a la base de
-                datos para cargar la lista de libros y se mostrará la actividad
-                principal.<br />Si es la primera vez, se mostrará la actividad
-                de bienvenida del usuario y poder registrarse o iniciar
-                sesión.<br />Si el usuario no tiene conexión a internet, se
-                mostrará un aviso de que no tiene conexión.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_analisis_2.jpg"
-                alt=""
-              />
-              <p>
-                En esta actividad, el usuario elegirá si registrarse si no tiene
-                una cuenta de Boker o Iniciar sesión.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_analisis_3.jpg"
-                alt=""
-              />
-              <p>
-                Esta es la pantalla de registro que pedirá el email del usuario,
-                el nombre de usuario y la contraseña.
-              </p>
-              <p>
-                Habrá dos CheckBoxs que uno consistirá en aceptar los términos y
-                condiciones de uso, que habilitará el botón de Registrarse y
-                otro si desea recibir noticias (Notificaciones) y correos de
-                Boker.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_analisis_4.jpg"
-                alt=""
-              />
-              <p>
-                Esta pantalla es la de iniciar sesión, que pedirá el usuario o
-                email y la contraseña.<br />Habrá un enlace abajo si el usuario
-                al olvidado la contraseña.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_analisis_5.jpg"
-                alt=""
-              />
-              <p>
-                Esta pantalla es la actividad principal de la aplicación.<br />Se
-                mostrarán algunos apartados, como recomendaciones, ultimas
-                búsquedas de los usuarios, etc.
-              </p>
-              <p>
-                Al darle un toque a una sinopsis del libro, le llevará a la
-                actividad de la sinopsis del libro.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_analisis_6.jpg"
-                alt=""
-              />
-              <p>
-                Si abrimos el menú principal, vemos que tenemos varios
-                apartados.
-              </p>
-              <ul>
-                <li>Categorías.</li>
-                <li>Libros guardados.</li>
-                <li>Escanear código ISBN.</li>
-                <li>Ver librerías en Google Maps.</li>
-              </ul>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_analisis_7.jpg"
-                alt=""
-              />
-              <p>
-                En esta pantalla, estará las categorías. Se mostrarán las 4
-                principales importantes, lo más leídos, los más vendidos, …<br />Si
-                vamos más para abajo, vemos por género, novelas, biografías,
-                cuentos, fábulas, etc.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_analisis_8.jpg"
-                alt=""
-              />
-              <p>
-                Si abrimos una categoría, se mostrarán sinopsis de un libro
-                aleatorio, el usuario podrá leer la sinopsis y puede hacer dos
-                cosas, pasar a otra sinopsis de otro libro (flecha Siguiente) o
-                ver el libro (Icono Ojo).
-              </p>
-              <p>
-                Si el usuario ha querido ver qué libro es, el usuario puntúa que
-                el libro parece ser recomendable, ya que ha captado la atención
-                de un lector.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_analisis_9.jpg"
-                alt=""
-              />
-              <p>
-                Esta es la pantalla que muestra el libro, su portada, el título
-                del libro, su autor y su género.
-              </p>
-              <p>
-                Aquí el usuario puede hacer dos cosas, o retroceder (flecha
-                retroceder) que volverá a otra sinopsis de un libro o darle a me
-                gusta (dedo Me Gusta) que guardará en libros guardados.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_analisis_10.jpg"
-                alt=""
-              />
-              <p>
-                Esta es la pantalla de los libros guardados que el usuario pulsa
-                el botón Me Gusta.<br />Se muestra una lista de todos los libros
-                que le ha gustado.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_analisis_11.jpg"
-                alt=""
-              />
-              <p>
-                Si el usuario pulsa Escanear código ISBN, se abrirá la cámara y
-                tendrá que escanearlo.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_analisis_12.jpg"
-                alt=""
-              />
-              <p>
-                Al escanear el libro, saldrá la información de este y podrá
-                guardarlo en Libros guardados.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_analisis_13.jpg"
-                alt=""
-              />
-              <p>
-                Esta es la pantalla al abrir Google Maps en Boker, saldrá en
-                mapa, las librarías más cercanas del usuario.
-              </p>
-              <p class="fw-bold">Requisitos no funcionales</p>
-              <p>
-                La App debería de funcionar en Android 4.4 KitKat o superior. El
-                dispositivo debe tener una pantalla de 5 pulgadas con 720 x 1280
-                pixeles, con geolocalización y conexión a Internet para la
-                conexión del usuario que estará almacenado en una base de datos,
-                como también sus libros guardados.
-              </p>
-              <h2 id="aplicacion">Planificación</h2>
-              <p class="fw-bold">Sprint 0</p>
-              <p>En este proyecto, la App usará las siguientes tecnologías:</p>
-              <ul>
-                <li>
-                  Firebase Authentication, para la Autenticación de usuarios en
-                  la App. En ella, se guardará el email y la contraseña de
-                  usuario. La contraseña vendrá cifrada.
-                </li>
-                <li>
-                  Firebase Database, la base de datos de Boker, el Backend. En
-                  la base de datos se guardará la siguiente información:
-                  <ul>
-                    <li>User: IDUser {email, IDUser, userName}</li>
-                    <li>
-                      Books: ISBN {authorBook, genreBook, ISBN, nameBook,
-                      synopsisBook}
-                    </li>
-                    <li>
-                      Listbook: IDListBook {IDListBook, IDUser,
-                      books{ID{authorBook, genreBook, ISBN, nameBook,
-                      synopsisBook} }}
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a class="rog-text-color" href="https://onesignal.com/"
-                    >OneSignal</a
-                  >, para las notificaciones Push de la App. En ella se enviará
-                  automáticamente una notificación al usuario de que abra la App
-                  en busca de nuevos libros.
-                </li>
-                <li>
-                  <a
-                    class="rog-text-color"
-                    href="https://github.com/zxing/zxing"
-                    >Zxing Barcode Scanner</a
-                  >
-                  La App tendrá una opción de escanear el código de barras ISBN
-                  de un libro, verificando si es un ISBN y si lo es, mostrará
-                  una Actividad para añadir el libro a la base de datos de
-                  Boker.
-                </li>
-                <li>
-                  Google Maps: La App tendrá una opción para ver el Mapa de
-                  Google, mostrando su ubicación real.
-                </li>
-              </ul>
-              <p class="fw-bold">Sprint 1</p>
-              <p>La App tendrá las siguientes Actividades:</p>
-
-              <p>SplashScreen:rortegag.boker/SplashScreen.class</p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_sprint1_1.jpg"
-                alt=""
-              />
-              <p>
-                Esta actividad es el laucher de la App. El usuario tendrá que
-                esperar 5 segundos para ir a la siguiente actividad
-                WelcomeScreen, a no ser que el usuario no tenga conexión a
-                Internet.
-              </p>
-              <p>WelcomeScreen: rortegag.boker/WelcomeScreen.class</p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_sprint1_2.jpg"
-                alt=""
-              />
-              <p>
-                En esta Actividad se mostrará una pantalla de bienvenida de la
-                App y contendrá dos botones: Registrarse: Este botón hará un
-                Intent a otra actividad, SignUpScreen. Iniciar sesión: Este
-                botón hará un Intent a otra actividad LoginScreen.
-              </p>
-              <p>SignUpScreen: rortegag.boker/SignUpScreen.class</p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_sprint1_3.jpg"
-                alt=""
-              />
-              <p>
-                En esta Actividad se mostrará 4 EditText donde el usuario tendrá
-                que meter los siguientes datos:
-              </p>
-              <ul>
-                <li>Usuario: Tendrá que meter el nombre de usuario.</li>
-                <li>
-                  Correo electrónico: Tendrá que meter el correo electrónico del
-                  usuario.
-                </li>
-                <li>Contraseña: La contraseña del usuario:</li>
-                <li>
-                  Repetir contraseña: Para comprobar la contraseña esté
-                  introducida bien.
-                </li>
-              </ul>
-              <p>
-                También tendrá dos checkbox,una para Aceptar los términos y
-                condiciones y otro para recibir noticias.<br />Un botón, que
-                será para registrar los datos del usuario al backend.
-              </p>
-              <p>LoginScreen: rortegag.boker/LoginScreen.class</p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_sprint1_4.jpg"
-                alt=""
-              />
-              <p>
-                En esta Actividad contendrá dos EditText, uno para el correo
-                electrónico de usuario y otro para su contraseña.<br />Más abajo
-                tendrá un botón donde puede iniciar sesión en la App,
-                conectándose al backend.
-              </p>
-              <p>MainActivity: rortegag.boker.main/MainActivity.class</p>
-              <p>
-                Esta es la Actividad principal de la App. La actividad contendrá
-                un NavigationDrawner, que contiene los siguientes Fragments:
-              </p>
-              <ul>
-                <li>Inicio: rortegag.boker.main.ui.home/HomeFragment.class</li>
-                <img
-                  class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                  src="../../assets/img/proyects/apps/boker/boker_sprint1_5.jpg"
-                  alt=""
-                />
-                <p>
-                  Este fragment contedrá dos CardView con información estática
-                  de libros. Estos CardView no tienen funcionalidad.
-                </p>
-                <li>
-                  Categorías:
-                  rortegag.boker.main.ui.categories/CategoriesFragment.class
-                </li>
-                <img
-                  class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                  src="../../assets/img/proyects/apps/boker/boker_sprint1_6.jpg"
-                  alt=""
-                />
-                <p>
-                  Este Fragment contendra 12 CardView, una para cada categoría,
-                  4 principales y 8 con distintos géneros de cada libro. En
-                  pulsar en el CardView, le llevará a una Actividad llamada
-                  ViewBookSynopsis
-                </p>
-                <li>
-                  Libros guardados:
-                  rortegag.boker.main.ui.saved_books/SavedBooksFragment.class
-                </li>
-                <img
-                  class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                  src="../../assets/img/proyects/apps/boker/boker_sprint1_7.jpg"
-                  alt=""
-                />
-                <p>
-                  Este Fragment contendrá un layout, que esté será un
-                  RecyclerView, que mostrará el nombre del libro y el autor del
-                  libro favoritos del usuario.
-                </p>
-                <li>
-                  Escanear código ISBN:
-                  rortegag.boker.main.ui.scan_code/ScanCodeFragment.class
-                </li>
-                <img
-                  class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                  src="../../assets/img/proyects/apps/boker/boker_sprint1_8.jpg"
-                  alt=""
-                />
-                <p>
-                  Este Fragment contendrá un botón para iniciar el escaneo del
-                  código de barras. Si el código es correcto, llevará a una
-                  Activiad llamada AddBook.
-                </p>
-                <li>Ver mapa:</li>
-                <p>
-                  Este fragment contendrá el mapa de Google Maps, mostrando la
-                  ubicación real del usuario.
-                </p>
-                <p>
-                  Este es la MainActivity, se irá desplazando por varios
-                  fragments de NavigationDrawner. En la Actividad, tendrá un
-                  ActionBar, con un botón de búsqueda (de momento sin
-                  funcionadidad) y otros dos con Chat (Actividad BluetoothChat)
-                  y Llamar (abrirá la App del teléfono).
-                </p>
-                <li>
-                  Ver sinopsis de un libro desconocido:
-                  rortegag.boker.main/ViewBookSynopsis.class
-                </li>
-                <img
-                  class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                  src="../../assets/img/proyects/apps/boker/boker_sprint1_9.jpg"
-                  alt=""
-                />
-                <p>
-                  En esta Actividad se mostrará un CardView grande, mostrando un
-                  largo texto de una sinopsis de un libro, elegido por el
-                  usuario, en el Fragment de Categorias. En el CardView tiene
-                  dos botones con una imagen:
-                </p>
-                <p>
-                  Boton Ver libro: Este botón hará un intent a otra Actividad
-                  llamado ViewBook,que msotrará que libro es.
-                </p>
-                <p>
-                  Boton Siguiente. Se llamará a sí mismo en intent y mostrará
-                  otra sinopsis de un libro.
-                </p>
-                <li>
-                  Ver libro de la sinopsis: rortegag.boker.main/ViewBook.class
-                </li>
-                <img
-                  class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                  src="../../assets/img/proyects/apps/boker/boker_sprint1_10.jpg"
-                  alt=""
-                />
-                <p>
-                  En esta Actividad mostrará al usuario los datos del libro,
-                  como son su Título, Autor, Genero y el ISBN del libro. En el
-                  CardView, tendrá dos botones:
-                </p>
-                <p>
-                  Botón Atrás: Terminará esta Actividad y lo mandará de vuelta
-                  al ViewBookSynopsis.
-                </p>
-                <p>
-                  Botón Me gusta: Esté botón añadirá a favoritos este libro y se
-                  podrá ver en el fragment de Libros guardados.
-                </p>
-                <li>Añadir libro: rortegag.boker.main/AddBook.class</li>
-                <img
-                  class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                  src="../../assets/img/proyects/apps/boker/boker_sprint1_11.jpg"
-                  alt=""
-                />
-                <p>
-                  En esta Actividad se podrá añadir un libro, esta Actividad es
-                  llamada cuando se escanea un código ISBN.
-                </p>
-                <li>Chat: rortegag.boker.main/BluetoothChat.class</li>
-                <img
-                  class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                  src="../../assets/img/proyects/apps/boker/boker_sprint1_12.jpg"
-                  alt=""
-                />
-                <p>
-                  Esta Actividad se muestra un chat que irá por Bluetooth. El
-                  darle al botón conectar, se mostrará un layout que contendrá
-                  los dispositivos Bluetooth que encuentre.
-                </p>
-              </ul>
-              <p class="fw-bold">Sprint 2</p>
-              <p>
-                El backend de Boker es un BaaS. Este BaaS es firebase, y se
-                utiliza para la autenticación de usuarios y la base de datos de
-                Boker.
-              </p>
-              <p>
-                Firebase Authetication. La App debe tener en el gradle la
-                librería:
-                <code
-                  >implementation
-                  'com.google.firebase:firebase-auth:19.2.0'</code
-                >
-              </p>
-              <p>
-                Si se va a usar la base de datos Realtime de Firebase, tiene que
-                tener la misma versión que la de autenticación:
-                <code
-                  >implementation
-                  'com.google.firebase:firebase-database:19.2.0'</code
-                >
-              </p>
-              <p>
-                De momento la persistencia de datos se usará la Shared
-                Preferences. Las preferencias guardarán solamente, el ID de la
-                lista de libros del usuario, nombre del usuario, email del
-                usuario y si ya ha iniciado sesión o no.<br />
-                Al registrarse el usuario SignUpScreen, mandará a Firebase el
-                email y contraseña en Firebase Authentication.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_sprint2_1.jpg"
-                alt=""
-              />
-              <p>
-                En el Realtime se guardará la siguiente información al
-                registrarse:
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_sprint2_2.jpg"
-                alt=""
-              />
-              <p>
-                En el LoginScreen, consultará los datos, buscará el email en
-                user, obtendrá los datos de user en un Objeto User.class que
-                está en rortegag.boker.main.models.user. El objeto se usa como
-                un POJO, para obtener los datos que queremos.
-              </p>
-              <p>
-                Después consultará los datos de la lista de libros, buscará el
-                ID del usuario código antes y mirará en listbook y obtendrá el
-                ID de la lista.
-              </p>
-              <p>
-                Al registrarse, se crea un ArrayList para que cree el hijo
-                books, con su índice y un libro de ejemplo.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_sprint2_3.jpg"
-                alt=""
-              />
-              <p>
-                Al iniciar o registrarse, en el MainActivity, en el
-                NavigationDrawner se muestra el nombre de usuario y el email. El
-                usuario no tendrá que volver a iniciar sesión, porque en el
-                SplashScreen se comprueba si se ha iniciado sesión.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_sprint2_4.jpg"
-                alt=""
-              />
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_sprint2_5.jpg"
-                alt=""
-              />
-              <p>
-                En usuario, dentro de App, cuando pulsa una categoría
-                dependiendo de que género a elegido, se muestra la sinopsis del
-                libro.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_sprint2_6.jpg"
-                alt=""
-              />
-              <p>
-                Si el usuario a elegido ver el libro, cogerá la sinopsis del
-                libro y buscará la sinopsis en Firebase. Hará una consulta y
-                sacará los datos del libro.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_sprint2_7.jpg"
-                alt=""
-              />
-              <p>
-                Si el usuario le da Me gusta, se guardará el libro en su lista
-                de libros. Si vamos a Libros guardados, vemos el libro favorito.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_sprint2_8.jpg"
-                alt=""
-              />
-              <p>
-                En AddBook, cuando se escanea un código, al botón de Añadir se
-                guarda ese libro en books.<br />Fuera de este documento, estará
-                el JSON de Firebase.<br />De momento, la App no tiene base de
-                datos local SQLite.
-              </p>
-              <p class="fw-bold">Sprint 3</p>
-              <p>BluetoothChat</p>
-              <p>
-                Para acceder, debe pulsar el botón del ActionBar y luego a Chat.
-                El desarrollo del módulo es el siguiente:
-              </p>
-              <p>rortegag.boker.controllers/ChatController.class</p>
-              <p>
-                En esta clase, tiene 3 hilos, uno para la mandar que ha aceptado
-                la conexión un dispositivo Bluetooth (AcceptThread), uno para
-                conexión de los dispositivos (ConnectThread) y otro para la
-                lectura y escritura de datos que vienen del
-                Bluetooth(ReadWriteThread).
-              </p>
-              <p>
-                <code>private final BluetoothAdapter bluetoothAdapter;</code
-                ><br />
-                <code>private final Handler handler;</code><br />
-                <code>private AcceptThread acceptThread;</code><br />
-                <code>private ConnectThread connectThread;</code><br />
-                <code>private int state;</code>
-              </p>
-              <p>
-                Todo el código está comentado de que hace cada función.
-                rortegag.boker/BluetoothChat.class
-              </p>
-              <p>
-                Este es el código detrás de la pantalla de Bluetooth, también
-                está documentado.
-              </p>
-              <p>
-                La App solo enviará al usuario a la Aplicación por defecto del
-                Teléfono.
-              </p>
-              <p>Google Maps.</p>
-              <p>
-                En Ver mapa, cuando el usuario entre por primera vez, se le
-                pedirá acesso a la ubicación. Si se le deniega, no podrá cargar
-                la ubicación exacta del usuario, obvio. Si acepta, el usuario
-                debe de entrar otra vez para entrar para ver su ubicación
-                exacta.
-              </p>
-              <p>
-                El código está en
-                rortegag.boker.main.ui.view_libraries/ViewLibrariesFragment.
-              </p>
-              <p>Notificaciones Push.</p>
-              <p>
-                Las notificaciones push se ha usado la tecnología de OneSignal.
-                Se debe obtener desde OneSignal, el id para nuestra App. Hay una
-                guía cuando te creas una cuenta de cómo agregar OneSignal al
-                proyecto.
-              </p>
-              <p>Agregar dependencias al Gradle.</p>
-              <p>
-                <code
-                  >implementation 'com.onesignal:OneSignal:[3.11.2,
-                  3.99.99]'</code
-                >
-              </p>
-              <p>En la primera línea de Gradle añadir lo siguiente.</p>
-              <p>
-                <code
-                  >buildscript { <br />
-                  repositories { <br />
-                  maven { <br />
-                  url 'https://plugins.gradle.org/m2/'} <br />
-                  } <br />
-                  dependencies { <br />
-                  classpath
-                  'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.4,
-                  0.99.99]' <br />
-                  } <br />
-                  } <br />
-                  apply plugin:
-                  'com.onesignal.androidsdk.onesignal-gradle-plugin' <br />
-                  <br />
-                  repositories { <br />
-                  maven { url 'https://maven.google.com' } <br />
-                  }</code
-                >
-              </p>
-              <p>
-                En la línea de android, debajo de
-                <code>testInstrumentationRunner</code> añadir lo siguiente.
-              </p>
-              <p>
-                <code
-                  >manifestPlaceholders = [ <br />
-                  onesignal_app_id: 'AQUÍ DEBE DE IR NUESTRA ID DE ONESIGNAL’,
-                  <br />
-                  // Project number pulled from dashboard, local value is
-                  ignored. <br />
-                  onesignal_google_project_number: 'REMOTE' ]</code
-                >
-              </p>
-              <p>Una vez hecho esto, se crea un Template.</p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_sprint3_1.jpg"
-                alt=""
-              />
-              <p>
-                Después vamos a Automated y creamos un nuevo mensaje automático
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_sprint3_2.jpg"
-                alt=""
-              />
-              <p>
-                Cada 3 horas, más o menos, también depende de la zona horaria
-                del teléfono, envía el mensaje al usuario suscrito.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_sprint3_3.jpg"
-                alt=""
-              />
-              <h2 id="diseno">Diseño</h2>
-              <p class="fw-bold">Arquitectura del sistema</p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_diseño_1.jpg"
-                alt=""
-              />
-              <p class="fw-bold">Interfaz gráfica</p>
-              <p>
-                SplashScreen. Actividad de inicio. Comprueba si tiene internet
-                el usuario y se debe esperar 5 segundos para ir a otra
-                Actividad. Si no se ha inciado sesión va a WelcomeScreen, si ha
-                iniciado sesión va a MainActivity.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_ui_1.jpg"
-                alt=""
-              />
-              <p>
-                WelcomeScreen. Actividad de bienvenida del usuario cuando
-                instala por primera vez la App. El usuario puede pulsar
-                Registrarse, que va a SignUpScreen o Iniciar sesión, que va a
-                LoginScreen.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_ui_2.jpg"
-                alt=""
-              />
-              <p>
-                SignUpScreen. Actividad para que el usuario se registre en
-                Boker. Cuando pulse en Registrarse, le manda a MainActivity.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_ui_3.jpg"
-                alt=""
-              />
-              <p>
-                LoginScreen. Actividad para que el usuario inicie sesión en
-                Boker. Cuando pulse en Iniciar sesión, le manda a MainActivity.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_ui_4.jpg"
-                alt=""
-              />
-              <p>
-                MainActivity. Actividad principal de la App, que contiene un
-                panel de navegación y la vista es por fragments. La vista del
-                fragment de inicio es HomeFragment.
-              </p>
-              <p>El panel de navegación es el siguiente.</p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_ui_5.jpg"
-                alt=""
-              />
-              <p>HomeFragment. Vista de la App. No tiene funcionalidad.</p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_ui_6.jpg"
-                alt=""
-              />
-              <p>
-                CategoriesFragment. Vista de las categorías que puede elegir el
-                usuario. Si pulsa en una, le envía a ViewBookSynopsis.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_ui_7.jpg"
-                alt=""
-              />
-              <p>
-                ViewBookFragment. Vista de los libros favoritos del usuario.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_ui_8.jpg"
-                alt=""
-              />
-              <p>
-                ScanCodeFragment. Fragment con un botón para iniciar el escaneo.
-                Si el escaneo es correcto, va a la Actividad AddBook.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_ui_9.jpg"
-                alt=""
-              />
-              <p>
-                ViewLibrariesFragment. Vista que usa el fragment de Google Maps
-                y visualiza el mapa con la ubicación del usuario.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_ui_10.jpg"
-                alt=""
-              />
-              <p>
-                ViewBookSynopsis. Actividad que muestra la sinopsis del libro,
-                de la categoría elegida por el usuario. Si el usuario le da al
-                botón del Ojo, se va a la Actividad ViewBook. Si le da a la
-                fecha de siguiente, vuelve a cargar otra sinopsis.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_ui_11.jpg"
-                alt=""
-              />
-              <p>
-                ViewBook. Actividad que muestra el libro que quería ver el
-                usuario. Si el usuario le da Atrás, termina la Actividad. Si el
-                usuario le da Me gusta, agrega este libro al ViewBookFragment.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_ui_12.jpg"
-                alt=""
-              />
-              <p>
-                AddBook. Actividad que muestra el ISBN escaneado y el usuario
-                puede agregar este libro al backend de Boker.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_ui_13.jpg"
-                alt=""
-              />
-              <p>
-                BluetoothChat. Actividad para chatear con un dispositivo
-                Bluetooth que disponga también de Boker.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_ui_14.jpg"
-                alt=""
-              />
-              <p class="fw-bold">Diseño de la base de datos</p>
-              <p>
-                Descripción de la base de datos local y del backend.<br />Se
-                recomienda utilizar diagramas de clases, así como la descripción
-                de las diferentes relaciones y sus atributos.
-              </p>
-              <p>
-                La App no tiene de momento base de datos local SQLite, seguiré
-                trabajando con la App.
-              </p>
-              <p>
-                El backend es un Firebase. Uso dos cosas de Firebase, Firebase
-                Authentication para el registro y logeo de usuarios y Firebase
-                Realtime Database, la base de datos que es un fichero JSON.
-              </p>
-              <p>
-                Al crear una base de datos en Realtime, debemos de establecer
-                por defecto la reglas en true.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_db_1.jpg"
-                alt=""
-              />
-              <p>
-                Después de trabajar como será nuestro BD de JSON, cambiamos las
-                reglas, para que puedan leer y escribir los usuarios
-                autenticados.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_db_2.jpg"
-                alt=""
-              />
-              <p>Diagrama de clases</p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_db_3.jpg"
-                alt=""
-              />
-              <p class="fw-bold">Entorno de desarrollo</p>
-              <p>Android Studio ha sido el entorno de desarrollo de la App.</p>
-              <p class="fw-bold">Servicios y librerías</p>
-              <p>Librería Firebase Authentication.</p>
-              <p>
-                <code
-                  >implementation
-                  'com.google.firebase:firebase-auth:19.2.0'</code
-                >
-              </p>
-              <p>
-                Esta librería se usa en las Actividades SignUpScreen y
-                LoginScreen.
-              </p>
-              <p>En SignUpScreen se crear una variable de tipo FirebaseAuth</p>
-              <p><code>private FirebaseAuth firebaseAuth;</code></p>
-              <p>
-                En el OnCreate de la Actividad, se instancia la conexión a
-                Firebase.
-              </p>
-              <p><code>firebase = FirebaseAuth.getInstance();</code></p>
-              <p>
-                En una función o puede ponerse en un onClick de un botón, se
-                utiliza la función…
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_connect_firebase_1.jpg"
-                alt=""
-              />
-              <p>
-                En LoginScreen se utiliza lo mismo, se crea la varialbe
-                FirebaseAuth, se instancia y se utiliza esta función para
-                iniciar sesión en Firebase.
-              </p>
-              <p>Librería Firebase Realtime Database.</p>
-              <p>
-                <code
-                  >implementation
-                  'com.google.firebase:firebase-database:19.2.0'</code
-                >
-              </p>
-              <p>
-                Esta librería se utiliza para guardar y consultar datos del
-                backend de Firebase. Claros ejemplos están en SignUpScreen y
-                LoginScreen de como utilizarlos. ViewBookSynopsis, ViewBook,
-                ViewBooksFragment y AddBook, utiliza esta librería para ello.
-              </p>
-              <p>Se crea la variable de tipo DatabaseReference.</p>
-              <p>
-                <code>
-                  private DatabaseReference databaseUsers;<br />
-                  private DatabaseReference databaseListBooks;
-                </code>
-              </p>
-              <p>
-                Se instancia y se hace referencia a donde pondrá el punto de
-                apoyo.
-              </p>
-              <p>
-                <code>
-                  databaseUsers =
-                  FirebaseDatabase.getInstance().getReference();<br />
-                  String idUser = databaseUsers.push().getKey();<br />
-                  User userDB = new User(idUser, userName, email);<br />
-                  databaseUsers.child("user").child(idUser).setValue(userDB);
-                </code>
-              </p>
-              <p>
-                Si no se pone nada en <code>getReference</code>, partirá por la
-                raíz del documento JSON. Podemos generar una clave a aleatoria
-                de tipo String con <code>.push().getKey()</code>. Si vamos a
-                meter un Usuario de Boker, creamos un objeto de tipo User. Este
-                objeto se encuentra en
-                rortegag.boker.main.models.user/User.class
-              </p>
-              <p>
-                Después, con <code>child()</code> seleccionamos el hijo de
-                <code>document(user)</code>. Dentro del hijo user, buscamos su
-                <code>child(idUser)</code>, la key generada por Firebase será el
-                ID del usuario.
-              </p>
-              <p>
-                Como último ponemos <code>setValue(userDB)</code>. Guardará los
-                datos ID, nombre e email. Si por alguna razón, no estuviera esos
-                hijos, no pasa nada, se crearán automáticamente.
-              </p>
-              <p>
-                En el LoginScreen, se puede ver una consulta para sacar el
-                nombre del usuario, ya que la App solo pide email y contraseña y
-                queremos visualizar el nombre del usuario en panel de
-                navegación.
-              </p>
-              <p>
-                <code
-                  >databaseUsers =
-                  FirebaseDatabase.getInstance().getReference("user")</code
-                >
-              </p>
-              <p>Como vemos aquí, le pongo la referencia de user.</p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_connect_firebase_2.jpg"
-                alt=""
-              />
-              <p>
-                Creamos una variable de tipo Query. La consulta usamos
-                <code>orderByChild(“email”)</code>, los hijos que contienen los
-                hijos llamados email que sean igual
-                <code>.equalTo(email del usuario)</code>.
-              </p>
-              <p>
-                Creamos un Listener y en un bucle for, sacamos cada hijo que
-                contiene el campo email. Como va a sacar uno solo, saldrá
-                rápidamente del bucle. Debemos crear el objeto User y usar el
-                getValue() y dentro el Objeto que se va usar.<br />
-                Estamos utilizando los objetos como POJOs, pueden guardar y
-                sacar datos de Firebase. Guardamos los datos en varias
-                variables.
-              </p>
-              <p>Librería OneSignal</p>
-              <p>
-                <code
-                  >implementation 'com.onesignal:OneSignal:[3.11.2,
-                  3.99.99]'</code
-                >
-              </p>
-              <p>OneSignal se ha explicado arriba.</p>
-              <p>Librería Zxing</p>
-              <p><code>implementation 'com.google.zxing:core:3.3.0'</code></p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_zxing_1.jpg"
-                alt=""
-              />
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_zxing_2.jpg"
-                alt=""
-              />
-              <p>Librería Google Maps</p>
-              <p>
-                <code
-                  >implementation
-                  'com.google.android.gms:play-services-maps:17.0.0'</code
-                >
-              </p>
-              <p>Explicado en la propia clase ViewLibrariesFragment.</p>
-              <h2 id="pruebas">Pruebas</h2>
-              <p class="fw-bold">Pruebas en varios dispositivos</p>
-              <p>
-                Se hará pruebas en 3 dispositivos reales, 1 que no cumpla la
-                función de resolución de pantalla, que puede ocasionar y 2
-                dispositivos normales que cumplen y ver discrepancias.
-              </p>
-              <p>Dispositivos utilizados</p>
-              <p>
-                <a
-                  class="rog-text-color"
-                  href="https://www.phonehouse.es/movil/vodafone/smart-prime-7.html"
-                  >Vodafone VFD 600 (Smart Prime 7)</a
-                >
-              </p>
-              <p>
-                <a
-                  class="rog-text-color"
-                  href="https://www.phonehouse.es/movil/lg/lgx210-8gb-blanco.html"
-                  >LG K7 (LG-X210)</a
-                >
-              </p>
-              <p>
-                <a
-                  class="rog-text-color"
-                  href="https://www.phonehouse.es/movil/samsung/galaxy-j3-2016.html"
-                  >Samsung Galaxy J3 (2016)</a
-                >
-              </p>
-              <p class="fw-bold">Informe de pruebas</p>
-              <p>Vodafone VFD 600</p>
-              <p>
-                Este dispositivo es el que ha hecho las pruebas de la App. Se
-                pueden ver los pantallazos en el apartado Interfaz gráfica.
-              </p>
-              <p>LG K7</p>
-              <p>
-                Este dispositivo no cumple la resolución óptima para la App.
-                Pantallazos siguientes.
-              </p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_lgk7_1.jpg"
-                alt=""
-              />
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_lgk7_2.jpg"
-                alt=""
-              />
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_lgk7_3.jpg"
-                alt=""
-              />
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_lgk7_4.jpg"
-                alt=""
-              />
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_lgk7_5.jpg"
-                alt=""
-              />
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_lgk7_6.jpg"
-                alt=""
-              />
-              <p>Samsung Galaxy J3 (2016)</p>
-              <p>Dispositivo que cumple con los requisitos.</p>
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_samsung_galaxy_j3_1.jpg"
-                alt=""
-              />
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_samsung_galaxy_j3_2.jpg"
-                alt=""
-              />
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_samsung_galaxy_j3_3.jpg"
-                alt=""
-              />
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_samsung_galaxy_j3_4.jpg"
-                alt=""
-              />
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_samsung_galaxy_j3_5.jpg"
-                alt=""
-              />
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_samsung_galaxy_j3_6.jpg"
-                alt=""
-              />
-              <img
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                src="../../assets/img/proyects/apps/boker/boker_samsung_galaxy_j3_7.jpg"
-                alt=""
-              />
-              <h2 id="conclusiones">Conclusiones</h2>
-              <p class="fw-bold">Conocimientos adquiridos</p>
-              <p>
-                Android Studio te da muchas herramientas desarrollo para las
-                interfaces de Android.
-              </p>
-              <p>
-                Usar librerías de terceros te ayuda mucho a ahorrarte trabajo en
-                desarrollar, por ejemplo, el escaneo de código de barras o las
-                notificaciones push.
-              </p>
-              <p>
-                Como Gradle te ayuda a agregar todas esas librerías, incluso te
-                dice cuando hay una nueva versión disponible de esa librería.
-              </p>
-              <p class="fw-bold">Mejoras futuras</p>
-              <p>
-                Hacer una base de datos local con SQLite, mejorará muchísimo los
-                accesos al backend, haciendo que se conecte menos al backend
-                para solamente obtener un dato, como es el caso de la Actividad
-                de mostrar la sinopsis del libro.
-              </p>
-              <p>Si se agrega la base de datos, habrá que cifrarla.</p>
-              <p>
-                Se debería comprobar si el dispositivo está hackeado o tiene
-                root, para que el usuario no pueda acceder a la base de datos o
-                ficheros de la App.
-              </p>
-              <p>
-                Agregar más notificaciones push cuando se agregue un libro nuevo
-                al backend.
-              </p>
-            </div>
+                class="rog-text-color"
+                href="https://www.phonehouse.es/movil/samsung/galaxy-j3-2016.html"
+                >Samsung Galaxy J3 (2016)</a
+              >
+            </p>
+            <p class="fw-bold">Informe de pruebas</p>
+            <p>Vodafone VFD 600</p>
+            <p>
+              Este dispositivo es el que ha hecho las pruebas de la App. Se
+              pueden ver los pantallazos en el apartado Interfaz gráfica.
+            </p>
+            <p>LG K7</p>
+            <p>
+              Este dispositivo no cumple la resolución óptima para la App.
+              Pantallazos siguientes.
+            </p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_lgk7_1.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_lgk7_2.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_lgk7_3.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_lgk7_4.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_lgk7_5.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_lgk7_6.jpg"
+              alt=""
+            />
+            <p>Samsung Galaxy J3 (2016)</p>
+            <p>Dispositivo que cumple con los requisitos.</p>
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_samsung_galaxy_j3_1.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_samsung_galaxy_j3_2.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_samsung_galaxy_j3_3.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_samsung_galaxy_j3_4.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_samsung_galaxy_j3_5.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_samsung_galaxy_j3_6.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              src="../../assets/img/proyects/apps/boker/boker_samsung_galaxy_j3_7.jpg"
+              alt=""
+            />
+            <h2 id="conclusiones">Conclusiones</h2>
+            <p class="fw-bold">Conocimientos adquiridos</p>
+            <p>
+              Android Studio te da muchas herramientas desarrollo para las
+              interfaces de Android.
+            </p>
+            <p>
+              Usar librerías de terceros te ayuda mucho a ahorrarte trabajo en
+              desarrollar, por ejemplo, el escaneo de código de barras o las
+              notificaciones push.
+            </p>
+            <p>
+              Como Gradle te ayuda a agregar todas esas librerías, incluso te
+              dice cuando hay una nueva versión disponible de esa librería.
+            </p>
+            <p class="fw-bold">Mejoras futuras</p>
+            <p>
+              Hacer una base de datos local con SQLite, mejorará muchísimo los
+              accesos al backend, haciendo que se conecte menos al backend para
+              solamente obtener un dato, como es el caso de la Actividad de
+              mostrar la sinopsis del libro.
+            </p>
+            <p>Si se agrega la base de datos, habrá que cifrarla.</p>
+            <p>
+              Se debería comprobar si el dispositivo está hackeado o tiene root,
+              para que el usuario no pueda acceder a la base de datos o ficheros
+              de la App.
+            </p>
+            <p>
+              Agregar más notificaciones push cuando se agregue un libro nuevo
+              al backend.
+            </p>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="h-100 p-5 rog-text-color rog-bg-default rounded-3">
-              <h2 class="rog-font-title text-center">ÍNDICE</h2>
-              <ol class="fs-5">
-                <li>
-                  <a class="rog-text-color" href="#introduccion"
-                    >Introducción</a
-                  >
-                </li>
-                <li><a class="rog-text-color" href="#analisis">Análisis</a></li>
-                <li>
-                  <a class="rog-text-color" href="#planificación"
-                    >Planificación</a
-                  >
-                </li>
-                <li>
-                  <a class="rog-text-color" href="#diseno">Diseño</a>
-                </li>
-                <li>
-                  <a class="rog-text-color" href="#pruebas">Pruebas</a>
-                </li>
-                <li>
-                  <a class="rog-text-color" href="#conclusiones"
-                    >Conclusiones</a
-                  >
-                </li>
-              </ol>
-              <div class="d-grid mx-auto">
-                <button
-                  class="btn rog-btn-github btn-lg btn-block rog-font-default"
-                  type="button"
-                  onclick="window.open('https://github.com/r-ortegag/boker', '_blank');"
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="h-100 p-5 rog-text-color rog-bg-default rounded-3">
+            <h2 class="rog-font-title text-center">ÍNDICE</h2>
+            <ol class="fs-5">
+              <li>
+                <a class="rog-text-color" href="#introduccion">Introducción</a>
+              </li>
+              <li><a class="rog-text-color" href="#analisis">Análisis</a></li>
+              <li>
+                <a class="rog-text-color" href="#planificación"
+                  >Planificación</a
                 >
-                  <i class="bi bi-github"></i> Ver proyecto en GitHub
-                </button>
-              </div>
+              </li>
+              <li>
+                <a class="rog-text-color" href="#diseno">Diseño</a>
+              </li>
+              <li>
+                <a class="rog-text-color" href="#pruebas">Pruebas</a>
+              </li>
+              <li>
+                <a class="rog-text-color" href="#conclusiones">Conclusiones</a>
+              </li>
+            </ol>
+            <div class="d-grid mx-auto">
+              <button
+                class="btn rog-btn-github btn-lg btn-block rog-font-default"
+                type="button"
+                onclick="window.open('https://github.com/r-ortegag/boker', '_blank');"
+              >
+                <i class="bi bi-github"></i> Ver proyecto en GitHub
+              </button>
             </div>
           </div>
         </div>
-      </main>
-      <footer
-        class="footer container-fluid text-center bg-dark text-white rounded-3"
-      >
-        <div class="container pt-3">
-          <section class="mb-4">
-            <a
-              class="text-light fs-3 me-3"
-              href="https://www.linkedin.com/in/raul-ortega-gallego/"
-              role="button"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="bi bi-linkedin"></i
-            ></a>
-            <a
-              class="text-light fs-3"
-              href="https://twitter.com/r_ortegag"
-              role="button"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="bi bi-twitter"></i
-            ></a>
-            <a
-              class="text-light fs-3 ms-3"
-              href="https://github.com/r-ortegag"
-              role="button"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="bi bi-github"></i
-            ></a>
-          </section>
-        </div>
-        <div class="text-center text-light pb-3">
-          2022
-          <a class="text-light" href="https://rortegag.com">rortegag.com</a>
-        </div>
-      </footer>
-      <button type="button" class="btn rog-btn btn-lg" id="btn-scroll-top">
-        <i class="bi bi-arrow-up-short"></i>
-      </button>
-    </div>
+      </div>
+    </main>
+    <footer class="container py-1 text-center bg-dark text-white rounded-3">
+      <div class="container pt-3">
+        <section class="mb-4">
+          <a
+            class="text-light fs-3 me-3"
+            href="https://www.linkedin.com/in/raul-ortega-gallego/"
+            role="button"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a
+            class="text-light fs-3"
+            href="https://twitter.com/r_ortegag"
+            role="button"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-twitter"></i
+          ></a>
+          <a
+            class="text-light fs-3 ms-3"
+            href="https://github.com/r-ortegag"
+            role="button"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-github"></i
+          ></a>
+        </section>
+      </div>
+      <div class="text-center text-light pb-3">
+        2022
+        <a class="text-light" href="https://rortegag.com">rortegag.com</a>
+      </div>
+    </footer>
+    <button type="button" class="btn rog-btn btn-lg" id="btn-scroll-top">
+      <i class="bi bi-arrow-up-short"></i>
+    </button>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"

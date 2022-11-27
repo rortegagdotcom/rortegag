@@ -106,157 +106,147 @@
   </head>
 
   <body class="rog-bg-main">
-    <div class="container py-1">
-      <header
-        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-1"
+    <header
+      class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-1"
+    >
+      <a
+        href="../../index.html"
+        class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
       >
-        <a
-          href="../../index.html"
-          class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
-        >
-          <picture>
-            <source
-              media="(prefers-color-scheme: dark)"
-              srcset="../../assets/img/logo-dark.svg"
-            />
+        <picture>
+          <source
+            media="(prefers-color-scheme: dark)"
+            srcset="../../assets/img/logo-dark.svg"
+          />
+          <img src="../../assets/img/logo-light.svg" width="320" height="100" />
+        </picture>
+      </a>
+      <nav>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a
+              href="../../index.html"
+              id="home"
+              class="nav-link rog-text-color rog-font-default"
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="../../aboutme.html"
+              id="aboutme"
+              class="nav-link rog-text-color rog-font-default"
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="../../blog.html"
+              id="blog"
+              class="nav-link rog-text-color rog-font-default"
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="../../cheatsheets.html"
+              id="cheatsheets"
+              class="nav-link rog-text-color rog-font-default"
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="../../contact.html"
+              id="contact"
+              class="nav-link rog-text-color rog-font-default"
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container py-1">
+      <div class="row align-items-md-stretch">
+        <div class="col-md-8 mb-4">
+          <div class="h-100 p-5 rog-text-default rog-bg-default rounded-3">
+            <h1 class="rog-font-title text-center">Foolist</h1>
             <img
-              src="../../assets/img/logo-light.svg"
-              width="320"
-              height="100"
+              src="../../assets/img/proyects/apps/foolist/foolist-index.png"
+              class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
+              alt="Diversión con banderas"
             />
-          </picture>
-        </a>
-        <nav>
-          <ul class="nav nav-pills">
-            <li class="nav-item">
-              <a
-                href="../../index.html"
-                id="home"
-                class="nav-link rog-text-color rog-font-default"
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="../../aboutme.html"
-                id="aboutme"
-                class="nav-link rog-text-color rog-font-default"
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="../../blog.html"
-                id="blog"
-                class="nav-link rog-text-color rog-font-default"
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="../../cheatsheets.html"
-                id="cheatsheets"
-                class="nav-link rog-text-color rog-font-default"
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="../../contact.html"
-                id="contact"
-                class="nav-link rog-text-color rog-font-default"
-              ></a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <div class="row align-items-md-stretch">
-          <div class="col-md-8 mb-4">
-            <div class="h-100 p-5 rog-text-default rog-bg-default rounded-3">
-              <h1 class="rog-font-title text-center">Foolist</h1>
-              <img
-                src="../../assets/img/proyects/apps/foolist/foolist-index.png"
-                class="img-fluid d-block mx-auto mt-3 mb-3 rounded-3"
-                alt="Diversión con banderas"
-              />
-              <h2 id="introduccion">Introducción</h2>
-              <p>
-                Este projecto se trata de una webapp para crear una lista de
-                tareas sencilla. Creado con React+Typescript.
-              </p>
-              <p>La App utiliza su propia API sencilla para las tareas.</p>
-              <h2 id="api">API</h2>
-              <p>
-                Este projecto se trata de una webapp para crear una lista de
-                tareas sencilla. Creado con React+Typescript.
-              </p>
-              <h2 id="aplicacion">Aplicación</h2>
-            </div>
+            <h2 id="introduccion">Introducción</h2>
+            <p>
+              Este projecto se trata de una webapp para crear una lista de
+              tareas sencilla. Creado con React+Typescript.
+            </p>
+            <p>La App utiliza su propia API sencilla para las tareas.</p>
+            <h2 id="api">API</h2>
+            <p>
+              Este projecto se trata de una webapp para crear una lista de
+              tareas sencilla. Creado con React+Typescript.
+            </p>
+            <h2 id="aplicacion">Aplicación</h2>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="h-100 p-5 rog-text-color rog-bg-default rounded-3">
-              <h2 class="rog-font-title text-center">ÍNDICE</h2>
-              <ol class="fs-5">
-                <li>
-                  <a class="rog-text-color" href="#introduccion"
-                    >Introducción</a
-                  >
-                </li>
-                <li><a class="rog-text-color" href="#api">API</a></li>
-                <li>
-                  <a class="rog-text-color" href="#aplicacion">Aplicación</a>
-                </li>
-              </ol>
-              <div class="d-grid mx-auto">
-                <button
-                  class="btn rog-btn-github btn-lg btn-block rog-font-default"
-                  type="button"
-                  onclick="window.open('https://github.com/r-ortegag/funwithflags', '_blank');"
-                >
-                  <i class="bi bi-github"></i> Ver proyecto en GitHub
-                </button>
-              </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="h-100 p-5 rog-text-color rog-bg-default rounded-3">
+            <h2 class="rog-font-title text-center">ÍNDICE</h2>
+            <ol class="fs-5">
+              <li>
+                <a class="rog-text-color" href="#introduccion">Introducción</a>
+              </li>
+              <li><a class="rog-text-color" href="#api">API</a></li>
+              <li>
+                <a class="rog-text-color" href="#aplicacion">Aplicación</a>
+              </li>
+            </ol>
+            <div class="d-grid mx-auto">
+              <button
+                class="btn rog-btn-github btn-lg btn-block rog-font-default"
+                type="button"
+                onclick="window.open('https://github.com/r-ortegag/funwithflags', '_blank');"
+              >
+                <i class="bi bi-github"></i> Ver proyecto en GitHub
+              </button>
             </div>
           </div>
         </div>
-      </main>
-      <footer
-        class="footer container-fluid text-center bg-dark text-white rounded-3"
-      >
-        <div class="container pt-3">
-          <section class="mb-4">
-            <a
-              class="text-light fs-3 me-3"
-              href="https://www.linkedin.com/in/raul-ortega-gallego/"
-              role="button"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="bi bi-linkedin"></i
-            ></a>
-            <a
-              class="text-light fs-3"
-              href="https://twitter.com/r_ortegag"
-              role="button"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="bi bi-twitter"></i
-            ></a>
-            <a
-              class="text-light fs-3 ms-3"
-              href="https://github.com/r-ortegag"
-              role="button"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="bi bi-github"></i
-            ></a>
-          </section>
-        </div>
-        <div class="text-center text-light pb-3">
-          2022
-          <a class="text-light" href="https://rortegag.com">rortegag.com</a>
-        </div>
-      </footer>
-      <button type="button" class="btn rog-btn btn-lg" id="btn-scroll-top">
-        <i class="bi bi-arrow-up-short"></i>
-      </button>
-    </div>
+      </div>
+    </main>
+    <footer class="container py-1 text-center bg-dark text-white rounded-3">
+      <div class="container pt-3">
+        <section class="mb-4">
+          <a
+            class="text-light fs-3 me-3"
+            href="https://www.linkedin.com/in/raul-ortega-gallego/"
+            role="button"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a
+            class="text-light fs-3"
+            href="https://twitter.com/r_ortegag"
+            role="button"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-twitter"></i
+          ></a>
+          <a
+            class="text-light fs-3 ms-3"
+            href="https://github.com/r-ortegag"
+            role="button"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-github"></i
+          ></a>
+        </section>
+      </div>
+      <div class="text-center text-light pb-3">
+        2022
+        <a class="text-light" href="https://rortegag.com">rortegag.com</a>
+      </div>
+    </footer>
+    <button type="button" class="btn rog-btn btn-lg" id="btn-scroll-top">
+      <i class="bi bi-arrow-up-short"></i>
+    </button>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"

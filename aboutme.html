@@ -100,1222 +100,1147 @@
   </head>
 
   <body class="rog-bg-main">
-    <div class="container py-1">
-      <header
-        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-1"
+    <header
+      class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-1"
+    >
+      <a
+        href="index.html"
+        class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
       >
-        <a
-          href="index.html"
-          class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
-        >
+        <picture>
+          <source
+            media="(prefers-color-scheme: dark)"
+            srcset="assets/img/logo-dark.svg"
+          />
+          <img src="assets/img/logo-light.svg" width="320" height="100" />
+        </picture>
+      </a>
+      <nav>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a
+              href="index.html"
+              id="home"
+              class="nav-link rog-text-color rog-font-default"
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#"
+              id="aboutme"
+              class="nav-link active rog-bg rog-font-default"
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="blog.html"
+              id="blog"
+              class="nav-link rog-text-color rog-font-default"
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="cheatsheets.html"
+              id="cheatsheets"
+              class="nav-link rog-text-color rog-font-default"
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="contact.html"
+              id="contact"
+              class="nav-link rog-text-color rog-font-default"
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container py-1">
+      <div class="p-4 mb-4 rog-bg-default rounded-3">
+        <div class="container-fluid">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <h1 class="display-5 fw-bold rog-text-default rog-font-title">
+                Me llamo
+              </h1>
+              <h2 class="display-5 fw-bold rog-text-gray rog-font-title">
+                <span class="rog-text-color">R</span>aúl
+                <span class="rog-text-color">Ortega</span>
+                <span class="rog-text-color">G</span>allego
+              </h2>
+            </div>
+            <div>
+              <a
+                href="./cv-rortegag.pdf"
+                class="btn rog-btn btn-lg btn-block rog-font-default"
+                ><i class="bi bi-file-earmark-person-fill"></i> Ver CV</a
+              >
+            </div>
+          </div>
+          <p class="fs-5 rog-text-default rog-font-default">
+            Apasionado de la informática desde pequeño, aprendi GNU/Linux con
+            DVDs con las revistas como PCWorld con Ubuntu, Fedora, Linux Mint...
+          </p>
+          <p class="fs-5 rog-text-default rog-font-default">
+            Hice el Grado Superior de ASIR y aprendí la programación web más por
+            mi cuenta.
+            <br />
+            Después, hice el Grado Superior de DAM y el Certificado de
+            Profesionalidad de Confección y Publicación de Páginas Web,
+            mejorando más mis skills web, haciendo páginas más dinámicas en
+            varios dispositivos.
+          </p>
+          <p class="fs-5 rog-text-default rog-font-default">
+            Ahora estoy aprendiendo las últimas tecnologías de programación
+            tanto de Frontend y Backend.
+          </p>
+        </div>
+      </div>
+      <div class="p-4 mb-4 rog-bg-default rounded-3">
+        <div class="container-fluid">
+          <h1 class="display-5 fw-bold rog-text-default rog-font-title">
+            Experiencia laboral
+          </h1>
+          <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="flex-grow-1 rog-text-default rog-font-default">
+              <p class="fw-bold h4">Técnico de Sistemas Informáticos</p>
+              <p class="fw-bold h5">La Academia de Valdepeñas S.L</p>
+              <ul>
+                <li class="fs-5">
+                  Soporte para equipos informáticos de la oficina, aulas
+                  presenciales y virtuales.
+                </li>
+                <li class="fs-5">
+                  Programador web para la página propia de la empresa y para los
+                  cursos online privados.
+                </li>
+                <li class="fs-5">
+                  Publicidad y maquetación web para los cursos online.
+                </li>
+              </ul>
+            </div>
+            <div class="flex-shrink-0">
+              <p class="rog-text-gray">Agosto 2020 - Julio 2021</p>
+            </div>
+          </div>
+          <br />
+          <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="flex-grow-1 rog-text-default rog-font-default">
+              <p class="fw-bold h4">
+                Soporte informático <span class="fw-normal fs-5">(PNL)</span>
+              </p>
+              <p class="fw-bold h5">Tecnobit S.L</p>
+              <ul>
+                <li class="fs-5">
+                  Tareas de configuración de Proxy para la validación de
+                  usuarios en LDAP.
+                </li>
+                <li class="fs-5">
+                  Trabajos de instalación y configuración de equipos, tanto a
+                  nivel de software como de hardware.
+                </li>
+                <li class="fs-5">
+                  Distribución automática de Sistemas Operativos y software
+                  básico para la instalación en remoto.
+                </li>
+                <li class="fs-5">Configuración de routers y switches.</li>
+              </ul>
+              <a
+                href="./assets/img/letters/letter-tecnobit.png"
+                class="btn rog-btn btn-block rog-font-default"
+                ><i class="bi bi-file-text-fill"></i> Carta de recomendación</a
+              >
+            </div>
+            <div class="flez-shrink-0">
+              <p class="rog-text-gray">Marzo 2017 - Junio 2017</p>
+            </div>
+          </div>
+          <br />
+          <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="flex-grow-1 rog-text-default rog-font-default">
+              <p class="fw-bold h4">
+                Técnico de reparación informática
+                <span class="fw-normal fs-5">(PNL)</span>
+              </p>
+              <p class="fw-bold h5">PC Coste S.L</p>
+              <ul>
+                <li class="fs-5">
+                  Instalación y configuración de equipos para su posterior venta
+                </li>
+                <li class="fs-5">
+                  Elección de hardware para su posterior instalación.
+                </li>
+                <li class="fs-5">Resolución de problemas en equipos.</li>
+                <li class="fs-5">Trato con clientes.</li>
+                <li class="fs-5">Eliminación de malware en equipos.</li>
+                <li class="fs-5">
+                  Sistemas de ticketing para la reparación de telefonía móvil.
+                </li>
+              </ul>
+            </div>
+            <div class="flex-shrink-0">
+              <p class="rog-text-gray">Marzo 2014- Junio 2014</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 mb-4 rog-bg-default rounded-3">
+        <div class="container-fluid">
+          <h1 class="display-5 fw-bold rog-text-default rog-font-title">
+            Educación
+          </h1>
+          <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="flex-grow-1 rog-text-default rog-font-default">
+              <p class="fw-bold h4">IES Gregorio Prieto</p>
+              <p class="fw-bold h5">
+                Ciclo Formativo de Grado Superior de Desarrollo de Aplicaciones
+                Multiplataforma
+              </p>
+            </div>
+            <div class="flex-shrink-0">
+              <p class="rog-text-gray">2018 - 2021</p>
+            </div>
+          </div>
+          <br />
+          <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="flex-grow-1 rog-text-default rog-font-default">
+              <p class="fw-bold h4">IES Gregorio Prieto</p>
+              <p class="fw-bold h5">
+                Ciclo Formativo de Grado Superior de Administración de Sistemas
+                Informáticos y Redes
+              </p>
+            </div>
+            <div class="flez-shrink-0">
+              <p class="rog-text-gray">2014 - 2017</p>
+            </div>
+          </div>
+          <br />
+          <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="flex-grow-1 rog-text-default rog-font-default">
+              <p class="fw-bold h4">IES Gregorio Prieto</p>
+              <p class="fw-bold h5">
+                Ciclo Formativo de Grado Medio de Sistemas Microinformáticos y
+                Redes
+              </p>
+            </div>
+            <div class="flex-shrink-0">
+              <p class="rog-text-gray">2012 - 2014</p>
+            </div>
+          </div>
+          <br />
+          <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="flex-grow-1 rog-text-default rog-font-default">
+              <p class="fw-bold h4">IES Gregorio Prieto</p>
+              <p class="fw-bold h5">Educación Secundaria Obligatoria</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 mb-4 rog-bg-default rounded-3">
+        <div class="container-fluid">
+          <h1 class="display-5 fw-bold rog-text-default rog-font-title">
+            Skills
+          </h1>
+          <h2 class="fw-bold rog-text-default rog-font-title mt-3">Frontend</h2>
+          <div class="card-group">
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/html5-logo.png"
+                  alt="HTML5"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  HTML5
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/css3-logo.png"
+                  alt="CSS3"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  CSS3
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/sass-logo.png"
+                  alt="SASS"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  SASS
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/bootstrap-logo.png"
+                  alt="Bootstrap"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Bootstrap
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/tailwindcss-logo.png"
+                  alt="Tailwind CSS"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Tailwind CSS
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/javascript-logo.png"
+                  alt="Javascript"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Javascript
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/jquery-logo.png"
+                  alt="jQuery"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  jQuery
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/react-logo.png"
+                  alt="React"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  React
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/vuejs-logo.png"
+                  alt="Vue"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Vue.js
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/thymeleaf.png"
+                  alt="Thymeleaf"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Thymeleaf
+                </p>
+              </div>
+            </div>
+          </div>
+          <h2 class="fw-bold rog-text-default rog-font-title mt-3">Backend</h2>
+          <div class="card-group">
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/mysql-logo.png"
+                  alt="MySQL"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  MySQL
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/sql-server-logo.png"
+                  alt="SQL Server"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  SQL Server
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/mongodb-logo.png"
+                  alt="MongoDB"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  MongoDB
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/typescript-logo.png"
+                  alt="Typescript"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Typescript
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/php-logo.png"
+                  alt="PHP"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  PHP
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/java-logo.png"
+                  alt="Java"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Java
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/spring-logo.png"
+                  alt="Spring MVC"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Spring MVC
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/nodejs-logo.png"
+                  alt="Node.js"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Node.js
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/express-logo.png"
+                  alt="Express"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Express
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/hibernate-logo.png"
+                  alt="Hibernate"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Hibernate
+                </p>
+              </div>
+            </div>
+          </div>
+          <h2 class="fw-bold rog-text-default rog-font-title mt-3">
+            CMS y LMS
+          </h2>
+          <div class="card-group">
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/wordpress-logo.png"
+                  alt="Wordpress"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Wordpress
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/moodle-logo.png"
+                  alt="Moodle"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Moodle
+                </p>
+              </div>
+            </div>
+          </div>
+          <h2 class="fw-bold rog-text-default rog-font-title mt-3">Otros</h2>
+          <div class="card-group">
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/android-logo.png"
+                  alt="Android"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Android
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/csharp-logo.png"
+                  alt="C#"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  C#
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/unity-logo.png"
+                  alt="Unity"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Unity
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/git-logo.png"
+                  alt="Git"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Git
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/office-logo.png"
+                  alt="Paquete Office"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Paquete Office
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/photoshop-logo.png"
+                  alt="Photoshop"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Photoshop
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/illustrator-logo.png"
+                  alt="Illustrator"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Illustrator
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/powershell-logo.png"
+                  alt="Powershell"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Powershell
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/windows-logo.png"
+                  alt="Windows"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Entornos Windows
+                </p>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <div class="card-body">
+                <img
+                  class="d-block img-fluid mx-auto"
+                  src="assets/img/icons/gnu-linux-logo.png"
+                  alt="GNU/Linux"
+                  width="64"
+                />
+                <p class="card-text fw-bold text-center rog-font-default pt-2">
+                  Entornos GNU/Linux
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 mb-4 rog-bg-default rounded-3">
+        <div class="container-fluid">
+          <h1 class="display-5 fw-bold rog-text-default rog-font-title">
+            Cursos y certificados
+          </h1>
           <picture>
             <source
               media="(prefers-color-scheme: dark)"
-              srcset="assets/img/logo-dark.svg"
+              srcset="assets/img/openwebinars-dark.png"
             />
-            <img src="assets/img/logo-light.svg" width="320" height="100" />
+            <img
+              class="d-block img-fluid mx-auto mb-2"
+              src="assets/img/openwebinars-light.png"
+              alt="OpenWebinars"
+            />
           </picture>
-        </a>
-        <nav>
-          <ul class="nav nav-pills">
-            <li class="nav-item">
-              <a
-                href="index.html"
-                id="home"
-                class="nav-link rog-text-color rog-font-default"
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="#"
-                id="aboutme"
-                class="nav-link active rog-bg rog-font-default"
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="blog.html"
-                id="blog"
-                class="nav-link rog-text-color rog-font-default"
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="cheatsheets.html"
-                id="cheatsheets"
-                class="nav-link rog-text-color rog-font-default"
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="contact.html"
-                id="contact"
-                class="nav-link rog-text-color rog-font-default"
-              ></a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <div class="p-4 mb-4 rog-bg-default rounded-3">
-          <div class="container-fluid">
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <h1 class="display-5 fw-bold rog-text-default rog-font-title">
-                  Me llamo
-                </h1>
-                <h2 class="display-5 fw-bold rog-text-gray rog-font-title">
-                  <span class="rog-text-color">R</span>aúl
-                  <span class="rog-text-color">Ortega</span>
-                  <span class="rog-text-color">G</span>allego
-                </h2>
-              </div>
-              <div>
-                <a
-                  href="./cv-rortegag.pdf"
-                  class="btn rog-btn btn-lg btn-block rog-font-default"
-                  ><i class="bi bi-file-earmark-person-fill"></i> Ver CV</a
-                >
-              </div>
-            </div>
-            <p class="fs-5 rog-text-default rog-font-default">
-              Apasionado de la informática desde pequeño, aprendi GNU/Linux con
-              DVDs con las revistas como PCWorld con Ubuntu, Fedora, Linux
-              Mint...
-            </p>
-            <p class="fs-5 rog-text-default rog-font-default">
-              Hice el Grado Superior de ASIR y aprendí la programación web más
-              por mi cuenta.
-              <br />
-              Después, hice el Grado Superior de DAM y el Certificado de
-              Profesionalidad de Confección y Publicación de Páginas Web,
-              mejorando más mis skills web, haciendo páginas más dinámicas en
-              varios dispositivos.
-            </p>
-            <p class="fs-5 rog-text-default rog-font-default">
-              Ahora estoy aprendiendo las últimas tecnologías de programación
-              tanto de Frontend y Backend.
-            </p>
-          </div>
-        </div>
-        <div class="p-4 mb-4 rog-bg-default rounded-3">
-          <div class="container-fluid">
-            <h1 class="display-5 fw-bold rog-text-default rog-font-title">
-              Experiencia laboral
-            </h1>
-            <div class="d-flex flex-column flex-md-row justify-content-between">
-              <div class="flex-grow-1 rog-text-default rog-font-default">
-                <p class="fw-bold h4">Técnico de Sistemas Informáticos</p>
-                <p class="fw-bold h5">La Academia de Valdepeñas S.L</p>
-                <ul>
-                  <li class="fs-5">
-                    Soporte para equipos informáticos de la oficina, aulas
-                    presenciales y virtuales.
-                  </li>
-                  <li class="fs-5">
-                    Programador web para la página propia de la empresa y para
-                    los cursos online privados.
-                  </li>
-                  <li class="fs-5">
-                    Publicidad y maquetación web para los cursos online.
-                  </li>
-                </ul>
-              </div>
-              <div class="flex-shrink-0">
-                <p class="rog-text-gray">Agosto 2020 - Julio 2021</p>
-              </div>
-            </div>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button
+              class="btn ow-btn btn-lg rog-font-default"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ow"
+            >
+              <i class="bi bi-arrow-90deg-down"></i>&nbsp; Ver certificados
+            </button>
             <br />
-            <div class="d-flex flex-column flex-md-row justify-content-between">
-              <div class="flex-grow-1 rog-text-default rog-font-default">
-                <p class="fw-bold h4">
-                  Soporte informático <span class="fw-normal fs-5">(PNL)</span>
-                </p>
-                <p class="fw-bold h5">Tecnobit S.L</p>
-                <ul>
-                  <li class="fs-5">
-                    Tareas de configuración de Proxy para la validación de
-                    usuarios en LDAP.
-                  </li>
-                  <li class="fs-5">
-                    Trabajos de instalación y configuración de equipos, tanto a
-                    nivel de software como de hardware.
-                  </li>
-                  <li class="fs-5">
-                    Distribución automática de Sistemas Operativos y software
-                    básico para la instalación en remoto.
-                  </li>
-                  <li class="fs-5">Configuración de routers y switches.</li>
-                </ul>
-                <a
-                  href="./assets/img/letters/letter-tecnobit.png"
-                  class="btn rog-btn btn-block rog-font-default"
-                  ><i class="bi bi-file-text-fill"></i> Carta de
-                  recomendación</a
-                >
+            <div id="ow" class="collapse">
+              <p class="h5 text-center mb-2">Carreras de OpenWebinars</p>
+              <div class="row align-items-md-stretch">
+                <div class="col-md-6 mb-4">
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-carrera-desarrollador-de-full-stack-mern.png"
+                    alt="Certificado Carrera OpenWebinars Full Stack MERN"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                </div>
+                <div class="col-md-6 mb-4">
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-carrera-programador-full-stack-mevn.png"
+                    alt="Certificado Carrera OpenWebinars Full Stack MEVN"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                </div>
               </div>
-              <div class="flez-shrink-0">
-                <p class="rog-text-gray">Marzo 2017 - Junio 2017</p>
+              <p class="h5 text-center mb-2">Cursos de OpenWebinars</p>
+              <div class="row align-items-md-stretch">
+                <div class="col-md-6 mb-4">
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-java-8-para-programadores-java.png"
+                    alt="Certificado OpenWebinars Java 8 para programadores Java"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-spring-core-5.png"
+                    alt="Certificado OpenWebinars Spring Core 5"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-introduccion-a-thymeleaf.png"
+                    alt="Certificado OpenWebinars Introducción a Thymeleaf"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-html5-y-css3.png"
+                    alt="Certificado OpenWebinars HTML5 y CSS3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-javascript-intermedio.png"
+                    alt="Certificado OpenWebinars JavaScript intermedio"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-javascript-profesional.png"
+                    alt="Certificado OpenWebinars JavaScript profesional"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-git.png"
+                    alt="Certificado OpenWebinars Git"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-nodejs-y-express.png"
+                    alt="Certificado OpenWebinars NodeJS y Express"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-crea-un-api-rest-con-nodejs-y-express-endpoint-con-rest.png"
+                    alt="Certificado OpenWebinars API Rest NodeJS y Express Endpoint con Rest"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-react-intermedio.png"
+                    alt="Certificado OpenWebinars React intermedio"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-desarrollo-con-express-y-vue.png"
+                    alt="Certificado OpenWebinars Desarrollo con Express y VueJS"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                </div>
+                <div class="col-md-6 mb-4">
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-android-online.png"
+                    alt="Certificado OpenWebinars Android Online"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-spring-boot-y-spring-mvc-5-creando-una-aplicacion-con-spring-boot-y-spring-mvc.png"
+                    alt="Certificado OpenWebinars Spring Boot y Spring MVC 5"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-construye-objetos-variables-y-constantes-con-lombok.png"
+                    alt="Certificado OpenWebinars Lombok"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-javascript-para-principiantes.png"
+                    alt="Certificado OpenWebinars JavaScript para principiantes"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-javascript-avanzado.png"
+                    alt="Certificado OpenWebinars JavaScript avanzado"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-typescript.png"
+                    alt="Certificado OpenWebinars Typescript"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-mongodb-creacion-y-gestion-de-bases-de-datos-nosql.png"
+                    alt="Certificado OpenWebinars MongoDB"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-crea-un-api-rest-con-nodejs-y-express-jwt-y-ficheros.png"
+                    alt="Certificado OpenWebinars API Rest NodeJS y Express: JWT y ficheros"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-react-para-principiantes.png"
+                    alt="Certificado OpenWebinars React para principiantes"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-react-avanzado.png"
+                    alt="Certificado OpenWebinars React avanzado"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-vuejs.png"
+                    alt="Certificado OpenWebinars VueJS"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                </div>
+              </div>
+              <p class="h5 text-center mb-2">Otros cursos</p>
+              <div class="row align-items-md-stretch">
+                <div class="col-md-6 mb-4">
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-powershell-para-principiantes.png"
+                    alt="Certificado OpenWebinars PowerShell para principiantes"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-excel-para-principiantes.png"
+                    alt="Certificado OpenWebinars Excel para principiantes"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-onenote.png"
+                    alt="Certificado OpenWebinars OneNote"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-introduccion-a-la-programacion-de-videojuegos-con-csharp-y-unity.png"
+                    alt="Certificado OpenWebinars Introducción a la programación de videojuegos con C# y Unity"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                </div>
+                <div class="col-md-6 mb-4">
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-word-para-principiantes.png"
+                    alt="Certificado OpenWebinars Word para principiantes"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-powerpoint.png"
+                    alt="Certificado OpenWebinars PowerPoint"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-outlook.png"
+                    alt="Certificado OpenWebinars Outlook"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-ow-curso-de-unity-5-programacion-de-videojuegos-2D.png"
+                    alt="Certificado OpenWebinars Unity 5: Porgramación de videojuegos 2D"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                </div>
               </div>
             </div>
+          </div>
+          <picture>
+            <source
+              media="(prefers-color-scheme: dark)"
+              srcset="assets/img/udemy-dark.png"
+            />
+            <img
+              class="d-block img-fluid mx-auto mb-2"
+              src="assets/img/udemy-light.png"
+              alt="Udemy"
+            />
+          </picture>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button
+              class="btn udemy-btn btn-lg rog-font-default"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#udemy"
+            >
+              <i class="bi bi-arrow-90deg-down"></i>&nbsp; Ver certificados
+            </button>
             <br />
-            <div class="d-flex flex-column flex-md-row justify-content-between">
-              <div class="flex-grow-1 rog-text-default rog-font-default">
-                <p class="fw-bold h4">
-                  Técnico de reparación informática
-                  <span class="fw-normal fs-5">(PNL)</span>
-                </p>
-                <p class="fw-bold h5">PC Coste S.L</p>
-                <ul>
-                  <li class="fs-5">
-                    Instalación y configuración de equipos para su posterior
-                    venta
-                  </li>
-                  <li class="fs-5">
-                    Elección de hardware para su posterior instalación.
-                  </li>
-                  <li class="fs-5">Resolución de problemas en equipos.</li>
-                  <li class="fs-5">Trato con clientes.</li>
-                  <li class="fs-5">Eliminación de malware en equipos.</li>
-                  <li class="fs-5">
-                    Sistemas de ticketing para la reparación de telefonía móvil.
-                  </li>
-                </ul>
-              </div>
-              <div class="flex-shrink-0">
-                <p class="rog-text-gray">Marzo 2014- Junio 2014</p>
+            <div id="udemy" class="collapse">
+              <div class="row align-items-md-stretch">
+                <div class="col-md-6 mb-4">
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-udemy-adobe-illustrator.jpg"
+                    alt="Certificado Udemy Adobe Illustrator"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                </div>
+                <div class="col-md-6 mb-4">
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-udemy-sass-moderno.jpg"
+                    alt="Certificado Udemy Sass Moderno"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="p-4 mb-4 rog-bg-default rounded-3">
-          <div class="container-fluid">
-            <h1 class="display-5 fw-bold rog-text-default rog-font-title">
-              Educación
-            </h1>
-            <div class="d-flex flex-column flex-md-row justify-content-between">
-              <div class="flex-grow-1 rog-text-default rog-font-default">
-                <p class="fw-bold h4">IES Gregorio Prieto</p>
-                <p class="fw-bold h5">
-                  Ciclo Formativo de Grado Superior de Desarrollo de
-                  Aplicaciones Multiplataforma
-                </p>
-              </div>
-              <div class="flex-shrink-0">
-                <p class="rog-text-gray">2018 - 2021</p>
-              </div>
-            </div>
+          <picture>
+            <source
+              media="(prefers-color-scheme: dark)"
+              srcset="assets/img/laacademia-dark.png"
+            />
+            <img
+              class="d-block img-fluid mx-auto mb-4"
+              src="assets/img/laacademia-light.png"
+              alt="La Academia de Valdepeñas SL"
+              width="450"
+              height="100"
+            />
+          </picture>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button
+              class="btn la-btn btn-lg rog-font-default"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#la"
+            >
+              <i class="bi bi-arrow-90deg-down"></i>&nbsp; Ver certificado
+            </button>
             <br />
-            <div class="d-flex flex-column flex-md-row justify-content-between">
-              <div class="flex-grow-1 rog-text-default rog-font-default">
-                <p class="fw-bold h4">IES Gregorio Prieto</p>
-                <p class="fw-bold h5">
-                  Ciclo Formativo de Grado Superior de Administración de
-                  Sistemas Informáticos y Redes
-                </p>
-              </div>
-              <div class="flez-shrink-0">
-                <p class="rog-text-gray">2014 - 2017</p>
-              </div>
+            <div id="la" class="collapse">
+              <p class="rog-text-default rog-font-default">
+                Certificado de Profesionalidad Nivel 2 - Confección y
+                Publicación de Páginas Web
+              </p>
             </div>
+          </div>
+          <picture>
+            <source
+              media="(prefers-color-scheme: dark)"
+              srcset="assets/img/cisco-dark.png"
+            />
+            <img
+              class="d-block img-fluid mx-auto mb-5"
+              src="assets/img/cisco-light.png"
+              alt="Cisco"
+              width="250"
+              height="50"
+            />
+          </picture>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button
+              class="btn cisco-btn btn-lg rog-font-default"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#cisco"
+            >
+              <i class="bi bi-arrow-90deg-down"></i>&nbsp; Ver certificados
+            </button>
             <br />
-            <div class="d-flex flex-column flex-md-row justify-content-between">
-              <div class="flex-grow-1 rog-text-default rog-font-default">
-                <p class="fw-bold h4">IES Gregorio Prieto</p>
-                <p class="fw-bold h5">
-                  Ciclo Formativo de Grado Medio de Sistemas Microinformáticos y
-                  Redes
-                </p>
-              </div>
-              <div class="flex-shrink-0">
-                <p class="rog-text-gray">2012 - 2014</p>
-              </div>
-            </div>
-            <br />
-            <div class="d-flex flex-column flex-md-row justify-content-between">
-              <div class="flex-grow-1 rog-text-default rog-font-default">
-                <p class="fw-bold h4">IES Gregorio Prieto</p>
-                <p class="fw-bold h5">Educación Secundaria Obligatoria</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="p-4 mb-4 rog-bg-default rounded-3">
-          <div class="container-fluid">
-            <h1 class="display-5 fw-bold rog-text-default rog-font-title">
-              Skills
-            </h1>
-            <h2 class="fw-bold rog-text-default rog-font-title mt-3">
-              Frontend
-            </h2>
-            <div class="card-group">
-              <div class="card bg-light">
-                <div class="card-body">
+            <div id="cisco" class="collapse">
+              <div class="row align-items-md-stretch">
+                <div class="col-md-6 mb-4">
                   <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/html5-logo.png"
-                    alt="HTML5"
-                    width="64"
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-cisco-ccna-routing-and-switching-1.png"
+                    alt="CCNA Switching and Routing: Introducción a las redes"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
                   />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    HTML5
-                  </p>
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-cisco-ccna-routing-and-switching-3.png"
+                    alt="CCNA Switching and Routing: Escalamiento de redes"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
+                  <img
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-cisco-ccna-discovery.png"
+                    alt="CCNA Discovery: Networking for Home and Small Business"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
+                  />
                 </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
+                <div class="col-md-6 mb-4">
                   <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/css3-logo.png"
-                    alt="CSS3"
-                    width="64"
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-cisco-ccna-routing-and-switching-2.png"
+                    alt="CCNA Switching and Routing: Principios básicos de routing y switching"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
                   />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    CSS3
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
                   <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/sass-logo.png"
-                    alt="SASS"
-                    width="64"
+                    class="rounded img-fluid mb-2 cursor"
+                    src="assets/img/certs/cert-cisco-ccna-routing-and-switching-4.png"
+                    alt="CCNA Switching and Routing: Conexión de redes"
+                    data-bs-toggle="modal"
+                    data-bs-target="#certModal"
                   />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    SASS
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/bootstrap-logo.png"
-                    alt="Bootstrap"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Bootstrap
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/tailwindcss-logo.png"
-                    alt="Tailwind CSS"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Tailwind CSS
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/javascript-logo.png"
-                    alt="Javascript"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Javascript
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/jquery-logo.png"
-                    alt="jQuery"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    jQuery
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/react-logo.png"
-                    alt="React"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    React
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/vuejs-logo.png"
-                    alt="Vue"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Vue.js
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/thymeleaf.png"
-                    alt="Thymeleaf"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Thymeleaf
-                  </p>
-                </div>
-              </div>
-            </div>
-            <h2 class="fw-bold rog-text-default rog-font-title mt-3">
-              Backend
-            </h2>
-            <div class="card-group">
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/mysql-logo.png"
-                    alt="MySQL"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    MySQL
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/sql-server-logo.png"
-                    alt="SQL Server"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    SQL Server
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/mongodb-logo.png"
-                    alt="MongoDB"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    MongoDB
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/typescript-logo.png"
-                    alt="Typescript"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Typescript
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/php-logo.png"
-                    alt="PHP"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    PHP
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/java-logo.png"
-                    alt="Java"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Java
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/spring-logo.png"
-                    alt="Spring MVC"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Spring MVC
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/nodejs-logo.png"
-                    alt="Node.js"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Node.js
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/express-logo.png"
-                    alt="Express"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Express
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/hibernate-logo.png"
-                    alt="Hibernate"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Hibernate
-                  </p>
-                </div>
-              </div>
-            </div>
-            <h2 class="fw-bold rog-text-default rog-font-title mt-3">
-              CMS y LMS
-            </h2>
-            <div class="card-group">
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/wordpress-logo.png"
-                    alt="Wordpress"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Wordpress
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/moodle-logo.png"
-                    alt="Moodle"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Moodle
-                  </p>
-                </div>
-              </div>
-            </div>
-            <h2 class="fw-bold rog-text-default rog-font-title mt-3">Otros</h2>
-            <div class="card-group">
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/android-logo.png"
-                    alt="Android"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Android
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/csharp-logo.png"
-                    alt="C#"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    C#
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/unity-logo.png"
-                    alt="Unity"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Unity
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/git-logo.png"
-                    alt="Git"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Git
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/office-logo.png"
-                    alt="Paquete Office"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Paquete Office
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/photoshop-logo.png"
-                    alt="Photoshop"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Photoshop
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/illustrator-logo.png"
-                    alt="Illustrator"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Illustrator
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/powershell-logo.png"
-                    alt="Powershell"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Powershell
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/windows-logo.png"
-                    alt="Windows"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Entornos Windows
-                  </p>
-                </div>
-              </div>
-              <div class="card bg-light">
-                <div class="card-body">
-                  <img
-                    class="d-block img-fluid mx-auto"
-                    src="assets/img/icons/gnu-linux-logo.png"
-                    alt="GNU/Linux"
-                    width="64"
-                  />
-                  <p
-                    class="card-text fw-bold text-center rog-font-default pt-2"
-                  >
-                    Entornos GNU/Linux
-                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="p-4 mb-4 rog-bg-default rounded-3">
-          <div class="container-fluid">
-            <h1 class="display-5 fw-bold rog-text-default rog-font-title">
-              Cursos y certificados
-            </h1>
-            <picture>
-              <source
-                media="(prefers-color-scheme: dark)"
-                srcset="assets/img/openwebinars-dark.png"
-              />
-              <img
-                class="d-block img-fluid mx-auto mb-2"
-                src="assets/img/openwebinars-light.png"
-                alt="OpenWebinars"
-              />
-            </picture>
-            <div class="d-grid gap-2 col-6 mx-auto">
-              <button
-                class="btn ow-btn btn-lg rog-font-default"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#ow"
-              >
-                <i class="bi bi-arrow-90deg-down"></i>&nbsp; Ver certificados
-              </button>
-              <br />
-              <div id="ow" class="collapse">
-                <p class="h5 text-center mb-2">Carreras de OpenWebinars</p>
-                <div class="row align-items-md-stretch">
-                  <div class="col-md-6 mb-4">
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-carrera-desarrollador-de-full-stack-mern.png"
-                      alt="Certificado Carrera OpenWebinars Full Stack MERN"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                  </div>
-                  <div class="col-md-6 mb-4">
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-carrera-programador-full-stack-mevn.png"
-                      alt="Certificado Carrera OpenWebinars Full Stack MEVN"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                  </div>
-                </div>
-                <p class="h5 text-center mb-2">Cursos de OpenWebinars</p>
-                <div class="row align-items-md-stretch">
-                  <div class="col-md-6 mb-4">
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-java-8-para-programadores-java.png"
-                      alt="Certificado OpenWebinars Java 8 para programadores Java"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-spring-core-5.png"
-                      alt="Certificado OpenWebinars Spring Core 5"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-introduccion-a-thymeleaf.png"
-                      alt="Certificado OpenWebinars Introducción a Thymeleaf"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-html5-y-css3.png"
-                      alt="Certificado OpenWebinars HTML5 y CSS3"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-javascript-intermedio.png"
-                      alt="Certificado OpenWebinars JavaScript intermedio"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-javascript-profesional.png"
-                      alt="Certificado OpenWebinars JavaScript profesional"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-git.png"
-                      alt="Certificado OpenWebinars Git"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-nodejs-y-express.png"
-                      alt="Certificado OpenWebinars NodeJS y Express"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-crea-un-api-rest-con-nodejs-y-express-endpoint-con-rest.png"
-                      alt="Certificado OpenWebinars API Rest NodeJS y Express Endpoint con Rest"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-react-intermedio.png"
-                      alt="Certificado OpenWebinars React intermedio"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-desarrollo-con-express-y-vue.png"
-                      alt="Certificado OpenWebinars Desarrollo con Express y VueJS"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                  </div>
-                  <div class="col-md-6 mb-4">
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-android-online.png"
-                      alt="Certificado OpenWebinars Android Online"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-spring-boot-y-spring-mvc-5-creando-una-aplicacion-con-spring-boot-y-spring-mvc.png"
-                      alt="Certificado OpenWebinars Spring Boot y Spring MVC 5"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-construye-objetos-variables-y-constantes-con-lombok.png"
-                      alt="Certificado OpenWebinars Lombok"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-javascript-para-principiantes.png"
-                      alt="Certificado OpenWebinars JavaScript para principiantes"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-javascript-avanzado.png"
-                      alt="Certificado OpenWebinars JavaScript avanzado"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-typescript.png"
-                      alt="Certificado OpenWebinars Typescript"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-mongodb-creacion-y-gestion-de-bases-de-datos-nosql.png"
-                      alt="Certificado OpenWebinars MongoDB"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-crea-un-api-rest-con-nodejs-y-express-jwt-y-ficheros.png"
-                      alt="Certificado OpenWebinars API Rest NodeJS y Express: JWT y ficheros"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-react-para-principiantes.png"
-                      alt="Certificado OpenWebinars React para principiantes"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-react-avanzado.png"
-                      alt="Certificado OpenWebinars React avanzado"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-vuejs.png"
-                      alt="Certificado OpenWebinars VueJS"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                  </div>
-                </div>
-                <p class="h5 text-center mb-2">Otros cursos</p>
-                <div class="row align-items-md-stretch">
-                  <div class="col-md-6 mb-4">
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-powershell-para-principiantes.png"
-                      alt="Certificado OpenWebinars PowerShell para principiantes"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-excel-para-principiantes.png"
-                      alt="Certificado OpenWebinars Excel para principiantes"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-onenote.png"
-                      alt="Certificado OpenWebinars OneNote"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-introduccion-a-la-programacion-de-videojuegos-con-csharp-y-unity.png"
-                      alt="Certificado OpenWebinars Introducción a la programación de videojuegos con C# y Unity"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                  </div>
-                  <div class="col-md-6 mb-4">
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-word-para-principiantes.png"
-                      alt="Certificado OpenWebinars Word para principiantes"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-powerpoint.png"
-                      alt="Certificado OpenWebinars PowerPoint"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-outlook.png"
-                      alt="Certificado OpenWebinars Outlook"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-ow-curso-de-unity-5-programacion-de-videojuegos-2D.png"
-                      alt="Certificado OpenWebinars Unity 5: Porgramación de videojuegos 2D"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <picture>
-              <source
-                media="(prefers-color-scheme: dark)"
-                srcset="assets/img/udemy-dark.png"
-              />
-              <img
-                class="d-block img-fluid mx-auto mb-2"
-                src="assets/img/udemy-light.png"
-                alt="Udemy"
-              />
-            </picture>
-            <div class="d-grid gap-2 col-6 mx-auto">
-              <button
-                class="btn udemy-btn btn-lg rog-font-default"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#udemy"
-              >
-                <i class="bi bi-arrow-90deg-down"></i>&nbsp; Ver certificados
-              </button>
-              <br />
-              <div id="udemy" class="collapse">
-                <div class="row align-items-md-stretch">
-                  <div class="col-md-6 mb-4">
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-udemy-adobe-illustrator.jpg"
-                      alt="Certificado Udemy Adobe Illustrator"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                  </div>
-                  <div class="col-md-6 mb-4">
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-udemy-sass-moderno.jpg"
-                      alt="Certificado Udemy Sass Moderno"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <picture>
-              <source
-                media="(prefers-color-scheme: dark)"
-                srcset="assets/img/laacademia-dark.png"
-              />
-              <img
-                class="d-block img-fluid mx-auto mb-4"
-                src="assets/img/laacademia-light.png"
-                alt="La Academia de Valdepeñas SL"
-                width="450"
-                height="100"
-              />
-            </picture>
-            <div class="d-grid gap-2 col-6 mx-auto">
-              <button
-                class="btn la-btn btn-lg rog-font-default"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#la"
-              >
-                <i class="bi bi-arrow-90deg-down"></i>&nbsp; Ver certificado
-              </button>
-              <br />
-              <div id="la" class="collapse">
-                <p class="rog-text-default rog-font-default">
-                  Certificado de Profesionalidad Nivel 2 - Confección y
-                  Publicación de Páginas Web
-                </p>
-              </div>
-            </div>
-            <picture>
-              <source
-                media="(prefers-color-scheme: dark)"
-                srcset="assets/img/cisco-dark.png"
-              />
-              <img
-                class="d-block img-fluid mx-auto mb-5"
-                src="assets/img/cisco-light.png"
-                alt="Cisco"
-                width="250"
-                height="50"
-              />
-            </picture>
-            <div class="d-grid gap-2 col-6 mx-auto">
-              <button
-                class="btn cisco-btn btn-lg rog-font-default"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#cisco"
-              >
-                <i class="bi bi-arrow-90deg-down"></i>&nbsp; Ver certificados
-              </button>
-              <br />
-              <div id="cisco" class="collapse">
-                <div class="row align-items-md-stretch">
-                  <div class="col-md-6 mb-4">
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-cisco-ccna-routing-and-switching-1.png"
-                      alt="CCNA Switching and Routing: Introducción a las redes"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-cisco-ccna-routing-and-switching-3.png"
-                      alt="CCNA Switching and Routing: Escalamiento de redes"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-cisco-ccna-discovery.png"
-                      alt="CCNA Discovery: Networking for Home and Small Business"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                  </div>
-                  <div class="col-md-6 mb-4">
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-cisco-ccna-routing-and-switching-2.png"
-                      alt="CCNA Switching and Routing: Principios básicos de routing y switching"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                    <img
-                      class="rounded img-fluid mb-2 cursor"
-                      src="assets/img/certs/cert-cisco-ccna-routing-and-switching-4.png"
-                      alt="CCNA Switching and Routing: Conexión de redes"
-                      data-bs-toggle="modal"
-                      data-bs-target="#certModal"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="modal fade"
-          id="certModal"
-          tabindex="-1"
-          aria-labelledby="certModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-              <img class="rounded img-fluid" id="certImage" />
-            </div>
-          </div>
-        </div>
-      </main>
-      <footer
-        class="footer container-fluid text-center bg-dark text-white rounded-3"
+      </div>
+      <div
+        class="modal fade"
+        id="certModal"
+        tabindex="-1"
+        aria-labelledby="certModalLabel"
+        aria-hidden="true"
       >
-        <div class="container pt-3">
-          <section class="mb-4">
-            <a
-              class="text-light fs-3 me-3"
-              href="https://www.linkedin.com/in/raul-ortega-gallego/"
-              role="button"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="bi bi-linkedin"></i
-            ></a>
-            <a
-              class="text-light fs-3"
-              href="https://twitter.com/r_ortegag"
-              role="button"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="bi bi-twitter"></i
-            ></a>
-            <a
-              class="text-light fs-3 ms-3"
-              href="https://github.com/r-ortegag"
-              role="button"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="bi bi-github"></i
-            ></a>
-          </section>
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <img class="rounded img-fluid" id="certImage" />
+          </div>
         </div>
-        <div class="text-center text-light pb-3">
-          2022
-          <a class="text-light" href="https://rortegag.com">rortegag.com</a>
-        </div>
-      </footer>
-      <button type="button" class="btn rog-btn btn-lg" id="btn-scroll-top">
-        <i class="bi bi-arrow-up-short"></i>
-      </button>
-    </div>
+      </div>
+    </main>
+    <footer class="container py-1 text-center bg-dark text-white rounded-3">
+      <div class="container pt-3">
+        <section class="mb-4">
+          <a
+            class="text-light fs-3 me-3"
+            href="https://www.linkedin.com/in/raul-ortega-gallego/"
+            role="button"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a
+            class="text-light fs-3"
+            href="https://twitter.com/r_ortegag"
+            role="button"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-twitter"></i
+          ></a>
+          <a
+            class="text-light fs-3 ms-3"
+            href="https://github.com/r-ortegag"
+            role="button"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-github"></i
+          ></a>
+        </section>
+      </div>
+      <div class="text-center text-light pb-3">
+        2022
+        <a class="text-light" href="https://rortegag.com">rortegag.com</a>
+      </div>
+    </footer>
+    <button type="button" class="btn rog-btn btn-lg" id="btn-scroll-top">
+      <i class="bi bi-arrow-up-short"></i>
+    </button>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
