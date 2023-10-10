@@ -184,25 +184,25 @@
           <p class="fs-5 rog-text-default rog-font-default">
             Traigo esta tarea de instalación y configuración de Ubuntu 20.04 LTS
             con entorno gráfico dentro de Windows 10/11, haciendo uso de Windows
-            Subsystem for Linux a su última versión (WSL2).
+            Subsystem for Linux en su última versión (WSL2).
           </p>
           <p class="fs-5 rog-text-default rog-font-default">
             <span class="fw-bold">¿Qué es WSL?</span> <br />
             Windows Subsystem for Linux es una capa de compatibilidad que ha
             agregado Microsoft en Windows 10 y 11 para entornos GNU/Linux dentro
-            de Windows, lo anterior quiere decir que podrás usar ciertas
+            de Windows. Lo anterior quiere decir que podrás usar ciertas
             distribuciones de GNU/Linux en Windows 10/11. <br />
-            La primera versión de WSL llevó al intérprete de comandos que se
+            La primera versión de WSL llevó el intérprete de comandos que se
             instala en la mayoría de las distribuciones GNU/Linux (estamos
-            hablando del shell bash) a Windows, permitiendo ejecutar binarios
-            desde Windows. Para la versión 2 de WSL hubo grandes mejoras en
-            cuando rendimiento, ya que WSL2 utiliza un núcleo Linux real. Se
-            pueden utilizar aplicaciones de GNU/Linux desde Windows 10/11
-            utilizando direcciones IP remotas, así mismo permite la gestión de
-            una distribución GNU/Linux con entorno gráfico.
+            hablando del shell bash) a Windows, lo que permitió ejecutar
+            binarios desde Windows. Para la versión 2 de WSL hubo grandes
+            mejoras en cuanto a rendimiento, ya que WSL2 utiliza un núcleo Linux
+            real. Se pueden utilizar aplicaciones de GNU/Linux desde Windows
+            10/11 utilizando direcciones IP remotas. Además, permite la gestión
+            de una distribución GNU/Linux con entorno gráfico.
           </p>
           <p class="fs-5 rog-text-default rog-font-default">
-            Primero, que versión de Windows tienes. Con ejecutar el comando
+            Primero, ¿qué versión de Windows tienes? Con ejecutar el comando
             <code class="rog-font-title">winver</code>
             verás la versión de Windows.
           </p>
@@ -212,18 +212,18 @@
             alt="Mostrando versión de Windows con winver"
           />
           <p class="fs-5 rog-text-default rog-font-default">
-            Una vez comprobado la versión de Windows, tienes que instalar 2
+            Una vez comprobada la versión de Windows, debes instalar 2
             características: Plataforma de máquina virtual y Subsistema de
             Windows para Linux.
           </p>
           <p class="fs-5 rog-text-default rog-font-default">
             Se puede instalar de dos formas, usando la herramienta DISM de
-            Powershell o a través de Activar o desactivar características de
-            Windows:
+            PowerShell o a través de "Activar o desactivar características de
+            Windows":
           </p>
           <p class="fs-5 rog-text-default rog-font-default">
-            En Powershell, ejecutado en modo administrador, debes de introducir
-            los siguentes comandos.
+            En PowerShell, ejecutado en modo administrador, debes introducir los
+            siguientes comandos.
           </p>
           <p class="fs-5 rog-text-default rog-font-default">
             <code class="rog-font-title"
@@ -248,8 +248,8 @@
             src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/caracteristicas-powershell-2.webp"
           />
           <p class="fs-5 rog-text-default rog-font-default">
-            En Activar y desactivar características de Windows, debes dar click
-            en la casilla para seleccionarlo para instalarlo.
+            En "Activar y desactivar características de Windows", debes dar clic
+            en la casilla para seleccionarlo e instalarlo.
           </p>
           <img
             class="img-fluid mx-auto d-block mb-2 rounded-3"
@@ -262,11 +262,11 @@
             alt="Característica seleccionada Subsistema de Windows para Linux"
           />
           <p class="fs-5 rog-text-default rog-font-default">
-            Después hay que reiniciar Windows para activar completamente las
+            Después, hay que reiniciar Windows para activar completamente las
             características instaladas.
           </p>
           <p class="fs-5 rog-text-default rog-font-default">
-            Luego, hay que volver abrir Powershell, en modo adminsitrador, para
+            Luego, debes volver a abrir PowerShell, en modo administrador, para
             permitir usar WSL2 de forma predeterminada.
           </p>
           <p class="fs-5 rog-text-default rog-font-default">
@@ -277,8 +277,8 @@
             src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/activar-wsl2.webp"
           />
           <p class="fs-5 rog-text-default rog-font-default">
-            Si sale un mensjae de que WSL2 requiere una actualización en su
-            componente kernel, debes abrir el enlace que te da. Con Ctrl + Click
+            Si sale un mensaje de que WSL2 requiere una actualización en su
+            componente kernel, debes abrir el enlace que te dan. Con Ctrl + Clic
             izquierdo abres el enlace.
           </p>
           <img
@@ -290,21 +290,22 @@
             src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/instalar-paquete-actualizacion-wsl2-2.webp"
           />
           <p class="fs-5 rog-text-default rog-font-default">
-            Debes volver a ejecutar otro vez el comando.
+            Debes volver a ejecutar el comando.
           </p>
           <p class="fs-5 rog-text-default rog-font-default">
             <code class="rog-font-title">wsl --set-default-version 2</code>
           </p>
           <p class="fs-5 rog-text-default rog-font-default">
-            Ahora, abres la Microsoft Store e instalas la versión de Ubuntu que
-            quieras.
+            Ahora, abre la Microsoft Store e instala la versión de Ubuntu que
+            desees.
           </p>
           <img
             class="img-fluid mx-auto d-block mb-2 rounded-3"
             src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/instalar-ubuntu-2004.webp"
           />
           <p class="fs-5 rog-text-default rog-font-default">
-            Una vez descargado, le das abrir y saldrá un terminal de Ubuntu.
+            Una vez descargado, le das a abrir y aparecerá un terminal de
+            Ubuntu.
           </p>
           <img
             class="img-fluid mx-auto d-block mb-2 rounded-3"
@@ -318,7 +319,7 @@
           />
           <p class="fs-5 rog-text-default rog-font-default">
             Si ejecutas el comando:
-            <code class="rog-font-title">wsl -l -v</code> puedes ver que Ubuntu
+            <code class="rog-font-title">wsl -l -v</code> podrás ver que Ubuntu
             se está ejecutando.
           </p>
           <img
@@ -378,15 +379,15 @@
             </li>
           </ol>
           <p class="fs-5 rog-text-default rog-font-default">
-            Puedes seleccionar el que quieras, LightDM es más ligero que GDM3.
+            Puedes seleccionar el que desees; LightDM es más ligero que GDM3.
           </p>
           <img
             class="img-fluid mx-auto d-block mb-2 rounded-3"
             src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/lightdm.webp"
           />
           <p class="fs-5 rog-text-default rog-font-default">
-            Cuando estes editando con el editor de archivos <code>nano</code>,
-            debes comentar las siguentes líneas:
+            Cuando estés editando con el editor de archivos <code>nano</code>,
+            debes comentar las siguientes líneas:
           </p>
           <p class="fs-5 rog-text-default rog-font-default">
             <code class="rog-font-title"
@@ -427,7 +428,7 @@
             src="../assets/img/blog/ubuntu-with-graphical-interface-on-windows-10-11-using-wsl2/conexion.webp"
           />
           <p class="fs-5 rog-text-default rog-font-default">
-            Y cuando te conectes, pon tu usuario y contraseña.
+            Y cuando te conectes, ingresa tu usuario y contraseña.
           </p>
           <img
             class="img-fluid mx-auto d-block mb-2 rounded-3"
@@ -435,7 +436,7 @@
           />
           <p class="fs-5 rog-text-default rog-font-default">
             Y ya tienes un Ubuntu operativo con entorno gráfico sin sacrificar
-            rendimiento del ordenador.
+            el rendimiento del ordenador.
           </p>
           <img
             class="img-fluid mx-auto d-block mb-2 rounded-3"
