@@ -41,7 +41,7 @@ function send() {
         (document.getElementById('send').innerHTML =
           '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando'),
         emailjs
-          .send('service_ftgs5aj', 'template_y8zgx8s', {
+          .send('service_ladg7ha', 'template_y8zgx8s', {
             from_name: document.querySelector('#your-name').value,
             to_name: document.querySelector('#your-email').value,
             message: document.querySelector('#your-message').value,
